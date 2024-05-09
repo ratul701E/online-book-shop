@@ -23,6 +23,27 @@ function create_user($username, $email, $password, $role, $status, $full_name, $
     mysqli_close($conn);
 }
 
+function update_password($user_id, $current_password, $new_password) {
+    $conn = conn();
+
+    $query = "SELECT password FROM users WHERE user_id = $user_id";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+    $stored_password = $row['password'];
+
+    if ($current_password === $stored_password) {
+
+        $update_query = "UPDATE users SET password = '$new_password' WHERE user_id = $user_id";
+        mysqli_query($conn, $update_query);
+        
+        mysqli_close($conn);
+        return true; 
+    } else {
+        mysqli_close($conn);
+        return false;
+    }
+}
+
 function get_user_by_username($username)
 {
     $conn = conn();

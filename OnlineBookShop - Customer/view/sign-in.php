@@ -1,5 +1,5 @@
 <?php
-    require '../controller/error-message.php'
+    require '../controller/status-message.php'
 ?>
 
 <!DOCTYPE html>
@@ -17,7 +17,7 @@
     <!-- fahim: login table -->
 
     <!-- message -->
-    <?php if(isset($_GET['status']))  echo get_error_message($_GET['status']) ?>
+    <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
     <table class="sign-in-table" id="sign-in-table">
         <tr>
             <td>
