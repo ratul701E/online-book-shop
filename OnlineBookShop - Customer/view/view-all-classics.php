@@ -1,3 +1,11 @@
+<?php
+require ('../model/book-model.php');
+
+$classics = get_all_books();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,22 +26,20 @@
             <h2>Classics</h2>
         </td>
     </tr>
-    <tr>
-        <td>
-            Title: <br>
-            Author Name: <br>
-            <img src="" alt="x"><br>
-            Taka: 
-        </td>
-    </tr>
-    <tr>
-        <td>
-            Title: <br>
-            Author Name: <br>
-            <img src="" alt="x"><br>
-            Taka: 
-        </td>
-    </tr>
+    <?php
+            foreach ($classics as $book) {
+                ?>
+                    <tr>
+                        <td>
+                            Title: <?= $book['title'] ?><br>
+                            Author Name: <?= $book['author'] ?><br>
+                            <img src="<?= $book['imgdir'] ?>" alt="x"><br>
+                            Taka: <?= $book['price'] ?>
+                        </td>
+                    </tr>
+                <?php
+            }
+        ?>
 </table>
 <?php require_once ('footer.php') ?>
 </body>

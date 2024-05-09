@@ -27,18 +27,18 @@ $best_sellers = get_all_books();
             </td>
         </tr>
         <?php
-        foreach ($best_sellers as $book) {
-            ?>
-                <tr>
-                    <td>
-                        Title: <?= $book['title'] ?><br>
-                        Author Name: <?= $book['author'] ?><br>
-                        <img src="<?= $book['imgdir'] ?>" alt="x"><br>
-                        Taka: <?= $book['price'] ?>
-                    </td>
-                </tr>
-            <?php
-        }
+            foreach ($best_sellers as $book) {
+                ?>
+                    <tr>
+                        <td>
+                            Title: <?= $book['title'] ?><br>
+                            Author Name: <?= $book['author'] ?><br>
+                            <img src="<?= $book['imgdir'] ?>" alt="x"><br>
+                            Taka: <?= $book['price'] ?>
+                        </td>
+                    </tr>
+                <?php
+            }
         ?>
     </table>
     <?php require_once ('footer.php') ?>
