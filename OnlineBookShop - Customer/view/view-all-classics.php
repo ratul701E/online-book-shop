@@ -12,29 +12,29 @@
 <?php require_once ('navbar.php') ?>
 
 <!-- ratul: fetch kor back to back  -->
-    <table class="classics-table" id="classics-table">
-        <tr>
-            <td>
-                <h2>Classics</h2>
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Title: <br>
-                Author Name: <br>
-                <img src="" alt="x"><br>
-                Taka: 
-            </td>
-        </tr>
-        <tr>
-            <td>
-                Title: <br>
-                Author Name: <br>
-                <img src="" alt="x"><br>
-                Taka: 
-            </td>
-        </tr>
-    </table>
+<table class="classics-table" id="classics-table">
+    <tr>
+        <td>
+            <h2>Classics</h2>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Title: <br>
+            Author Name: <br>
+            <img src="" alt="x"><br>
+            Taka: 
+        </td>
+    </tr>
+    <tr>
+        <td>
+            Title: <br>
+            Author Name: <br>
+            <img src="" alt="x"><br>
+            Taka: 
+        </td>
+    </tr>
+</table>
 <?php require_once ('footer.php') ?>
 </body>
 </html>
