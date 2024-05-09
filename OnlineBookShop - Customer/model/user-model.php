@@ -54,7 +54,7 @@ function get_user_by_username($username)
     return $user;
 }
 
-function update_user($user_id, $username, $email, $password, $role, $status, $full_name, $nid, $post, $mobile_number)
+function update_user($user_id, $username, $email, $password, $role, $status, $full_name, $nid, $address, $mobile_number)
 {
     $conn = conn();
     $query = "UPDATE users SET 
@@ -65,7 +65,7 @@ function update_user($user_id, $username, $email, $password, $role, $status, $fu
               status = '$status', 
               full_name = '$full_name', 
               nid = '$nid', 
-              post = '$post', 
+              address = '$address', 
               mobile_number = '$mobile_number'
               WHERE user_id = $user_id";
     mysqli_query($conn, $query);

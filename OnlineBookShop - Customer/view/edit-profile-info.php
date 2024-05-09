@@ -1,5 +1,6 @@
 <?php
     require_once('../model/user-model.php');
+    require_once '../controller/status-message.php';
     session_start();
     $user = $_SESSION['user'];
 
@@ -18,7 +19,8 @@
     <a href="profile.php">Back</a>
 
     <!-- fahim: edit profile table -->
-    <!-- ratul: info fetch kor -->
+    <!-- ratul: info fetch kor : DONE-->
+    <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
     <form action="../controller/edit-profile-info-controller.php" method="post">
         <table class="edit-profile-table" id="edit-profile-table">
             <tr>

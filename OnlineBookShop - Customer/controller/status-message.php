@@ -14,6 +14,8 @@ function get_status_message($status)
             return '<span class="error-message">Old password not matched.</span>';
         case 6:
             return '<span class="success-message">Password updated successfully.</span>';
+        case 7:
+            return '<span class="success-message">Profile info updated successfully.</span>';
         default:
             return '<span class="error-message">Unknown error occurred</span>';
     }
