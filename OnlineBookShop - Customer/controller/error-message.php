@@ -1,18 +1,15 @@
 <?php
-function get_error_message($status) {
+function get_error_message($status)
+{
     switch ($status) {
         case 1:
             return '<span class="error-message">Invalid Credentials</span>';
-            break;
         case 2:
             return '<span class="error-message">Fields cannot be empty</span>';
-            break;
         case 3:
-            return '<span class="error-message">Sign up successful. Please log in to continue.</span>';
-            break;
+            return '<span class="success-message">Sign up successful. Please log in to continue.</span>';
         default:
             return '<span class="error-message">Unknown error occurred</span>';
-            break;
     }
 }
 ?>
