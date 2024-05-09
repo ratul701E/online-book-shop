@@ -29,6 +29,8 @@
             </td>
         </tr>
     </table>
+    <!-- ratul: total price fetch koris  -->
+    <button><a href="checkout.php">Checkout [Total Price]</a></button>
     <?php require_once ('footer.php') ?>
 </body>
 </html>
