@@ -16,19 +16,19 @@
         <tr>
             <td>
                 Fullname <br>
-                <input type="text"><br><br>
+                <input type="text" name="full_name"><br><br>
                 Email <br>
-                <input type="text"><br><br>
-                Phone <br>
-                <input type="text"><br><br>
+                <input type="text" name="email"><br><br>
+                Mobile Number <br>
+                <input type="text" name="mobile_number"><br><br>
                 Address <br>
-                <input type="text"><br><br>
+                <textarea type="text" name="Address"><br><br>
                 Username <br>
-                <input type="text"><br><br>
+                <input type="text" name="username"><br><br>
                 Password <br>
-                <input type="text"><br><br>
+                <input type="text" name="password"><br><br>
                 NID <br>
-                <input type="text"><br><br>
+                <input type="text" name="nid"><br><br>
                 <!-- fahim: sign up button -->
                 <button class="sign-up-button" id="sign-up-button">Sign Up</button>
             </td>
