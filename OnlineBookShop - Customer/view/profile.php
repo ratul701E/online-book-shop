@@ -11,6 +11,7 @@
     <a href="customer-home.php">Back</a>
     <a href="edit-profile-info.php">Edit Profile Info</a>
     <a href="manage-address-book.php">Manage Address Book</a>
+    <a href="change-password.php">Change Password</a>
 
     <!-- fahim: profile table -->
     <!-- ratul: info fetch kor -->
