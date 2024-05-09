@@ -1,3 +1,7 @@
+<?php
+    require '../controller/error-message.php'
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +13,11 @@
     <!-- fahim: signup button -->
     Don't have an account yet? <a href="sign-up.php">create one right now!</a>
     
-    <form action="" method="post">
+    <form action="../controller/sign-in-controller.php" method="post">
     <!-- fahim: login table -->
+
+    <!-- message -->
+    <?php if(isset($_GET['status']))  echo get_error_message($_GET['status']) ?>
     <table class="sign-in-table" id="sign-in-table">
         <tr>
             <td>
