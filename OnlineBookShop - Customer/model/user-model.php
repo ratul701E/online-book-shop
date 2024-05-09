@@ -89,4 +89,24 @@ function get_all_users()
     mysqli_close($conn);
     return $users;
 }
+
+function update_user_address($user_id, $password, $new_address) {
+    $conn = conn();
+
+    $query = "SELECT password FROM users WHERE user_id = $user_id";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+    $stored_password = $row['password'];
+
+    if ($password === $stored_password) {
+        $update_query = "UPDATE users SET address = '$new_address' WHERE user_id = $user_id";
+        mysqli_query($conn, $update_query);
+
+        mysqli_close($conn);
+        return true; 
+    } else {
+        mysqli_close($conn);
+        return false;
+    }
+}
 ?>
