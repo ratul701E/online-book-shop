@@ -18,7 +18,7 @@
             <a href="profile.php"><!-- fahim: profile icon --></a>
             <a href="wishlist.php"><!-- fahim: wishlist icon --></a>
             <a href="cart.php"><!-- fahim: cart icon --></a>
-            <a href=""><!-- fahim: cart icon -->Logout</a>
+            <a href=""><!-- ratul: fahim: logout -->Logout</a>
 
             <!-- fahim: call icon --> 1620
         </td>
@@ -43,6 +43,7 @@
         </td>
     </tr>
     <tr>
+        <!-- ratul: daan dik borabor fetch koris td te 5 ta -->
         <td>
             Title <br>
             Author Name <br>
@@ -61,6 +62,7 @@
         </td>
     </tr>
     <tr>
+        <!-- ratul: daan dik borabor fetch koris td te 5 ta -->
         <td>
             Title <br>
             Author Name <br>
