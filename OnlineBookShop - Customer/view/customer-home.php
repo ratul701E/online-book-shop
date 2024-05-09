@@ -30,7 +30,7 @@ $all_books = get_all_books();
         <tr>
             <td>
                 <h2>Best Seller</h2>
-                <a href="view-all-best-sellers.php">View All</a>
+                <a href="view-all-best-seller.php">View All</a>
             </td>
         </tr>
         <tr>
@@ -76,5 +76,4 @@ $all_books = get_all_books();
     </table>
     <?php require_once ('footer.php') ?>
 </body>
-
 </html>
