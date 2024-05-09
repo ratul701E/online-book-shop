@@ -19,7 +19,7 @@
                 Password <br>
                 <input type="text" name="password"><br><br>
                 <!-- fahim: sign in button -->
-                <button class="sign-up-button" id="sign-up-button">Sign In</button>
+                <button class="sign-in-button" id="sign-in-button">Sign In</button>
             </td>
         </tr>
     </table>
