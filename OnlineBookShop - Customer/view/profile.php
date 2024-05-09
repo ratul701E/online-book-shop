@@ -15,7 +15,7 @@
 
     <!-- fahim: profile table -->
     <!-- ratul: info fetch kor -->
-    <table class="profile" id="profile">
+    <table class="profile-table" id="profile-table">
         <tr>
             <td>
                 Fullname:
