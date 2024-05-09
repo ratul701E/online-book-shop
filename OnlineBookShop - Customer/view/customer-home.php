@@ -6,24 +6,7 @@
     <title>Customer Home</title>
 </head>
 <body>
-<!-- fahim: navbar -->
-<table class="navbar" id="navbar">
-    <tr>
-        <td>
-            <!-- fahim: logo -->
-            <img src="" alt="">
-
-            <input type="text" name="search">
-
-            <a href="profile.php"><!-- fahim: profile icon --></a>
-            <a href="wishlist.php"><!-- fahim: wishlist icon --></a>
-            <a href="cart.php"><!-- fahim: cart icon --></a>
-            <a href=""><!-- ratul: fahim: logout -->Logout</a>
-
-            <!-- fahim: call icon --> 1620
-        </td>
-    </tr>
-</table>
+<?php require_once('navbar.php') ?>
 <!-- fahim: banner -->
 <table class="banner" id="banner">
     <tr>
@@ -71,32 +54,6 @@
         </td>
     </tr>
 </table>
-
-<!-- fahim: footer -->
-<table class="footer" id="footer">
-    <tr>
-        <td>
-            <!-- fahim: logo -->
-            <img src="" alt="">
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="">Contact</a>
-            <a href="">Shop</a>
-            <a href="">Support</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <!-- fahim: facebook icon -->
-            <img src="" alt="">
-            <!-- fahim: youtube icon -->
-            <img src="" alt="">
-            <!-- fahim: instagram icon -->
-            <img src="" alt="">
-        </td>
-    </tr>
-</table>
+<?php require_once('footer.php') ?>
 </body>
 </html>
