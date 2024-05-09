@@ -1,3 +1,11 @@
+<?php
+    require('../model/book-model.php');
+
+    $best_sellers = get_all_books();
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

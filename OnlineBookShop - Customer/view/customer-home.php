@@ -1,7 +1,8 @@
 <?php
 require '../model/book-model.php';
 
-$all_books = get_all_books();
+$all_books = array_slice(get_all_books(), 0, 5);
+
 
 ?>
 
