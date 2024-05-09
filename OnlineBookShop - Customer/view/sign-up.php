@@ -11,7 +11,7 @@
     <a href="sign-in.php">Back</a>
 
     <!-- fahim: registration form -->
-    <form action="" method="post">
+    <form action="../controller/sign-up-controller.php" method="post">
     <table class="registration-table" id="registration-table">
         <tr>
             <td>
@@ -22,7 +22,7 @@
                 Mobile Number <br>
                 <input type="text" name="mobile_number"><br><br>
                 Address <br>
-                <textarea type="text" name="Address"><br><br>
+                <textarea type="text" name="Address"> </textarea><br><br>
                 Username <br>
                 <input type="text" name="username"><br><br>
                 Password <br>
