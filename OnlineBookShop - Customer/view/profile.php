@@ -18,12 +18,12 @@
     <table class="profile-table" id="profile-table">
         <tr>
             <td>
-                Fullname:
-                Email:
-                Mobile Number:
-                Address:
-                Username:
-                NID: 
+                Fullname: Dummy Value
+                Email: Dummy Value
+                Mobile Number: Dummy Value
+                Address: Dummy Value
+                Username: Dummy Value
+                NID: Dummy Value
             </td>
         </tr>
     </table>
