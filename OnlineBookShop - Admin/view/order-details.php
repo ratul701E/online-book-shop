@@ -8,18 +8,16 @@
 <body>
 <?php require_once('navbar.php') ?>
 <?php require_once('side-panel.php') ?>
-    <!-- fahim: book table -->
+    <!-- fahim: order details table -->
     <!-- ratul: info fetch kor -->
-    <table class="book-table" id="book-table">
+    <table class="order-details-table" id="order-details-table">
         <tr>
             <td>
-                Book Title: 
-                Author:  
-                Genre: 
-                ISBN: 
-                Price: 
-                Description: 
-                Stock Quantity: 
+                Username: 
+                Order ID: 
+                Order Date: 
+                Total Amount:
+                Order Status: 
             </td>
         </tr>
     </table>
