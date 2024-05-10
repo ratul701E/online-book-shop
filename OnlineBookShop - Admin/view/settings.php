@@ -1,3 +1,9 @@
+<?php
+
+session_start();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +16,7 @@
 <?php require_once('side-panel.php') ?>
 
     <!-- fahim: sobi laga  -->
-    <a href="edit-profile-info.php">Edit Profile Info</a>
+    <a href="edit-profile-info.php?user_id=<?=$_SESSION['user']['user_id']?>">Edit Profile Info</a>
     <a href="change-password.php">Change Password</a>
 
 <?php require_once('footer.php') ?>

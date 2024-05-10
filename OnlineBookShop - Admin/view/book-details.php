@@ -1,3 +1,10 @@
+<?php
+    require('../model/book-model.php');
+
+    $book = get_book_by_id($_GET['book_id']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,13 +20,13 @@
     <table class="book-table" id="book-table">
         <tr>
             <td>
-                Book Title: 
-                Author:  
-                Genre: 
-                ISBN: 
-                Price: 
-                Description: 
-                Stock Quantity: 
+                Book Title: <?=$book['title']?>
+                Author: <?=$book['title']?>
+                Genre: <?=$book['genre']?>
+                ISBN: <?=$book['isbn']?>
+                Price: <?=$book['price']?>
+                Description: <?=$book['description']?>
+                Stock Quantity: <?=$book['stock_quantity']?>
             </td>
         </tr>
     </table>

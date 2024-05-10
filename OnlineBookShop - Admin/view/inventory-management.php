@@ -1,3 +1,10 @@
+<?php
+    require('../model/book-model.php');
+
+    $books = get_all_books();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -26,14 +33,20 @@
             <td> Stock </td>
             <td colspan="3"> Action </td>
         </tr>
-        <tr>
-            <td> 1 </td>
-            <td> Rianul Amin </td>
-            <td> 5 </td>
-            <td> <a href="book-details.php">View Details</a> </td>
-            <td> <a href="edit-book-info.php">Update Information</a> </td>
-            <td> <a href="">Delete Book</a> </td>
-        </tr>
+        <?php
+                foreach($books as $book) {
+                    ?>  
+                        <tr>
+                            <td><?=$book['book_id']?></td>
+                            <td><?=$book['title']?></td>
+                            <td><?=$book['stock_quantity']?></td>
+                            <td><a href="book-details.php?book_id=<?=$book['book_id']?>">View</a></td>
+                            <td><a href="edit-book-info.php?book_id=<?=$book['book_id']?>">Edit</a></td>
+                            <td><a href="../controller/remove-book-controller.php?book_id=<?=$book['book_id']?>">Remove</a></td>
+                        </tr>
+                    <?php
+                }
+            ?>
     </table>
 <?php require_once('footer.php') ?>
 </body>
