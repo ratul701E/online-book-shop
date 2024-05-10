@@ -24,7 +24,7 @@
             </td>
             <td>
                 <!-- ratul: employee create kor notun -->
-                <a href="add-user.php">Add Manager</a>
+                <a href="add-user.php">Add Employee</a>
             </td>
         </tr>
         <tr>
