@@ -1,3 +1,10 @@
+<?php
+    require('../model/user-model.php');
+    
+    $managers = get_users_by_role("Customer");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,26 +18,35 @@
 <!-- fahim: customer table -->
 <!-- ratul: fetch kor -->
     <table class="customers-table" id="customers-table">
-        <tr>
-            <td colspan="6">
+    <tr>
+            <td colspan="5">
                 Customer Details
+            </td>
+            <td>
+                <!-- ratul: employee create kor notun -->
+                <a href="add-user.php">Add Manager</a>
             </td>
         </tr>
         <tr>
-            <td> Customer ID </td>
+            <td> ID </td>
             <td> Fullname </td>
             <td> Username </td>
             <td colspan="3"> Action </td>
         </tr>
-        <tr>
-            <td> 1 </td>
-            <td> Rianul Amin </td>
-            <td> ppsppspsspss </td>
-            <!-- ratul: eki file shobar leiga oi file gulay id pass koira dis edit view ban -->
-            <td> <a href="view-profile.php">View Details</a> </td>
-            <td> <a href="edit-profile-info.php">Update Information</a> </td>
-            <td> <a href="">Ban Customer</a> </td>
-        </tr>
+        <?php
+            foreach($managers as $user) {
+                ?>
+                    <tr>
+                        <td> <?= $user['user_id'] ?> </td>
+                        <td> <?= $user['full_name'] ?> </td>
+                        <td> <?= $user['username'] ?> </td>
+                        <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">View Details</a> </td>
+                        <td> <a href="edit-profile-info.php?user_id=<?= $user['user_id'] ?>">Update Information</a> </td>
+                        <td> <a href="../controller/ban-user-controller.php?user_id=<?=$user['user_id']?>">Ban Customer</a> </td>
+                    </tr>
+                <?php
+            }
+        ?>
     </table>
 <?php require_once('footer.php') ?>
 </body>

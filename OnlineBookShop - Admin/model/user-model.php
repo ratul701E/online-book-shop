@@ -44,6 +44,30 @@ function update_password($user_id, $current_password, $new_password) {
     }
 }
 
+function get_users_by_role($role) {
+    $conn = conn();
+    $query = "SELECT * FROM users WHERE role = '$role' and status = 'Active'";
+    $result = mysqli_query($conn, $query);
+    $users = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_close($conn);
+    return $users;
+}
+
+function change_user_role($user_id, $new_role) {
+    $conn = conn();
+    $query = "UPDATE users SET role = '$new_role' WHERE user_id = $user_id";
+    mysqli_query($conn, $query);
+    mysqli_close($conn);
+}
+function ban_user($user_id) {
+    $conn = conn();
+    $query = "UPDATE users SET status = 'Inactive' WHERE user_id = $user_id";
+    mysqli_query($conn, $query);
+    mysqli_close($conn);
+}
+
+
+
 function get_user_by_username($username)
 {
     $conn = conn();

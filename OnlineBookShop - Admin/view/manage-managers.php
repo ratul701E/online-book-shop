@@ -1,3 +1,10 @@
+<?php
+    require('../model/user-model.php');
+    
+    $managers = get_users_by_role("Manager");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,20 +28,26 @@
             </td>
         </tr>
         <tr>
-            <td> Customer ID </td>
+            <td> ID </td>
             <td> Fullname </td>
             <td> Username </td>
             <td colspan="3"> Action </td>
         </tr>
-        <tr>
-            <td> 1 </td>
-            <td> Rianul Amin </td>
-            <td> ppsppspsspss </td>
-            <td> <a href="view-profile.php">View Details</a> </td>
-            <td> <a href="edit-profile-info.php">Update Information</a> </td>
-            <td> <a href="">Ban Manager</a> </td>
-            <td> <a href="">Demote to Employee</a> </td>
-        </tr>
+        <?php
+            foreach($managers as $user) {
+                ?>
+                    <tr>
+                        <td> <?= $user['user_id'] ?> </td>
+                        <td> <?= $user['full_name'] ?> </td>
+                        <td> <?= $user['username'] ?> </td>
+                        <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">View Details</a> </td>
+                        <td> <a href="edit-profile-info.php?user_id=<?= $user['user_id'] ?>">Update Information</a> </td>
+                        <td> <a href="../controller/ban-user-controller.php?user_id=<?=$user['user_id']?>">Ban Manager</a> </td>
+                        <td> <a href="../controller/change-user-role-controller.php?user_id=<?=$user['user_id']?>&role=Employee">Demote to Employee</a> </td>
+                    </tr>
+                <?php
+            }
+        ?>
     </table>
 <?php require_once('footer.php') ?>
 </body>

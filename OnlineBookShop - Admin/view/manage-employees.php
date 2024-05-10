@@ -1,3 +1,10 @@
+<?php
+    require('../model/user-model.php');
+    
+    $employees = get_users_by_role("Employee");
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,30 +18,36 @@
 <!-- fahim: manager table -->
 <!-- ratul: fetch kor -->
     <table class="employees-table" id="employees-table">
-        <tr>
-            <td colspan="4">
+    <tr>
+            <td colspan="5">
                 Employee Details
             </td>
             <td>
                 <!-- ratul: employee create kor notun -->
-                <a href="add-user.php">Add Employee</a>
+                <a href="add-user.php">Add Manager</a>
             </td>
         </tr>
         <tr>
-            <td> Customer ID </td>
+            <td> ID </td>
             <td> Fullname </td>
             <td> Username </td>
             <td colspan="3"> Action </td>
         </tr>
-        <tr>
-            <td> 1 </td>
-            <td> Rianul Amin </td>
-            <td> ppsppspsspss </td>
-            <td> <a href="view-profile.php">View Details</a> </td>
-            <td> <a href="edit-profile-info.php">Update Information</a> </td>
-            <td> <a href="">Ban Employee</a> </td>
-            <td> <a href="">Promote to Manager</a> </td>
-        </tr>
+        <?php
+            foreach($employees as $user) {
+                ?>
+                    <tr>
+                        <td> <?= $user['user_id'] ?> </td>
+                        <td> <?= $user['full_name'] ?> </td>
+                        <td> <?= $user['username'] ?> </td>
+                        <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">View Details</a> </td>
+                        <td> <a href="edit-profile-info.php?user_id=<?= $user['user_id'] ?>">Update Information</a> </td>
+                        <td> <a href="../controller/ban-user-controller.php?user_id=<?=$user['user_id']?>">Ban Employee</a> </td>
+                        <td> <a href="../controller/change-user-role-controller.php?user_id=<?=$user['user_id']?>&role=Manager">Promote to Manager</a> </td>
+                    </tr>
+                <?php
+            }
+        ?>
     </table>
 <?php require_once('footer.php') ?>
 </body>

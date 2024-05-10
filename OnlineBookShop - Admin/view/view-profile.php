@@ -1,3 +1,11 @@
+<?php
+    require('../model/user-model.php');
+
+    $user = get_user_by_id($_GET['user_id']);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,12 +21,12 @@
     <table class="profile-table" id="profile-table">
         <tr>
             <td>
-                Fullname: 
-                Email: 
-                Mobile Number: 
-                Address: 
-                Username: 
-                NID: 
+                Fullname: <?= $user['full_name'] ?>
+                Email: <?= $user['email'] ?>
+                Mobile Number: <?= $user['mobile_number'] ?>
+                Address: <?= $user['address'] ?>
+                Username: <?= $user['username'] ?>
+                NID: <?= $user['nid'] ?>
             </td>
         </tr>
     </table>

@@ -2,7 +2,7 @@
     require_once('../model/user-model.php');
     require_once '../controller/status-message.php';
     session_start();
-    $user = $_SESSION['user'];
+    $user = get_user_by_id($_GET['user_id']);
 
 ?>
 
@@ -18,9 +18,9 @@
 <?php require_once('side-panel.php') ?>
 
     <!-- fahim: edit profile table -->
-    <!-- ratul: info fetch kor : DONE-->
-    <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
+    <br><?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
     <form action="../controller/edit-profile-info-controller.php" method="post">
+        <input type="hidden" name="user_id" value="<?= $user['user_id'] ?>">
         <table class="edit-profile-table" id="edit-profile-table">
             <tr>
                 <td>
