@@ -7,6 +7,11 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // Validate 
 
+    if (empty($username) || empty($password)) {
+        header("Location: ../view/sign-in.php?status=2"); 
+        exit();
+    }
+
     if (check_user_existence($username, $password)) {
         session_start();
 

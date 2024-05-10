@@ -1,3 +1,2 @@
 <?php 
-    header('location: view/sign-in.php');
-    //amar nam fahim
+    header('location: view/sign-in.php');    

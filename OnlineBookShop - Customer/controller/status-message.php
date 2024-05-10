@@ -36,6 +36,8 @@ function get_status_message($status)
             return '<span class="success-message">Posted.</span>';
         case 17:
             return '<span class="success-message">Order Placed.</span>';
+        case 18:
+            return '<span class="success-message">Password do not match.</span>';
         default:
             return '<span class="error-message">Unknown error occurred</span>';
     }
