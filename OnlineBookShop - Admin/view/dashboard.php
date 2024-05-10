@@ -3,20 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Admin Home</title>
+    <title>Dashboard</title>
 </head>
 <body>
 <?php require_once('navbar.php') ?>
 
-<!-- fahim: admin er left navigation bar -->
-    <select name="options" onchange="location = this.value">
-        <option disabled selected hidden> Admin Panel </option>
-        <option value="view/dashboard.php">Dashboard</option>
-        <option value="view/user-management.php">User Management</option>
-        <option value="view/inventory-management.php">Inventory Management</option>
-        <option value="view/order-management.php">Order Management</option>
-        <option value="view/reporting-and-analytics.php">Reporting and Analytics</option>
-    </select>
+<?php require_once('side-panel.php') ?>
 
     <!-- ratul: fetch kor -->
     Invoices 
