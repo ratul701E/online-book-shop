@@ -26,6 +26,10 @@ function get_status_message($status)
             return '<span class="error-message">Failed to Delete.</span>';
         case 12:
             return '<span class="error-message">Failed to add.</span>';
+        case 13:
+            return '<span class="success-message">Added to cart successfully.</span>';
+        case 14:
+            return '<span class="error-message">Deleted from cart.</span>';
         default:
             return '<span class="error-message">Unknown error occurred</span>';
     }

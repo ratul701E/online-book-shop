@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    require '../controller/status-message.php';
+    $cart = $_SESSION['cart'];
+    $total_price = 0;
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,22 +22,32 @@
     <table class="cart-table" id="cart-table">
         <tr>
             <td>
-                <h2>Cart</h2>
+                <h2>Cart</h2> <br>
+                <!-- msg -->
+                <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?> 
             </td>
         </tr>
         <tr>
-            <td>
-                Title: <br>
-                Author Name: <br>
-                <img src="" alt="x"><br>
-                Taka: 
-                <!-- ratul: remove koris cart erte  -->
-                <a href="">Remove from Cart</a>
-            </td>
+            <?php
+                foreach($cart as $book) {
+                    $total_price += $book['price'];
+                    ?>
+                        <td>
+                            Title: <?= $book['title'] ?><br>
+                            Author Name: <?= $book['author'] ?><br>
+                            <img src="<?= $book['imgdir'] ?>" alt="x"><br>
+                            Taka: <?= $book['price'] ?>
+                            <!-- ratul: remove koris cart erte  -->
+                            <a href="../controller/add-remove-book-from-cart.php?book_id=<?= $book['book_id'] ?>&action=2&return_url=cart.php?">Remove from Cart</a>
+                        </td>
+                    <?php
+                }
+
+            ?>
         </tr>
     </table>
     <!-- ratul: total price fetch koris  -->
-    <button><a href="checkout.php">Checkout [Total Price]</a></button>
+    <button><a href="checkout.php">Checkout [<?=$total_price?>]</a></button>
     <?php require_once ('footer.php') ?>
 </body>
 </html>

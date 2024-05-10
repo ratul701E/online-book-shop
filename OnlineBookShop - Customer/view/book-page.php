@@ -1,7 +1,9 @@
 <?php
-    session_start();
+    require '../controller/status-message.php';
     require('../model/book-model.php');
     require('../model/wishlist-model.php');
+    require '../controller/cart-essential-functions.php';
+
     if(!isset($_GET['book_id'])) {
         $_GET['book_id'] = 1;
     }
@@ -38,8 +40,24 @@
                 <strike><?= $book['price'] ?></strike> Tk <?= $book['price'] - 20 ?> (20 Taka Off!) <br>
                 In Stock (Only <?= $book['stock_quantity'] ?> Copies left) <br>
                 Order before out of stock <br><br>
-                <button><a href="">Add to Cart</a></button> <br>
+
+                <!-- msg -->
+                <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?> <br>
+                
+                <?php
+                    if(is_exist_in_cart($book['book_id'])) {
+                        ?>
+                            Book already in the <a href="cart.php">Cart</a> <br>
+                        <?php
+                    } else {
+                        ?>
+                            <button><a href="../controller/add-remove-book-from-cart.php?book_id=<?= $book['book_id'] ?>&action=1&return_url=book-page.php?book_id=<?=$book['book_id']?>">Add to Cart</a></button> <br>
+                        <?php
+                    }
+                ?>
+                
                 <!-- fahim: icon gular leiga img tag disi -->
+                
                 <img src="" alt=""> The opportunity to pay the price by getting the book <img src="" alt=""> Exchange opportunity within 7 days <br>
                 <?php
                     if(is_book_in_wishlist($_SESSION['user']['user_id'], $book['book_id'])) {
