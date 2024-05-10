@@ -12,7 +12,7 @@
 <!-- ratul: fetch kor -->
     <table class="employees-table" id="employees-table">
         <tr>
-            <td colspan="5">
+            <td colspan="4">
                 Employee Details
             </td>
             <td>
@@ -33,6 +33,7 @@
             <td> <a href="view-profile.php">View Details</a> </td>
             <td> <a href="edit-profile-info.php">Update Information</a> </td>
             <td> <a href="">Ban Employee</a> </td>
+            <td> <a href="">Promote to Manager</a> </td>
         </tr>
     </table>
 <?php require_once('footer.php') ?>

@@ -17,7 +17,7 @@
             </td>
             <td>
                 <!-- ratul: employee create kor notun -->
-                <a href="add-user.php">Add Book</a>
+                <a href="add-book.php">Add Book</a>
             </td>
         </tr>
         <tr>
@@ -30,8 +30,8 @@
             <td> 1 </td>
             <td> Rianul Amin </td>
             <td> 5 </td>
-            <td> <a href="view-profile.php">View Details</a> </td>
-            <td> <a href="edit-profile-info.php">Update Information</a> </td>
+            <td> <a href="book-details.php">View Details</a> </td>
+            <td> <a href="edit-book-info.php">Update Information</a> </td>
             <td> <a href="">Delete Book</a> </td>
         </tr>
     </table>

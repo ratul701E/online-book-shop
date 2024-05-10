@@ -33,6 +33,7 @@
             <td> <a href="view-profile.php">View Details</a> </td>
             <td> <a href="edit-profile-info.php">Update Information</a> </td>
             <td> <a href="">Ban Manager</a> </td>
+            <td> <a href="">Demote to Employee</a> </td>
         </tr>
     </table>
 <?php require_once('footer.php') ?>

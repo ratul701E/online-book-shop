@@ -8,7 +8,6 @@
             <input type="text" name="search">
 
             <!-- fahim: settings icon --> <a href="settings.php">Settings</a>
-            <!-- fahim: notifications icon --> <a href="notifications.php">Notifications</a>
 
             <!-- fahim: oije navbar er oida bucchos e to naam mone nai -->
             <!-- ratul: information fetch kor logout redirect kor -->

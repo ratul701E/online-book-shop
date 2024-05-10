@@ -4,6 +4,5 @@
     <option value="view/dashboard.php">Dashboard</option>
     <option value="view/user-management.php">User Management</option>
     <option value="view/inventory-management.php">Inventory Management</option>
-    <option value="view/order-management.php">Order Management</option>
     <option value="view/reporting-and-analytics.php">Reporting and Analytics</option>
 </select>
