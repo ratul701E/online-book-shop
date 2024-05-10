@@ -1,3 +1,12 @@
+<?php
+    require('../model/order-model.php');
+
+    $orders_count = get_order_counts();
+    $total_money = get_total_money_by_status();
+    $all_orders = get_all_orders();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,16 +20,16 @@
 
     <!-- ratul: fetch kor -->
     Invoices 
-    Total Earning: TK. 21000 
-    Pending: TK. 1000
+    Total Earning: <?= $total_money['completed_money'] ?>  TK. 
+    Pending: TK. <?= $total_money['pending_money'] ?> 
     Overdue: TK. 1000 <!-- ratul: hardcoded -->
     Essentials: TK. 1000 <!-- ratul: hardcoded -->
 
     <!-- ratul: fetch kor -->
-    Total Orders: 
-    Orders Pending: 
-    Completed Orders:  
-    Cancelled Orders: 
+    Total Orders: <?= $orders_count['total_count'] ?>
+    Orders Pending: <?= $orders_count['pending_count'] ?>
+    Completed Orders: <?= $orders_count['completed_count'] ?>
+    Cancelled Orders: <?= $orders_count['cancelled_count'] ?>
 
     <!-- ratul: fetch kor -->
     <!-- fahim: last details table -->
@@ -37,13 +46,20 @@
             <td> Total </td>
             <td> Action </td>
         </tr>
-        <tr>
-            <td> 1 </td>
-            <td> delivered </td>
-            <td> ajke </td>
-            <td> 200 </td>
-            <td> <a href="order-details.php">View Details</a> </td>
-        </tr>
+        <?php
+            foreach($all_orders as $order){
+                ?>
+                    <tr>
+                        <td> <?= $order['order_id'] ?> </td>
+                        <td> <?= $order['status'] ?> </td>
+                        <td> <?= $order['order_date'] ?> </td>
+                        <td> <?= $order['total_price'] ?> </td>
+                        <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
+                    </tr>
+                <?php
+            }
+
+        ?>
     </table>
 
 <?php require_once('footer.php') ?>
