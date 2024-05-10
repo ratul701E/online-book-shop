@@ -7,7 +7,6 @@
 </head>
 <body>
 <?php require_once('navbar.php') ?>
-
 <?php require_once('side-panel.php') ?>
 
     <!-- ratul: fetch kor -->
