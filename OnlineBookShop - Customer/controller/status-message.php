@@ -34,6 +34,8 @@ function get_status_message($status)
             return '<span class="success-message">Rating added.</span>';
         case 16:
             return '<span class="success-message">Posted.</span>';
+        case 17:
+            return '<span class="success-message">Order Placed.</span>';
         default:
             return '<span class="error-message">Unknown error occurred</span>';
     }

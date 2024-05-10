@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 10, 2024 at 12:24 AM
+-- Generation Time: May 10, 2024 at 06:30 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -58,25 +58,20 @@ INSERT INTO `books` (`book_id`, `title`, `author`, `genre`, `isbn`, `price`, `de
 
 CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `order_date` timestamp NOT NULL DEFAULT current_timestamp(),
-  `total_amount` decimal(10,2) NOT NULL DEFAULT 0.00,
-  `status` enum('Pending','Processing','Shipped','Delivered') NOT NULL DEFAULT 'Pending'
+  `user_id` int(11) DEFAULT NULL,
+  `book_id` int(11) DEFAULT NULL,
+  `quantity` int(11) DEFAULT NULL,
+  `total_price` decimal(10,2) DEFAULT NULL,
+  `order_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
--- --------------------------------------------------------
-
 --
--- Table structure for table `order_details`
+-- Dumping data for table `orders`
 --
 
-CREATE TABLE `order_details` (
-  `order_detail_id` int(11) NOT NULL,
-  `order_id` int(11) NOT NULL,
-  `book_id` int(11) NOT NULL,
-  `quantity` int(11) NOT NULL DEFAULT 0,
-  `subtotal` decimal(10,2) NOT NULL DEFAULT 0.00
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+INSERT INTO `orders` (`order_id`, `user_id`, `book_id`, `quantity`, `total_price`, `order_date`) VALUES
+(1, 1, 1, 1, 0.00, '2024-05-10 15:36:08'),
+(2, 1, 2, 1, 10.99, '2024-05-10 16:29:31');
 
 -- --------------------------------------------------------
 
@@ -96,17 +91,60 @@ CREATE TABLE `payment_methods` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `reviews`
+-- Table structure for table `rating`
 --
 
-CREATE TABLE `reviews` (
-  `review_id` int(11) NOT NULL,
-  `book_id` int(11) NOT NULL,
-  `user_id` int(11) NOT NULL,
-  `rating` int(11) NOT NULL DEFAULT 0,
-  `comment` text NOT NULL DEFAULT '',
-  `date` timestamp NOT NULL DEFAULT current_timestamp()
+CREATE TABLE `rating` (
+  `rating_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `book_id` int(11) DEFAULT NULL,
+  `rating` int(11) DEFAULT NULL,
+  `rating_date` timestamp NOT NULL DEFAULT current_timestamp()
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `rating`
+--
+
+INSERT INTO `rating` (`rating_id`, `user_id`, `book_id`, `rating`, `rating_date`) VALUES
+(1, 1, 1, 5, '2024-05-10 14:43:18'),
+(2, 1, 1, 1, '2024-05-10 15:16:54'),
+(3, 1, 1, 5, '2024-05-10 15:17:05'),
+(4, 1, 1, 5, '2024-05-10 15:17:11'),
+(5, 1, 1, 5, '2024-05-10 15:17:13'),
+(6, 1, 1, 5, '2024-05-10 15:17:15'),
+(7, 1, 1, 5, '2024-05-10 15:17:17'),
+(8, 1, 1, 5, '2024-05-10 15:17:18'),
+(9, 1, 1, 5, '2024-05-10 15:17:20'),
+(10, 1, 1, 5, '2024-05-10 15:17:22'),
+(11, 1, 1, 1, '2024-05-10 15:17:24'),
+(12, 1, 1, 1, '2024-05-10 15:17:25'),
+(13, 1, 1, 1, '2024-05-10 15:17:27'),
+(14, 1, 2, 5, '2024-05-10 16:29:45');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `review`
+--
+
+CREATE TABLE `review` (
+  `review_id` int(11) NOT NULL,
+  `user_id` int(11) DEFAULT NULL,
+  `book_id` int(11) DEFAULT NULL,
+  `review_text` text DEFAULT NULL,
+  `review_date` timestamp NOT NULL DEFAULT current_timestamp()
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `review`
+--
+
+INSERT INTO `review` (`review_id`, `user_id`, `book_id`, `review_text`, `review_date`) VALUES
+(1, 1, 1, 'Are osthir book', '2024-05-10 15:46:08'),
+(2, 1, 1, 'sex', '2024-05-10 15:54:05'),
+(3, 1, 1, 'osthir', '2024-05-10 15:54:40'),
+(4, 1, 1, '0000000', '2024-05-10 15:55:19');
 
 -- --------------------------------------------------------
 
@@ -151,8 +189,7 @@ CREATE TABLE `wishlist` (
 --
 
 INSERT INTO `wishlist` (`wishlist_id`, `user_id`, `book_id`) VALUES
-(2, 1, 1),
-(6, 1, 5);
+(9, 1, 1);
 
 --
 -- Indexes for dumped tables
@@ -169,14 +206,7 @@ ALTER TABLE `books`
 --
 ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_id`),
-  ADD KEY `user_id` (`user_id`);
-
---
--- Indexes for table `order_details`
---
-ALTER TABLE `order_details`
-  ADD PRIMARY KEY (`order_detail_id`),
-  ADD KEY `order_id` (`order_id`),
+  ADD KEY `user_id` (`user_id`),
   ADD KEY `book_id` (`book_id`);
 
 --
@@ -187,12 +217,20 @@ ALTER TABLE `payment_methods`
   ADD KEY `user_id` (`user_id`);
 
 --
--- Indexes for table `reviews`
+-- Indexes for table `rating`
 --
-ALTER TABLE `reviews`
+ALTER TABLE `rating`
+  ADD PRIMARY KEY (`rating_id`),
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `book_id` (`book_id`);
+
+--
+-- Indexes for table `review`
+--
+ALTER TABLE `review`
   ADD PRIMARY KEY (`review_id`),
-  ADD KEY `book_id` (`book_id`),
-  ADD KEY `user_id` (`user_id`);
+  ADD KEY `user_id` (`user_id`),
+  ADD KEY `book_id` (`book_id`);
 
 --
 -- Indexes for table `users`
@@ -222,13 +260,7 @@ ALTER TABLE `books`
 -- AUTO_INCREMENT for table `orders`
 --
 ALTER TABLE `orders`
-  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT;
-
---
--- AUTO_INCREMENT for table `order_details`
---
-ALTER TABLE `order_details`
-  MODIFY `order_detail_id` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT for table `payment_methods`
@@ -237,10 +269,16 @@ ALTER TABLE `payment_methods`
   MODIFY `payment_method_id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
--- AUTO_INCREMENT for table `reviews`
+-- AUTO_INCREMENT for table `rating`
 --
-ALTER TABLE `reviews`
-  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT;
+ALTER TABLE `rating`
+  MODIFY `rating_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=15;
+
+--
+-- AUTO_INCREMENT for table `review`
+--
+ALTER TABLE `review`
+  MODIFY `review_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 
 --
 -- AUTO_INCREMENT for table `users`
@@ -252,7 +290,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `wishlist`
 --
 ALTER TABLE `wishlist`
-  MODIFY `wishlist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+  MODIFY `wishlist_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- Constraints for dumped tables
@@ -262,14 +300,8 @@ ALTER TABLE `wishlist`
 -- Constraints for table `orders`
 --
 ALTER TABLE `orders`
-  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
-
---
--- Constraints for table `order_details`
---
-ALTER TABLE `order_details`
-  ADD CONSTRAINT `order_details_ibfk_1` FOREIGN KEY (`order_id`) REFERENCES `orders` (`order_id`),
-  ADD CONSTRAINT `order_details_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `books` (`book_id`);
+  ADD CONSTRAINT `orders_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  ADD CONSTRAINT `orders_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `books` (`book_id`);
 
 --
 -- Constraints for table `payment_methods`
@@ -278,11 +310,18 @@ ALTER TABLE `payment_methods`
   ADD CONSTRAINT `payment_methods_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
 
 --
--- Constraints for table `reviews`
+-- Constraints for table `rating`
 --
-ALTER TABLE `reviews`
-  ADD CONSTRAINT `reviews_ibfk_1` FOREIGN KEY (`book_id`) REFERENCES `books` (`book_id`),
-  ADD CONSTRAINT `reviews_ibfk_2` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`);
+ALTER TABLE `rating`
+  ADD CONSTRAINT `rating_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  ADD CONSTRAINT `rating_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `books` (`book_id`);
+
+--
+-- Constraints for table `review`
+--
+ALTER TABLE `review`
+  ADD CONSTRAINT `review_ibfk_1` FOREIGN KEY (`user_id`) REFERENCES `users` (`user_id`),
+  ADD CONSTRAINT `review_ibfk_2` FOREIGN KEY (`book_id`) REFERENCES `books` (`book_id`);
 
 --
 -- Constraints for table `wishlist`

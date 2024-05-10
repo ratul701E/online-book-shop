@@ -153,7 +153,6 @@
                         }
                     ?>
                 </table>
-                <!-- ratul: ei boida kinna thakle review post korte parbo -->
                 <?php
                     if(has_ordered_book($_SESSION['user']['user_id'], $book['book_id'])) {
                         ?>
