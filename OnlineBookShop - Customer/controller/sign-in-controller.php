@@ -19,6 +19,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         }
         else if($user['role'] == "Customer") {
+            //inititate a cart for customer
+            $_SESSION['cart'] = array();
             header("Location: ../view/customer-home.php");
             exit();
         }

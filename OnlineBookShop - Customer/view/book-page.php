@@ -1,3 +1,15 @@
+<?php
+    session_start();
+    require('../model/book-model.php');
+    require('../model/wishlist-model.php');
+    if(!isset($_GET['book_id'])) {
+        $_GET['book_id'] = 1;
+    }
+
+    $book = get_book_by_id($_GET['book_id']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,25 +25,34 @@
         <tr>
             <td>
                 <!-- fahim: boi er sobi -->
-                <img src="" alt="">
+                <img src="<?= $book['imgdir'] ?>" alt="">
             </td>
             <td>
-                <!-- ratul: fetch kor -->
                 <!-- fahim: formatting kor -->
-                Book Title <br>
-                by Author Name <br>
-                ISBN: isbn <br>
-                Genre: genre <br>
+                <?= $book['title'] ?><br>
+                by <?= $book['author'] ?> <br>
+                ISBN: <?= $book['isbn'] ?> <br>
+                Genre: <?= $book['genre'] ?> <br>
                 4 Ratings | 2 Reviews <br>
-                Description: description <br>
-                <strike>Price</strike> Tk 1200 (20 Taka Off!) <br>
-                In Stock (Only 3 Copies left) <br>
+                Description: <?= $book['description'] ?> <br>
+                <strike><?= $book['price'] ?></strike> Tk <?= $book['price'] - 20 ?> (20 Taka Off!) <br>
+                In Stock (Only <?= $book['stock_quantity'] ?> Copies left) <br>
                 Order before out of stock <br><br>
                 <button><a href="">Add to Cart</a></button> <br>
                 <!-- fahim: icon gular leiga img tag disi -->
                 <img src="" alt=""> The opportunity to pay the price by getting the book <img src="" alt=""> Exchange opportunity within 7 days <br>
-                <!-- ratul: wishlist e add kor -->
-                <img src="" alt=""><a href="">Add to Wishlist</a>
+                <?php
+                    if(is_book_in_wishlist($_SESSION['user']['user_id'], $book['book_id'])) {
+                        ?>
+                            Book already in the <a href="wishlist.php">wishlist</a>
+                        <?php
+                    } else {
+                        ?>
+                            <img src="" alt=""><a href="../controller/add-book-to-wishlist-controller.php?book_id=<?= $book['book_id'] ?>">Add to Wishlist</a>
+                        <?php
+                    }
+                ?>
+                
             </td>
         </tr>
     </table>

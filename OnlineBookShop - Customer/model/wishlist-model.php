@@ -25,4 +25,14 @@ function get_wishlist($user_id) {
     return $wishlist;
 }
 
+function is_book_in_wishlist($user_id, $book_id) {
+    $conn = conn();
+    $query = "SELECT COUNT(*) AS count FROM wishlist WHERE user_id = $user_id AND book_id = $book_id";
+    $result = mysqli_query($conn, $query);
+    $row = mysqli_fetch_assoc($result);
+    $count = $row['count'];
+    mysqli_close($conn);
+    return $count > 0; // Returns true if the book is in the wishlist, false otherwise
+}
+
 ?>
