@@ -1,7 +1,11 @@
 <?php
     require '../controller/status-message.php';
+    require('../model/user-model.php');
     require('../model/book-model.php');
     require('../model/wishlist-model.php');
+    require('../model/rating-model.php');
+    require('../model/order-model.php');
+    require('../model/review-model.php');
     require '../controller/cart-essential-functions.php';
 
     if(!isset($_GET['book_id'])) {
@@ -9,6 +13,8 @@
     }
 
     $book = get_book_by_id($_GET['book_id']);
+    $related_books = array_slice(get_books_by_genre($book['genre']), 0, 5);
+    $reviews = get_reviews_for_book($book['book_id']);
 
 ?>
 
@@ -23,6 +29,8 @@
 <!-- fahim: back button  -->
 <a href="customer-home.php">Back</a>
 <?php require_once ('navbar.php') ?>
+<!-- msg -->
+<?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?> <br>
     <table>
         <tr>
             <td>
@@ -40,9 +48,6 @@
                 <strike><?= $book['price'] ?></strike> Tk <?= $book['price'] - 20 ?> (20 Taka Off!) <br>
                 In Stock (Only <?= $book['stock_quantity'] ?> Copies left) <br>
                 Order before out of stock <br><br>
-
-                <!-- msg -->
-                <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?> <br>
                 
                 <?php
                     if(is_exist_in_cart($book['book_id'])) {
@@ -75,61 +80,97 @@
         </tr>
     </table>
     <!-- fahim: related products -->
-    <!-- ratul: genre match kore emon 5 ta fetch koira nia ay -->
     <table class="related-products-table" id="related-products-table">
         <tr>
             <td>
                 <h2>Related Products</h2>
-                <!-- ratul: genre da oi file e patha and oi file e same genre er shob dia table populate kor -->
                 <a href="view-all-related-products.php">View All</a>
             </td>
         </tr>
         <tr>
-            <!-- ratul: daan dik borabor fetch koris td te 5 ta jedir genre match kore -->
-            <td>
-                Title: <br>
-                Author Name:   <br>
-                <img src="" alt="x"><br>
-                Taka: 
-            </td>
+            <?php
+                foreach($related_books as $_book) {
+                    ?>
+                        <td>
+                            Title: <?= $_book['title'] ?> <br>
+                            Author Name: <?= $_book['author'] ?>  <br>
+                            <img src="<?= $_book['imgdir'] ?>" alt="x"><br>
+                            Taka: <?= $_book['price'] ?>
+                        </td>
+                    <?php
+                }
+            ?>
         </tr>
     </table>
     <!-- fahim: bame rating daane review -->
     <table class="reviews-and-ratings-table" id="reviews-and-ratings-table">
         <tr>
             <td>
-                <!-- ratul: ei boida kinna thakle rating dite parbo -->
-                4.8 <br>
-                5 people have rated this. <br>
-                <!-- ratul: einte rating nis -->
-                <form action="" method="post">
-                <input type="radio" name="rating"> * <!-- fahim: eine star er icon bohais -->
-                <input type="radio" name="rating"> **
-                <input type="radio" name="rating"> ***
-                <input type="radio" name="rating"> ****
-                <input type="radio" name="rating"> ***** <br><br>
-                <button>Submit Rating</button>
+
+                <?= get_average_rating($book['book_id']) ?> <br>
+                <?= get_no_of_rating($book['book_id']) ?> people have rated this. <br>
+
+                <form action="../controller/add-rating-controller.php" method="post">
+                    <input type="hidden" name="book_id" value="<?=$book['book_id'] ?>">
+                    <input type="hidden" name="return_url" value="book-page.php?book_id=<?=$book['book_id'] ?>">
+
+                    <input type="radio" name="rating" value="1"> * <!-- fahim: eine star er icon bohais -->
+                    <input type="radio" name="rating" value="2"> **
+                    <input type="radio" name="rating" value="3"> ***
+                    <input type="radio" name="rating" value="4"> ****
+                    <input type="radio" name="rating" value="5"> ***** <br><br>
+                    
+                    <?php
+                    if(has_ordered_book($_SESSION['user']['user_id'], $book['book_id'])) {
+                        ?>
+                            <button type="submit">Submit Rating</button>
+                        <?php
+                    } else {
+                        ?>
+                            **Order first to Rate This
+                        <?php
+                    }
+                ?>
                 </form>
+
                 <br><br>
                 Product Q&A <br>
                 Have a question regarding this product? Ask us.
             </td>
             <td>
-                <!-- ratul: review gula fetch koris lomba koira tr dia -->
                 <table class="reviews-table" id="reviews-table">
-                    <tr>
-                        <td>
-                            username <br>
-                            review
-                            <!-- ratul: nijer review hoile delete korte parbo -->
-                        </td>
-                    </tr>
+                    
+                    <?php
+                        foreach($reviews as $review) {
+                            ?>
+                                <tr>
+                                <td>
+                                    <?= get_user_by_id($review['user_id'])['username'] ?> <br>
+                                    <?= $review['review_text'] ?>
+                                </td>
+                            </tr>
+                            <?php
+                        }
+                    ?>
                 </table>
                 <!-- ratul: ei boida kinna thakle review post korte parbo -->
-                <form action="">
-                    <textarea name="review"></textarea><br>
-                    <button>Post</button>
-                </form>
+                <?php
+                    if(has_ordered_book($_SESSION['user']['user_id'], $book['book_id'])) {
+                        ?>
+                            <form action="../controller/add-review-controller.php" method="post">
+                                <input type="hidden" name="book_id" value="<?=$book['book_id'] ?>">
+                                <input type="hidden" name="return_url" value="book-page.php?book_id=<?=$book['book_id'] ?>">
+
+                                <textarea name="review"></textarea><br>
+                                <button>Post</button>
+                            </form>
+                        <?php
+                    } else {
+                        ?>
+                            **Order first to Review
+                        <?php
+                    }
+                ?>
             </td>
         </tr>
     </table>

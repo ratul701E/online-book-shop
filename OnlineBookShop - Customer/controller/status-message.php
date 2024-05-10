@@ -30,6 +30,10 @@ function get_status_message($status)
             return '<span class="success-message">Added to cart successfully.</span>';
         case 14:
             return '<span class="error-message">Deleted from cart.</span>';
+        case 15:
+            return '<span class="success-message">Rating added.</span>';
+        case 16:
+            return '<span class="success-message">Posted.</span>';
         default:
             return '<span class="error-message">Unknown error occurred</span>';
     }

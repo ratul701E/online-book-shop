@@ -18,6 +18,15 @@ function get_book_by_id($book_id) {
     return $book;
 }
 
+function get_books_by_genre($genre) {
+    $conn = conn();
+    $query = "SELECT * FROM books WHERE genre like '%$genre%'";
+    $result = mysqli_query($conn, $query);
+    $books = mysqli_fetch_all($result, MYSQLI_ASSOC);
+    mysqli_close($conn);
+    return $books;
+}
+
 function update_book($book_id, $title, $author, $genre, $isbn, $price, $description, $stock_quantity, $imgdir) {
     $conn = conn();
     $query = "UPDATE books SET 

@@ -53,6 +53,15 @@ function get_user_by_username($username)
     mysqli_close($conn);
     return $user;
 }
+function get_user_by_id($user_id)
+{
+    $conn = conn();
+    $query = "SELECT * FROM users WHERE user_id = $user_id";
+    $result = mysqli_query($conn, $query);
+    $user = mysqli_fetch_assoc($result);
+    mysqli_close($conn);
+    return $user;
+}
 
 function update_user($user_id, $username, $email, $password, $role, $status, $full_name, $nid, $address, $mobile_number)
 {
