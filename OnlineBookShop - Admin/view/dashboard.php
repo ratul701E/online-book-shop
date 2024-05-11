@@ -9,59 +9,71 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
+    <link rel="stylesheet" href="css/dashboardStyles.css">
 </head>
+
 <body>
-<?php require_once('navbar.php') ?>
-<?php require_once('side-panel.php') ?>
+    <?php require_once('navbar.php') ?>
 
-    <!-- ratul: fetch kor -->
-    Invoices 
-    Total Earning: <?= $total_money['completed_money'] ?>  TK. 
-    Pending: TK. <?= $total_money['pending_money'] ?> 
-    Overdue: TK. 1000 <!-- ratul: hardcoded -->
-    Essentials: TK. 1000 <!-- ratul: hardcoded -->
-
-    <!-- ratul: fetch kor -->
-    Total Orders: <?= $orders_count['total_count'] ?>
-    Orders Pending: <?= $orders_count['pending_count'] ?>
-    Completed Orders: <?= $orders_count['completed_count'] ?>
-    Cancelled Orders: <?= $orders_count['cancelled_count'] ?>
-
-    <!-- ratul: fetch kor -->
-    <!-- fahim: last details table -->
-    <table class="last-details-table" id="last-details-table">
-        <tr>
-            <td colspan="5">
-                Last Details
-            </td>
-        </tr>
-        <tr>
-            <td> Order ID </td>
-            <td> Status </td>
-            <td> Date </td>
-            <td> Total </td>
-            <td> Action </td>
-        </tr>
-        <?php
+    <div class="container">
+        <div>
+            <?php require_once('side-panel.php') ?>
+        </div>
+        <div>
+            <h1 align="center">Last Details</h1>
+            <table class="last-details-table" id="last-details-table">
+                <tr>
+                    <th> Order ID </th>
+                    <th> Status </th>
+                    <th> Date </th>
+                    <th> Total </th>
+                    <th> Action </th>
+                </tr>
+                <?php
             foreach($all_orders as $order){
                 ?>
-                    <tr>
-                        <td> <?= $order['order_id'] ?> </td>
-                        <td> <?= $order['status'] ?> </td>
-                        <td> <?= $order['order_date'] ?> </td>
-                        <td> <?= $order['total_price'] ?> </td>
-                        <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
-                    </tr>
+                <tr>
+                    <td> <?= $order['order_id'] ?> </td>
+                    <td> <?= $order['status'] ?> </td>
+                    <td> <?= $order['order_date'] ?> </td>
+                    <td> <?= $order['total_price'] ?> </td>
+                    <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
+                </tr>
                 <?php
             }
 
         ?>
-    </table>
-
-<?php require_once('footer.php') ?>
+            </table>
+        </div>
+        <div class="hero">
+            <div class="invoice">
+                <p>
+                <h2>Invoices</h2>
+                </p>
+                <p>Total Earning: <?= $total_money['completed_money'] ?> TK.</p>
+                <p>Pending: TK. <?= $total_money['pending_money'] ?></p>
+                <p>Overdue: TK. 1000</p>
+                <!-- ratul: hardcoded -->
+                <p>Essentials: TK. 1000</p>
+                <!-- ratul: hardcoded -->
+            </div>
+            <div class="cards">
+                <!-- ratul: fetch kor -->
+                <p>Total Orders: <?= $orders_count['total_count'] ?></p>
+                <p>Orders Pending:
+                    <?= $orders_count['pending_count'] ?></p>
+                <p>Completed Orders: <?= $orders_count['completed_count'] ?></p>
+                <p>Cancelled Orders: <?= $orders_count['cancelled_count'] ?></p>
+                <!-- ratul: fetch kor -->
+            </div>
+        </div>
+    </div>
+    <?php require_once('footer.php') ?>
 </body>
+
 </html>
