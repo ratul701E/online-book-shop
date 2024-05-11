@@ -19,7 +19,6 @@
 <body>
 <?php require_once('navbar.php') ?>
 <?php require_once('side-panel.php') ?>
-    <!-- ratul: fetch kor -->
     <!-- fahim: order details table -->
     <table class="order-details-table" id="order-details-table">
         <tr>
@@ -31,7 +30,6 @@
             </td>
         </tr>
     </table>
-    <!-- ratul: fetch kor -->
     <!-- fahim: reporting and analytics table -->
     <table class="order-info-table" id="order-info-table">
         <tr>

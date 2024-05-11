@@ -17,7 +17,6 @@
 <?php require_once('navbar.php') ?>
 <?php require_once('side-panel.php') ?>
     <!-- fahim: profile table -->
-    <!-- ratul: info fetch kor, ei file e admin nijer info dekhte parbo + manage erte view click korleo einei anbi -->
     <table class="profile-table" id="profile-table">
         <tr>
             <td>

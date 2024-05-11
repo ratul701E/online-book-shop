@@ -19,7 +19,6 @@
 <?php require_once('side-panel.php') ?>
 
     <!-- fahim: rating system table -->
-    <!-- ratul: fetch kor -->
     <table class="rating-system-table" id="rating-system-table">
         <tr>
             <td colspan="4">

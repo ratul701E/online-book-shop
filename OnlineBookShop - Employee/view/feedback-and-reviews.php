@@ -8,7 +8,6 @@
 <body>
 <?php require_once('navbar.php') ?>
 <?php require_once('side-panel.php') ?>
-    <!-- ratul: fetch kor -->
     <!-- fahim: rating table table -->
     <table class="cutomer-ratings-table" id="cutomer-ratings-table">
         <tr>
@@ -39,7 +38,6 @@
             }
         ?>
     </table>
-    <!-- ratul: fetch kor -->
     <!-- fahim: review table -->
     <table class="cutomer-reviews-table" id="cutomer-reviews-table">
         <tr>
