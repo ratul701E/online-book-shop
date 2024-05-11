@@ -1,19 +1,87 @@
-<!-- fahim: navbar -->
-<table class="navbar" id="navbar">
-    <tr>
-        <td>
-            <!-- fahim: logo -->
-            <img src="" alt="">
+<!DOCTYPE html>
+<html lang="en">
 
-            <!-- ratul: search -->
-            <input type="text" name="search">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/navBarStyles.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
 
-            <a href="profile.php">Profile<!-- fahim: profile icon --></a>
-            <a href="wishlist.php">Wishlist<!-- fahim: wishlist icon --></a>
-            <a href="cart.php">Cart<!-- fahim: cart icon --></a>
-            <a href="../controller/logout.php"><!-- ratul: fahim: logout -->Logout</a>
+<body>
+    <nav>
+        <!-- fahim: navbar -->
+        <table class="navbar" id="navbar">
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td>
+                    <div class="call">
+                        <span class="material-symbols-outlined">
+                            call
+                        </span>
+                        <span id="callText">1620</span>
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <div class="navBarItems">
+                    <td>
+                        <div class="logo">
+                            <!-- fahim: logo -->
+                            <img src="../vendor/logo.png" alt="" height="100px" width="200px">
+                        </div>
+                    </td>
+                    <td>
+                        <div class="search">
+                            <input type="text" name="search" placeholder="Search here...">
+                            <span class="material-symbols-outlined">
+                                search
+                            </span>
+                            <!-- ratul: search -->
+                        </div>
+                    </td>
+                    <td>
+                        <div class="others">
+                            <a href="profile.php">
+                                <span class="material-symbols-outlined">
+                                    person
+                                </span>
+                            </a>
+                            <a href="wishlist.php"><span class="material-symbols-outlined">
+                                    favorite
+                                </span>
+                            </a>
+                            <a href="cart.php"><span class="material-symbols-outlined">
+                                    shopping_cart
+                                </span>
+                            </a>
+                            <a href="../controller/logout.php">
+                                <span class="material-symbols-outlined">
+                                    logout
+                                </span>
+                                <span id="logoutText">Logout</span>
+                            </a>
+                        </div>
+                    </td>
+                </div>
+            </tr>
 
-            <!-- fahim: call icon --> 1620
-        </td>
-    </tr>
-</table>
+        </table>
+    </nav>
+</body>
+
+</html>

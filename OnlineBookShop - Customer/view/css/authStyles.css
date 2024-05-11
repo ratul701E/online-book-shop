@@ -51,7 +51,7 @@ textarea {
 
 button {
   padding: 10px 20px;
-  background-color: #581845;
+  background-color: #20123e;
   border: none;
   border-radius: 5px;
   cursor: pointer;
@@ -62,12 +62,12 @@ button {
 
 button:hover {
   background-color: whitesmoke;
-  color: #581845;
-  border: 1px solid #581845;
+  color: #20123e;
+  border: 1px solid #20123e;
 }
 
 a {
-  color: #581845;
+  color: #20123e;
   text-decoration: none;
   font-size: 16px;
   margin-bottom: 20px;

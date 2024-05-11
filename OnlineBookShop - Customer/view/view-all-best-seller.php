@@ -18,7 +18,6 @@ $best_sellers = get_all_books();
 <body>
 
     <!-- fahim: back button  -->
-    <a href="customer-home.php">Back</a>
     <?php require_once ('navbar.php') ?>
     <table class="best-seller-table" id="best-seller-table">
         <tr>
@@ -29,15 +28,15 @@ $best_sellers = get_all_books();
         <?php
             foreach ($best_sellers as $book) {
                 ?>
-                    <tr>
-                        <td>
-                            Title: <?= $book['title'] ?><br>
-                            Author Name: <?= $book['author'] ?><br>
-                            <img src="<?= $book['imgdir'] ?>" alt="x"><br>
-                            Taka: <?= $book['price'] ?>
-                        </td>
-                    </tr>
-                <?php
+        <tr>
+            <td>
+                Title: <?= $book['title'] ?><br>
+                Author Name: <?= $book['author'] ?><br>
+                <img src="<?= $book['imgdir'] ?>" alt="x"><br>
+                Taka: <?= $book['price'] ?>
+            </td>
+        </tr>
+        <?php
             }
         ?>
     </table>
