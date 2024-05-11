@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    require_once('../model/user-model.php');
+    require_once('../model/user-attendance-model.php');
+    $employees = get_users_by_role('Employee');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +19,6 @@
 <?php require_once('side-panel.php') ?>
 
     <!-- fahim: salary sheet table -->
-    <!-- ratul: fetch kor -->
     <table class="salary-sheet-table" id="salary-sheet-table">
         <tr>
             <td colspan="4">
@@ -24,13 +32,12 @@
             <td> Action </td>
         </tr>
         <?php
-            foreach($managers as $user) {
+            foreach($employees as $user) {
                 ?>
                     <tr>
-                        <!-- ratul: salary fetch koris -->
                         <td> <?= $user['user_id'] ?> </td>
                         <td> <?= $user['full_name'] ?> </td>
-                        <td> salary </td>
+                        <td> <?= get_user_attendance($user['user_id']) * 500 ?> </td>
                         <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>"> <!-- fahim: view korar icon --></a> </td>
                     </tr>
                 <?php

@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    require_once('../model/user-model.php');
+    require_once('../model/user-attendance-model.php');
+    $employees = get_users_by_role('Employee');
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -24,14 +33,13 @@
             <td> Action </td>
         </tr>
         <?php
-            foreach($managers as $user) {
+            foreach($employees as $user) {
                 ?>
                     <tr>
-                        <!-- ratul: attendance fetch koris -->
                         <td> <?= $user['user_id'] ?> </td>
                         <td> <?= $user['full_name'] ?> </td>
-                        <td> Attendance </td>
-                        <td> <a href=""> Give Attendance </a> </td>
+                        <td> <?= get_user_attendance($user['user_id'])?> </td>
+                        <td> <a href="../controller/give-attendance-controller.php?user_id=<?= $user['user_id'] ?>"> Give Attendance </a> </td>
                     </tr>
                 <?php
             }
