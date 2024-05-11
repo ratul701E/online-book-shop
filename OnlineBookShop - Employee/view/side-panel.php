@@ -12,7 +12,7 @@
     </tr>
     <tr>
         <td>
-            <a href="">Salary Sheet</a>
+            <a href="salary-sheet.php">Salary Sheet</a>
         </td>
     </tr>
     <tr>

@@ -8,10 +8,15 @@
 <body>
 <?php require_once('navbar.php') ?>
 <?php require_once('side-panel.php') ?>
-<!-- fahim: add user table -->
-<!-- ratul: ein dia employee ar manager 2 account e khulte parbi -->
-    <form action="../controller/add-user-controller.php" method="post">
-        <table class="create-user-table" id="create-user-table">
+<!-- fahim: add employee table -->
+<!-- ratul: ein dia employee account khulte parbi -->
+    <form action="" method="post">
+        <table class="add-employee-table" id="add-employee-table">
+            <tr>
+                <td>
+                    Add Employee
+                </td>
+            </tr>
             <tr>
                 <td>
                     Fullname <br>
@@ -28,14 +33,42 @@
                     <input type="text" name="password"><br><br>
                     NID <br>
                     <input type="text" name="nid"><br><br>
-                    Role<br>
-                    <input type="radio" name="role" id="role" value="Employee"> Employee
-                    <input type="radio" name="role" id="role" value="Manager"> Manager
-                    <!-- fahim: Create User button -->
-                    <button type="submmit">Create User</button>
+                    <!-- fahim: add employee button -->
+                    <button type="submmit">Confirm</button>
                 </td>
             </tr>
         </table>
     </form>
+    <!-- fahim: employee table -->
+    <!-- ratul: fetch kor -->
+    <table class="employee-table" id="employee-table">
+        <tr>
+            <td colspan="6">
+                Profile Update
+            </td>
+        </tr>
+        <tr>
+            <td> ID </td>
+            <td> Employees Name </td>
+            <td> Status </td>
+            <td colspan="3"> Action </td>
+        </tr>
+        <?php
+            foreach($managers as $user) {
+                ?>
+                    <tr>
+                        <!-- ratul: delete koris -->
+                        <td> <?= $user['user_id'] ?> </td>
+                        <td> <?= $user['full_name'] ?> </td>
+                        <td> <?= $user['staus'] ?> </td>
+                        <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>"> <!-- fahim: view korar icon --></a> </td>
+                        <td> <a href="edit-profile-info.php?user_id=<?= $user['user_id'] ?>"><!-- fahim: edit korar icon --></a> </td>
+                        <td> <a href=""><!-- fahim: delete korar icon --></a> </td>
+                    </tr>
+                <?php
+            }
+        ?>
+    </table>
+<?php require_once('footer.php') ?>
 </body>
 </html>
