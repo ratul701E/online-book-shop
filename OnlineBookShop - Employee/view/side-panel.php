@@ -27,17 +27,17 @@
     </tr>
     <tr>
         <td>
-            <a href="">Delivery Status Updates</a>
+            <a href="delivery-status-updates.php">Delivery Status Updates</a>
         </td>
     </tr>
     <tr>
         <td>
-            <a href="">Print Report</a>
+            <a href="print-report.php">Print Report</a>
         </td>
     </tr>
     <tr>
         <td>
-            <a href="">Feedback & Reviews</a>
+            <a href="feedback-and-reviews">Feedback & Reviews</a>
         </td>
     </tr>
 </table>
