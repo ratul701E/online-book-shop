@@ -26,7 +26,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         }
         else if($user['role'] == "Employee") {
-            header("Location: ../view/employee-home.php");
+            header("Location: ../view/profile-update.php");
             exit();
         }
         else if($user['role'] == "Manager") {

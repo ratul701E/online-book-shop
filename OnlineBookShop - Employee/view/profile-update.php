@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    require_once('../model/user-model.php');
+    $employees = get_users_by_role('Employee');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,8 +16,7 @@
 <?php require_once('navbar.php') ?>
 <?php require_once('side-panel.php') ?>
 <!-- fahim: add employee table -->
-<!-- ratul: ein dia employee account khulte parbi -->
-    <form action="" method="post">
+    <form action="../controller/add-user-controller.php" method="post">
         <table class="add-employee-table" id="add-employee-table">
             <tr>
                 <td>
@@ -40,7 +46,6 @@
         </table>
     </form>
     <!-- fahim: employee table -->
-    <!-- ratul: fetch kor -->
     <table class="employee-table" id="employee-table">
         <tr>
             <td colspan="6">
@@ -54,16 +59,15 @@
             <td colspan="3"> Action </td>
         </tr>
         <?php
-            foreach($managers as $user) {
+            foreach($employees as $user) {
                 ?>
                     <tr>
-                        <!-- ratul: delete koris -->
                         <td> <?= $user['user_id'] ?> </td>
                         <td> <?= $user['full_name'] ?> </td>
-                        <td> <?= $user['staus'] ?> </td>
-                        <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>"> <!-- fahim: view korar icon --></a> </td>
-                        <td> <a href="edit-profile-info.php?user_id=<?= $user['user_id'] ?>"><!-- fahim: edit korar icon --></a> </td>
-                        <td> <a href=""><!-- fahim: delete korar icon --></a> </td>
+                        <td> <?= $user['status'] ?> </td>
+                        <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">View <!-- fahim: view korar icon --></a> </td>
+                        <td> <a href="edit-profile-info.php?user_id=<?= $user['user_id'] ?>">Edit<!-- fahim: edit korar icon --></a> </td>
+                        <td> <a href="../controller/delete-user-controller.php?user_id=<?= $user['user_id'] ?>">Delete<!-- fahim: delete korar icon --></a> </td>
                     </tr>
                 <?php
             }
