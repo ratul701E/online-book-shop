@@ -43,7 +43,7 @@ $all_books = array_slice(get_all_books(), 0, 5);
                 foreach($all_books as $book) {
                     ?>
                 <td>
-                    Title: <?= $book['title'] ?> <br>
+                <a href="book-page.php?book_id=<?= $book['book_id'] ?>">Title: <?= $book['title'] ?></a> <br>
                     Author Name: <?= $book['author'] ?> <br>
                     <img src="<?= $book['imgdir'] ?>" alt="x"><br>
                     Taka: <?= $book['price'] ?>
@@ -68,7 +68,7 @@ $all_books = array_slice(get_all_books(), 0, 5);
                 foreach($all_books as $book) {
                     ?>
                 <td>
-                    Title: <?= $book['title'] ?> <br>
+                    <a href="book-page.php?book_id=<?= $book['book_id'] ?>">Title: <?= $book['title'] ?></a> <br>
                     Author Name: <?= $book['author'] ?> <br>
                     <img src="<?= $book['imgdir'] ?>" alt="x"><br>
                     Taka: <?= $book['price'] ?>

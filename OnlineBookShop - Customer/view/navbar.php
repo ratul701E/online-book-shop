@@ -42,7 +42,7 @@
                     <td>
                         <div class="logo">
                             <!-- fahim: logo -->
-                            <img src="../vendor/logo.png" alt="" height="100px" width="200px">
+                            <a href="customer-home.php"><img src="../vendor/logo.png" alt="" height="100px" width="200px"></a>
                         </div>
                     </td>
                     <td>

@@ -17,7 +17,7 @@
             <tr>
                 <td>
                     <!-- fahim: logo -->
-                    <img src="../vendor/logo.png" alt="" height="75px" width="150px">
+                    <a href="customer-home.php"><img src="../vendor/logo.png" alt="" height="75px" width="150px"></a>
                 </td>
             </tr>
             <tr>

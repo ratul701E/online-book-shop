@@ -33,7 +33,7 @@
                 ?>
             <tr>
                 <td>
-                    Title: <?= $book['title'] ?><br>
+                <a href="book-page.php?book_id=<?= $book['book_id'] ?>">Title: <?= $book['title'] ?></a><br>
                     Author Name: <?= $book['author'] ?><br>
                     <img src="<?= $book['imgdir'] ?>" alt="x"><br>
                     Taka: <?= $book['price'] ?>
