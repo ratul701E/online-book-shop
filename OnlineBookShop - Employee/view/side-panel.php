@@ -12,17 +12,17 @@
     </tr>
     <tr>
         <td>
-            <a href="">Salary Sheet</a>
+            <a href="salary-sheet.php">Salary Sheet</a>
         </td>
     </tr>
     <tr>
         <td>
-            <a href="">Rating System</a>
+            <a href="rating-system.php">Rating System</a>
         </td>
     </tr>
     <tr>
         <td>
-            <a href="">Manage Order Information</a>
+            <a href="order-information.php">Manage Order Information</a>
         </td>
     </tr>
     <tr>

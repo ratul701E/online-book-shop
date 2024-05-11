@@ -1,4 +1,3 @@
-
 <table class="navbar" id="navbar">
     <tr>
         <td>
