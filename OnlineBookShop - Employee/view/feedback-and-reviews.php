@@ -10,7 +10,7 @@
 <?php require_once('side-panel.php') ?>
     <!-- ratul: fetch kor -->
     <!-- fahim: rating table table -->
-    <table class="order-info-table" id="order-info-table">
+    <table class="cutomer-ratings-table" id="cutomer-ratings-table">
         <tr>
             <td colspan="7">
                 Customer Ratings
@@ -41,7 +41,7 @@
     </table>
     <!-- ratul: fetch kor -->
     <!-- fahim: review table -->
-    <table class="order-info-table" id="order-info-table">
+    <table class="cutomer-reviews-table" id="cutomer-reviews-table">
         <tr>
             <td colspan="7">
                 Customer Reviews
