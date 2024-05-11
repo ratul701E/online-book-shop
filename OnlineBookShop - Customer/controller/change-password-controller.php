@@ -10,6 +10,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $new_password = $_POST["npassword"];
     $confirm_new_password = $_POST["cnpassword"];
 
+    if (empty($_POST["password"]) || empty($_POST["npassword"]) || empty($_POST["cnpassword"])) {
+        header("Location: ../view/change-password.php?status=2");
+        exit();
+    }
 
     if ($new_password === $confirm_new_password) {
         if (update_password($user_id, $old_password, $new_password)) {

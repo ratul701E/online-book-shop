@@ -10,6 +10,10 @@ if (!isset($_SESSION['user'])) {
 //validation
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["full_name"]) || empty($_POST["email"]) || empty($_POST["mobile_number"]) || empty($_POST["username"]) || empty($_POST["nid"])) {
+        header("Location: ../view/edit-profile-info.php?status=2");
+        exit();
+    }
     $user = $_SESSION['user'];
     $full_name = $_POST["full_name"];
     $email = $_POST["email"];

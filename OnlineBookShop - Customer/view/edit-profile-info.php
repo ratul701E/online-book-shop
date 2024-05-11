@@ -14,14 +14,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile Info</title>
     <link rel="stylesheet" href="css/profileStyles.css">
+    <script src="../controller/js/profileScript.js"></script>
+
 </head>
 
 <body>
     <?php require_once('navbar.php') ?>
     <h1 align="center">Edit Profile</h1>
     <div class="container">
-        <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
-        <form action="../controller/edit-profile-info-controller.php" method="post">
+        <?php if(isset($_GET['status'])) echo get_status_message($_GET['status']) ?>
+        <form action="../controller/edit-profile-info-controller.php" method="post" onsubmit="return validateForm()">
             <table class="edit-profile-table" id="edit-profile-table">
                 <tr>
                     <td>
@@ -45,6 +47,7 @@
 
     </div>
     <?php require_once('footer.php') ?>
+
 </body>
 
 </html>

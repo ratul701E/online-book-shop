@@ -9,49 +9,51 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Wishlist</title>
+    <link rel="stylesheet" href="css/cartStyles.css" />
 </head>
+
 <body>
     <!-- fahim: back button  -->
-    <a href="customer-home.php">Back</a>
     <?php require_once ('navbar.php') ?>
+    <h1 align="center">Wishlist</h1>
+    <div class="container">
 
-    <!-- fahim: wishlist table  -->
-    <!-- ratul: wishlist fetch kor  -->
-    <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
-    <table class="wishlist-table" id="wishlist-table">
-        <tr>
-            <td>
-                <h2>Wishlist</h2>
-            </td>
-        </tr>
-
-        <?php
+        <!-- fahim: wishlist table  -->
+        <!-- ratul: wishlist fetch kor  -->
+        <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
+        <table class="wishlist-table" id="wishlist-table"s>
+            <?php
             foreach($wishlist as $wish){
                 $book = get_book_by_id($wish['book_id']);
                 ?>
-                    <tr>
-                        <td>
-                            Title: <?= $book['title'] ?><br>
-                            Author Name: <?= $book['author'] ?><br>
-                            <img src="<?= $book['imgdir'] ?>" alt="x"><br>
-                            Taka: <?= $book['price'] ?>
-                            <form action="../controller/remove-book-from-wishlist-controller.php" method="post">
-                                <input type="hidden" name="book_id" value="<?= $book['book_id'] ?>">
-                                <button class="delete" type="submit">Remove From Wishlist</button>
-                            </form>
-                        </td>
-                    </tr>
-                <?php
+            <tr>
+                <td>
+                    Title: <?= $book['title'] ?><br>
+                    Author Name: <?= $book['author'] ?><br>
+                    <img src="<?= $book['imgdir'] ?>" alt="x"><br>
+                    Taka: <?= $book['price'] ?>
+                    <form action="../controller/remove-book-from-wishlist-controller.php" method="post">
+                        <input type="hidden" name="book_id" value="<?= $book['book_id'] ?>">
+                        <button class="delete" type="submit">Remove From Wishlist</button>
+                    </form>
+                </td>
+            </tr>
+            <?php
             }
 
         ?>
 
 
-    </table>
+        </table>
+        <a href="customer-home.php"><button>Back</button></a>
+
+    </div>
     <?php require_once ('footer.php') ?>
 </body>
+
 </html>

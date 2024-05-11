@@ -9,42 +9,48 @@
     foreach($cart as $item) {
         $total_price += $item['price'];
     }
-
 ?>
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Checkout</title>
+    <link rel="stylesheet" href="css/checkoutStyles.css" />
 </head>
+
 <body>
-<!-- fahim: back button  -->
-<a href="cart.php">Back</a>
-<?php require_once ('navbar.php') ?>
-<!-- fahim: checkout table  -->
+    <!-- fahim: back button  -->
+    <?php require_once ('navbar.php') ?>
+    <h1 align="center">Checkout</h1>
+    <!-- fahim: checkout table  -->
+    <div class="container">
+        <!-- message -->
+        <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
 
-    <!-- message -->
-    <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
+        <table class="checkout-table" id="checkout-table">
+            <tr>
+                <td>
+                    Username: <?=$user['username']?> <br>
+                    Contact Number: <?=$user['mobile_number']?> <br>
+                    E-mail: <?=$user['email']?> <br>
+                    Address: <?=$user['address']?> <br><br>
+                    Total: <?=$total_price?> <br><br>
+                    <!-- ratul: password thikmoto dile order confirm  -->
+                    <form action="../controller/checkout-controller.php" method="post">
+                        Password <br>
+                        <input type="text" name="password"><br><br>
+                        <button>Confirm Order</button>
+                    </form>
+                </td>
+            </tr>
+        </table>
+        <a href="cart.php"><button>Back</button></a>
+    </div>
 
-    <table class="checkout-table" id="checkout-table">
-        <tr>
-            <td>
-                <?=$user['username']?> <br>
-                <?=$user['mobile_number']?> <br>
-                <?=$user['email']?> <br>
-                <?=$user['address']?> <br><br>
-                Total: <?=$total_price?>  <br><br>
-                <!-- ratul: password thikmoto dile order confirm  -->
-                <form action="../controller/checkout-controller.php" method="post">
-                    Password <br>
-                    <input type="text" name="password"><br><br>
-                    <button>Confirm Order</button>
-                </form>
-            </td>
-        </tr>
-    </table>
-<?php require_once ('footer.php') ?>
+    <?php require_once ('footer.php') ?>
 </body>
+
 </html>

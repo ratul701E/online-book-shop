@@ -10,33 +10,38 @@ require '../controller/status-message.php'
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Password</title>
+    <link rel="stylesheet" href="css/profileStyles.css" />
 </head>
 
 <body>
     <?php require_once('navbar.php') ?>
     <!-- fahim: back button -->
-    <a href="profile.php">Back</a>
+    <h1 align="center">Change Password</h1>
+    <div class="container">
 
-    <!-- fahim: change password table -->
-    <!-- ratul: password verify koira password update kor  => DONE -->
-    <!-- message -->
-    <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
-    <form action="../controller/change-password-controller.php" method="post">
-        <table class="change-password-table" id="change-password-table">
-            <tr>
-                <td>
-                    Enter Old Password <br>
-                    <input type="password" name="password"><br><br>
-                    New Password <br>
-                    <input type="password" name="npassword"><br><br>
-                    Confirm New Password <br>
-                    <input type="password" name="cnpassword"><br><br>
-                    <!-- fahim: save changes button -->
-                    <button class="save-changes-button" id="save-changes-button">Save Changes</button>
-                </td>
-            </tr>
-        </table>
-    </form>
+        <!-- fahim: change password table -->
+        <!-- ratul: password verify koira password update kor  => DONE -->
+        <!-- message -->
+        <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
+        <form action="../controller/change-password-controller.php" method="post">
+            <table class="change-password-table" id="change-password-table">
+                <tr>
+                    <td>
+                        Enter Old Password <br>
+                        <input type="password" name="password"><br><br>
+                        New Password <br>
+                        <input type="password" name="npassword"><br><br>
+                        Confirm New Password <br>
+                        <input type="password" name="cnpassword"><br><br>
+                        <!-- fahim: save changes button -->
+                        <button class="save-changes-button" id="save-changes-button">Save Changes</button>
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <a href="profile.php"><button>Back</button></a>
+
+    </div>
     <?php require_once('footer.php') ?>
 </body>
 

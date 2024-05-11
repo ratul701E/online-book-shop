@@ -51,7 +51,7 @@ button:hover {
 .profile-table td:first-child {
   width: 30%;
   font-weight: bold;
-  background-color: #f0f0f0;
+  background-color: white;
 }
 
 .profile-table td:last-child {
