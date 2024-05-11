@@ -19,12 +19,8 @@
 <!-- ratul: fetch kor -->
     <table class="customers-table" id="customers-table">
     <tr>
-            <td colspan="5">
+            <td colspan="6">
                 Customer Details
-            </td>
-            <td>
-                <!-- ratul: employee create kor notun -->
-                <a href="add-user.php">Add Manager</a>
             </td>
         </tr>
         <tr>

@@ -16,7 +16,7 @@
 <?php require_once('navbar.php') ?>
 <?php require_once('side-panel.php') ?>
 
-    <a href="edit-profile-info.php">Edit Profile Info</a>
+    <a href="edit-profile-info.php?user_id=<?=$user['user_id']?>">Edit Profile Info</a>
 
     <!-- fahim: profile table -->
     <!-- ratul: info fetch kor -->
