@@ -11,7 +11,7 @@
 
     <a href="view-profile.php">View Profile</a>
     <a href="edit-profile-info.php">Edit Profile Information</a>
-    <a href="">Change Password</a>
+    <a href="change-password.php">Change Password</a>
 
 <?php require_once('footer.php') ?>
 </body>
