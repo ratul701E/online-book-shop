@@ -8,33 +8,46 @@
     <link rel="stylesheet" href="css/sidePanel.css" />
     <link rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="../controller/js/dashboardScript.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
 </head>
 
 <body>
     <div class="sidebar">
         <!-- fahim: admin er left navigation bar -->
-        <div class="option1">Admin Panel <span class="material-symbols-outlined">
-                expand_more
-            </span></div>
-        <div class="option2">User Management <span class="material-symbols-outlined">
-                expand_more
-            </span></div>
-        <div class="option3">Inventory Management <span class="material-symbols-outlined">
-                expand_more
-            </span></div>
-        <div class="option4">Dashboard <span class="material-symbols-outlined">
-                expand_more
-            </span></div>
-        <div class="option4">Reporting and Analytics <span class="material-symbols-outlined">
-                expand_more
-            </span></div>
-        <!-- <select name="options" onchange="location = this.value">
-            <option disabled selected hidden> Admin Panel </option>
-            <option value="user-management.php">User Management </option>
-            <option value="inventory-management.php">Inventory Management </option>
-            <option value="dashboard.php">Dashboard </option>
-            <option value="reporting-and-analytics.php">Reporting and Analytics </option>
-            </select> -->
+        <div class="option1"><button class="mainButton" onclick="toggleOptions()">
+                <span class="material-symbols-outlined">
+                    shield_person
+                </span>
+                <br>Admin Panel
+                <span class="material-symbols-outlined">
+                    expand_more
+                </span></button></div>
+        <div class="options">
+            <div class="option4"><a href="dashboard.php"><button><span class="material-symbols-outlined">
+                            dashboard
+                        </span><br>Dashboard</button></a> </div>
+            <div class="option2"><a href="user-management.php"><button><span class="material-symbols-outlined">
+                            person
+                        </span><br>User Management</button></a></div>
+            <div class="option3"><a href="inventory-management.php"><button><span class="material-symbols-outlined">
+                            inventory_2
+                        </span><br>Inventory Management</button></a> </div>
+            <div class="option4"><a href="reporting-and-analytics.php"><button><span class="material-symbols-outlined">
+                            analytics
+                        </span><br>Reporting and Analytics</button></a>
+            </div>
+        </div>
+        <!-- <select name="options" onchange="location = this.value"> -->
     </div>
 </body>
 
