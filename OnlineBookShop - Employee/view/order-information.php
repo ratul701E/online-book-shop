@@ -1,7 +1,11 @@
 <?php
     require('../model/book-model.php');
+    require('../model/order-model.php');
     session_start();
+    $counts = get_book_counts();
+    $total_money = get_total_money_by_status();
     $books = get_all_books();
+    $all_orders = get_all_orders();
 
 ?>
 

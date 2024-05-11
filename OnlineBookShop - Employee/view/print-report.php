@@ -1,3 +1,17 @@
+<?php
+    require('../model/order-model.php');
+    require('../model/book-model.php');
+    require('../model/user-model.php');
+    session_start();
+    
+    $all_orders = get_all_orders();
+    $counts = get_book_counts();
+    $users = get_user_counts();
+    $total_money = get_total_money_by_status();
+    $orders_count = get_order_counts();
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,7 +24,6 @@
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
 
-    <!-- ratul: fetch kor ar pdf bana -->
     <!-- fahim: shundor kor -->
     Number of Books Available: <?=$counts['total_books'] ?> 
     Number of Books in Stock: <?=$counts['total_stock'] ?>

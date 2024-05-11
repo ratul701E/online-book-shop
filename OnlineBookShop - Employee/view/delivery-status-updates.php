@@ -1,7 +1,9 @@
 <?php
+    require('../model/order-model.php');
     require('../model/book-model.php');
     session_start();
     $books = get_all_books();
+    $all_orders = get_all_orders();
 
 ?>
 
@@ -39,8 +41,8 @@
                         <td> <?= $order['order_date'] ?> </td>
                         <td> <?= $order['total_price'] ?> </td>
                         <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
-                        <td> <a href="">Mark as Delivered</a> </td>
-                        <td> <a href="">Mark as Cancelled</a> </td>
+                        <td> <a href="../controller/order-status-change-controller.php?order_id=<?= $order['order_id'] ?>&status=Completed">Mark as Completed</a> </td>
+                        <td> <a href="../controller/order-status-change-controller.php?order_id=<?= $order['order_id'] ?>&status=Cancelled">Mark as Cancelled</a> </td>
                     </tr>
                 <?php
             }
