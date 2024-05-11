@@ -22,8 +22,9 @@
     <?php require_once('navbar.php') ?>
     <h1 align="center">Edit Profile</h1>
     <div class="container">
-        <?php if(isset($_GET['status'])) echo get_status_message($_GET['status']) ?>
-        <form action="../controller/edit-profile-info-controller.php" method="post" onsubmit="return validateForm()">
+        <form action="../controller/edit-profile-info-controller.php" method="post"
+            onsubmit="return validateEditProfileForm()">
+            <?php if(isset($_GET['status'])) echo get_status_message($_GET['status']) ?>
             <table class="edit-profile-table" id="edit-profile-table">
                 <tr>
                     <td>

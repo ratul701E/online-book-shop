@@ -23,8 +23,9 @@
     <div class="container">
         <!-- fahim: manage address book table -->
         <!-- ratul: password verify koira address update kor -->
-        <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
-        <form action="../controller/manage-address-book-controller.php" method="post">
+        <form action="../controller/manage-address-book-controller.php" method="post"
+            onsubmit="return validateManageAddressBookForm()">
+            <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
             <table class="manage-address-book-table" id="manage-address-book-table">
                 <tr>
                     <td>
