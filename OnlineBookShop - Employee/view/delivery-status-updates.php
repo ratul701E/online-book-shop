@@ -16,23 +16,11 @@
 <?php require_once('navbar.php') ?>
 <?php require_once('side-panel.php') ?>
     <!-- ratul: fetch kor -->
-    <!-- fahim: order details table -->
-    <table class="order-details-table" id="order-details-table">
-        <tr>
-            <td>
-                Number of Books Available: <?=$counts['total_books'] ?>
-                Number of Books in Stock: <?=$counts['total_stock'] ?>
-                Number of Books Sold: <?=$counts['total_sold'] ?>
-                Total Revenue: <?=$total_money['completed_money']?>
-            </td>
-        </tr>
-    </table>
-    <!-- ratul: fetch kor -->
     <!-- fahim: reporting and analytics table -->
     <table class="order-info-table" id="order-info-table">
         <tr>
-            <td colspan="5">
-                Order Information
+            <td colspan="7">
+                Delivery Status Updates
             </td>
         </tr>
         <tr>
@@ -40,7 +28,7 @@
             <td> Status </td>
             <td> Date </td>
             <td> Total </td>
-            <td> Action </td>
+            <td colspan="3"> Action </td>
         </tr>
         <?php
             foreach($all_orders as $order){
@@ -51,6 +39,8 @@
                         <td> <?= $order['order_date'] ?> </td>
                         <td> <?= $order['total_price'] ?> </td>
                         <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
+                        <td> <a href="">Mark as Delivered</a> </td>
+                        <td> <a href="">Mark as Cancelled</a> </td>
                     </tr>
                 <?php
             }

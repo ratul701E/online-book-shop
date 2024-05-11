@@ -3,7 +3,6 @@
     require_once '../controller/status-message.php';
     session_start();
     $user = get_user_by_id($_GET['user_id']);
-
 ?>
 
 <!DOCTYPE html>
