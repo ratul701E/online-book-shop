@@ -1,3 +1,14 @@
+<?php
+    require('../model/order-model.php');
+    require('../model/book-model.php');
+    require('../model/user-model.php');
+
+    $all_orders = get_all_orders();
+    $counts = get_book_counts();
+    $users = get_user_counts();
+    $total_money = get_total_money_by_status();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,13 +25,13 @@
     <table class="reporting-and-analytics-table" id="reporting-and-analytics-table">
         <tr>
             <td>
-                Number of Books Available: 
-                Number of Books in Stock: 
-                Number of Books Sold: 
-                Total Revenue: 
-                Number of Customers: 
-                Number of Employees: 
-                Number of Managers: 
+                Number of Books Available: <?=$counts['total_books'] ?>
+                Number of Books in Stock: <?=$counts['total_stock'] ?>
+                Number of Books Sold: <?=$counts['total_sold'] ?>
+                Total Revenue: <?=$total_money['completed_money']?>
+                Number of Customers: <?=$users['total_customers'] ?>
+                Number of Employees: <?=$users['total_employees'] ?>
+                Number of Managers: <?=$users['total_managers'] ?>
             </td>
         </tr>
     </table>
@@ -34,18 +45,24 @@
         </tr>
         <tr>
             <td> Order ID </td>
-            <td> Username </td>
+            <td> Status </td>
             <td> Date </td>
             <td> Total </td>
             <td> Action </td>
         </tr>
-        <tr>
-            <td> 1 </td>
-            <td> ppsppspsspss </td>
-            <td> ajke </td>
-            <td> 200 </td>
-            <td> <a href="order-details.php">View Details</a> </td>
-        </tr>
+        <?php
+            foreach($all_orders as $order){
+                ?>
+                    <tr>
+                        <td> <?= $order['order_id'] ?> </td>
+                        <td> <?= $order['status'] ?> </td>
+                        <td> <?= $order['order_date'] ?> </td>
+                        <td> <?= $order['total_price'] ?> </td>
+                        <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
+                    </tr>
+                <?php
+            }
+        ?>
     </table>
 
 <?php require_once('footer.php') ?>

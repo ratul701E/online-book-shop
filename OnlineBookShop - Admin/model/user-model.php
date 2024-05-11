@@ -142,4 +142,32 @@ function update_user_address($user_id, $password, $new_address) {
         return false;
     }
 }
+
+function get_user_counts() {
+    $conn = conn();
+    
+    $query_customers = "SELECT COUNT(*) AS total_customers FROM users WHERE role = 'Customer'";
+    $result_customers = mysqli_query($conn, $query_customers);
+    $customers_row = mysqli_fetch_assoc($result_customers);
+    $total_customers = $customers_row['total_customers'];
+
+    $query_employees = "SELECT COUNT(*) AS total_employees FROM users WHERE role = 'Employee'";
+    $result_employees = mysqli_query($conn, $query_employees);
+    $employees_row = mysqli_fetch_assoc($result_employees);
+    $total_employees = $employees_row['total_employees'];
+
+    $query_managers = "SELECT COUNT(*) AS total_managers FROM users WHERE role = 'Manager'";
+    $result_managers = mysqli_query($conn, $query_managers);
+    $managers_row = mysqli_fetch_assoc($result_managers);
+    $total_managers = $managers_row['total_managers'];
+
+    mysqli_close($conn);
+
+    return [
+        'total_customers' => $total_customers,
+        'total_employees' => $total_employees,
+        'total_managers' => $total_managers
+    ];
+}
+
 ?>
