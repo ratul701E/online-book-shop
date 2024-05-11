@@ -1,7 +1,8 @@
 <?php
     require('../model/order-model.php');
     require('../model/user-model.php');
-
+    session_start();
+    
     if(!isset($_GET['order_id'])) $_GET['order_id'] = 1;
     $order = get_order_details($_GET['order_id']);
     $user_details = get_user_by_id($order['user_id']);

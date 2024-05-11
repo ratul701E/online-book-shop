@@ -1,5 +1,4 @@
 
-<?php session_start() ?>
 <table class="navbar" id="navbar">
     <tr>
         <td>

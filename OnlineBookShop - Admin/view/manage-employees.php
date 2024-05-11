@@ -1,6 +1,6 @@
 <?php
     require('../model/user-model.php');
-    
+    session_start();
     $employees = get_users_by_role("Employee");
 
 ?>

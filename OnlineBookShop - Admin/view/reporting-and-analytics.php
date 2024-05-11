@@ -2,7 +2,8 @@
     require('../model/order-model.php');
     require('../model/book-model.php');
     require('../model/user-model.php');
-
+    session_start();
+    
     $all_orders = get_all_orders();
     $counts = get_book_counts();
     $users = get_user_counts();

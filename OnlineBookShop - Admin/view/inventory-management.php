@@ -1,6 +1,6 @@
 <?php
     require('../model/book-model.php');
-
+    session_start();
     $books = get_all_books();
 
 ?>

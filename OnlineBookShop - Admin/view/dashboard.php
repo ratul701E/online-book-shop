@@ -1,6 +1,6 @@
 <?php
     require('../model/order-model.php');
-
+    session_start();
     $orders_count = get_order_counts();
     $total_money = get_total_money_by_status();
     $all_orders = get_all_orders();

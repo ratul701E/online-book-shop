@@ -1,6 +1,6 @@
 <?php
     require_once ('../model/book-model.php');
-
+    session_start();
     $book = get_book_by_id($_GET['book_id']);
 
 ?>
