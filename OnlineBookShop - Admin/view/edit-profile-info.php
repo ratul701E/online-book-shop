@@ -38,6 +38,7 @@
                         Mobile Number <br>
                         <input type="text" name="mobile_number" value="<?= $user['mobile_number'] ?>"><br><br>
                         Username <br>
+                        <input type="text" name="address" value="<?= $user['address'] ?>"><br><br>Address<br>
                         <input type="text" name="username" value="<?= $user['username'] ?>"><br><br>
                         NID <br>
                         <input type="text" name="nid" value="<?= $user['nid'] ?>"><br><br>

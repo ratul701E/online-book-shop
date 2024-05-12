@@ -17,15 +17,15 @@ $all_books = array_slice(get_all_books(), 0, 5);
 </head>
 
 <body>
+    <?php require_once ('navbar.php') ?>
+    <table class="banner" id="banner">
+        <tr>
+            <td>
+                <img src="../vendor/banner.png" alt="">
+            </td>
+        </tr>
+    </table>
     <div class="container">
-        <?php require_once ('navbar.php') ?>
-        <table class="banner" id="banner">
-            <tr>
-                <td>
-                    <img src="../vendor/banner.png" alt="">
-                </td>
-            </tr>
-        </table>
 
         <table class="best-seller-table" id="best-seller-table">
             <tr>
@@ -38,8 +38,8 @@ $all_books = array_slice(get_all_books(), 0, 5);
                 <?php
                 foreach($all_books as $book) {
                     ?>
-                <td>
-                <a href="book-page.php?book_id=<?= $book['book_id'] ?>">Title: <?= $book['title'] ?></a> <br>
+                <td class="bookImage">
+                    <a href="book-page.php?book_id=<?= $book['book_id'] ?>">Title: <?= $book['title'] ?></a> <br>
                     Author Name: <?= $book['author'] ?> <br>
                     <img src="../vendor/<?= $book['imgdir'] ?>" alt="x"><br>
                     Taka: <?= $book['price'] ?>
@@ -61,7 +61,7 @@ $all_books = array_slice(get_all_books(), 0, 5);
                 <?php
                 foreach($all_books as $book) {
                     ?>
-                <td>
+                <td class="bookImage">
                     <a href="book-page.php?book_id=<?= $book['book_id'] ?>">Title: <?= $book['title'] ?></a> <br>
                     Author Name: <?= $book['author'] ?> <br>
                     <img src="../vendor/<?= $book['imgdir'] ?>" alt="x"><br>
