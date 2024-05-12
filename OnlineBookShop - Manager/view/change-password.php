@@ -1,7 +1,6 @@
 <?php
-    session_start();
-    require('../controller/status-message.php');
-
+session_start();
+require '../controller/status-message.php'
 ?>
 
 <!DOCTYPE html>
@@ -11,6 +10,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Password</title>
+    <link rel="stylesheet" href="css/allFormStyles.css">
+    <script src="../controller/js/script.js"></script>
 </head>
 
 <body>
@@ -18,6 +19,7 @@
     <?php require_once('right-panel.php') ?>
 
     <!-- fahim: change password table -->
+    <!-- ratul: password verify koira password update kor  => DONE -->
     <!-- message -->
     <div class="container">
         <h1 align="center">Change Password</h1>

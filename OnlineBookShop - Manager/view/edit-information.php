@@ -13,6 +13,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Information</title>
+    <link rel="stylesheet" href="css/allFormStyles.css">
+    <script src="../controller/js/script.js"></script>
 </head>
 
 <body>

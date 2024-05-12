@@ -6,35 +6,45 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home</title>
+    <link rel="stylesheet" href="css/managerHome.css">
 </head>
+
 <body>
-<?php require_once('navbar.php') ?>
-<?php require_once('right-panel.php') ?>
-
-<!-- fahim: chhobi ajaira balsal dia bhorayla -->
-<!-- ratul: ajker tarikh fetch kor eine (jigaisna ken) -->
-<?=date('j F, Y', strtotime('2024-05-05'))?>
-
-<a href="edit-information.php">Edit Information</a> <!-- fahim: ei 2 da right corner e rakh profile er -->
-<a href="change-password.php">Change Password</a>
-
-<table class="manager-home-table" id="manager-home-table">
-    <tr>
-        <td>
-            Manager Home 
-
-            Fullname: <?= $user['full_name'] ?>
-            Email: <?= $user['email'] ?>
-            Mobile Number: <?= $user['mobile_number'] ?>
-            Address: <?= $user['address'] ?>
-            Username: <?= $user['username'] ?>
-            NID: <?= $user['nid'] ?>
-        </td>
-    </tr>
-</table>
+    <?php require_once('navbar.php') ?>
+    <div class="rightPanel"><?php require_once('right-panel.php') ?></div>
+    <div class="container">
+        <!-- fahim: chhobi ajaira balsal dia bhorayla -->
+        <!-- ratul: ajker tarikh fetch kor eine (jigaisna ken) -->
+        <h1 align="center">Welcome <?= $user['full_name'] ?></h1>
+        <div class="others">
+            <?=date('j F, Y', strtotime('2024-05-05'))?>
+            <a href="edit-information.php"><button>Edit Information</button></a>
+            <!-- fahim: ei 2 da right corner e rakh profile er -->
+            <a href="change-password.php"><button>Change Password</button></a>
+        </div>
+        <br>
+        <br>
+        <div>
+            <table class="manager-home-table" id="manager-home-table">
+                <tr>
+                    <td>
+                        <h2 align="center">Profile</h2>
+                        <p><strong>Fullname:</strong> <?= $user['full_name'] ?></p>
+                        <p><strong>Email:</strong> <?= $user['email'] ?></p>
+                        <p><strong>Mobile Number:</strong> <?= $user['mobile_number'] ?></p>
+                        <p><strong>Address:</strong> <?= $user['address'] ?></p>
+                        <p><strong>Username:</strong> <?= $user['username'] ?></p>
+                        <p><strong>NID:</strong> <?= $user['nid'] ?></p>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
 </body>
+
 </html>

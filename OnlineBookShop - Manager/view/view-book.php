@@ -7,28 +7,37 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Book</title>
+    <link rel="stylesheet" href="css/allTableStyles.css">
 </head>
+
 <body>
-<?php require_once('navbar.php') ?>
-<?php require_once('right-panel.php') ?>
+    <?php require_once('navbar.php') ?>
+    <?php require_once('right-panel.php') ?>
     <!-- fahim: book table -->
     <!-- ratul: info fetch kor -->
-    <table class="book-table" id="book-table">
-        <tr>
-            <td>
-                Book Title: <?=$book['title']?>
-                Author: <?=$book['title']?>
-                Genre: <?=$book['genre']?>
-                ISBN: <?=$book['isbn']?>
-                Price: <?=$book['price']?>
-                Description: <?=$book['description']?>
-                Stock Quantity: <?=$book['stock_quantity']?>
-            </td>
-        </tr>
-    </table>
+
+    <div class="container">
+        <h1 align="center">View Book</h1>
+        <table class="book-table" id="book-table">
+            <tr>
+                <td>
+                    <p><strong>Book Title:</strong> <?=$book['title']?></p>
+                    <p><strong>Author:</strong> <?=$book['author']?></p>
+                    <p><strong>Genre:</strong> <?=$book['genre']?></p>
+                    <p><strong>ISBN:</strong> <?=$book['isbn']?></p>
+                    <p><strong>Price:</strong> <?=$book['price']?></p>
+                    <p><strong>Description:</strong> <?=$book['description']?></p>
+                    <p><strong>Stock Quantity:</strong> <?=$book['stock_quantity']?></p>
+
+                </td>
+            </tr>
+        </table>
+    </div>
 </body>
+
 </html>
