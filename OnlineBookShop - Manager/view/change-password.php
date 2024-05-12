@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    require('../controller/status-message.php');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,10 +15,9 @@
 
 <body>
     <?php require_once('navbar.php') ?>
-    <?php require_once('side-panel.php') ?>
+    <?php require_once('right-panel.php') ?>
 
     <!-- fahim: change password table -->
-    <!-- ratul: password verify koira password update kor  => DONE -->
     <!-- message -->
     <div class="container">
         <h1 align="center">Change Password</h1>
@@ -35,7 +40,6 @@
             </table>
         </form>
     </div>
-    <?php require_once('footer.php') ?>
 </body>
 
 </html>

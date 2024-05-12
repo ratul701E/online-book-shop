@@ -1,3 +1,11 @@
+<?php
+    session_start();
+    require('../model/user-model.php');
+    require('../controller/status-message.php');
+    $user = get_user_by_id($_SESSION['user']['user_id']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,11 +17,11 @@
 
 <body>
     <?php require_once('navbar.php') ?>
-    <?php require_once('side-panel.php') ?>
+    <?php require_once('right-panel.php') ?>
 
     <!-- fahim: edit profile table -->
     <div class="container">
-        <form action="../controller/edit-profile-info-controller.php" method="post"
+        <form action="../controller/edit-own-profile-info-controller.php" method="post"
             onsubmit="return validateEditProfileForm()">
             <h1 align="center">Edit Profile</h1>
             <br><?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
@@ -38,7 +46,6 @@
             </table>
         </form>
     </div>
-    <?php require_once('footer.php') ?>
 </body>
 
 </html>

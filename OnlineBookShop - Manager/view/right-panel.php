@@ -13,6 +13,6 @@
         <td><a href="books.php">Books</a></td>
     </tr>
     <tr>
-        <td><a href="logout.php">Logout</a></td>
+        <td><a href="../controller/logout.php">Logout</a></td>
     </tr>
 </table>

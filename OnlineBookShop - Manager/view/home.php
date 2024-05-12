@@ -1,3 +1,9 @@
+<?php
+    session_start();
+    require('../model/user-model.php');
+    $user = get_user_by_id($_SESSION['user']['user_id']);
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -11,7 +17,7 @@
 
 <!-- fahim: chhobi ajaira balsal dia bhorayla -->
 <!-- ratul: ajker tarikh fetch kor eine (jigaisna ken) -->
-5 May, 2024
+<?=date('j F, Y', strtotime('2024-05-05'))?>
 
 <a href="edit-information.php">Edit Information</a> <!-- fahim: ei 2 da right corner e rakh profile er -->
 <a href="change-password.php">Change Password</a>
