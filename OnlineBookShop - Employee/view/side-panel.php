@@ -1,43 +1,44 @@
-<!-- fahim: admin er left navigation bar -->
-<table class="side-panel-table" id="side-panel-table">
-    <tr>
-        <td>
-            Employee
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="profile-update.php">Profile Update</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="salary-sheet.php">Salary Sheet</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="rating-system.php">Rating System</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="order-information.php">Manage Order Information</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="delivery-status-updates.php">Delivery Status Updates</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="print-report.php">Print Report</a>
-        </td>
-    </tr>
-    <tr>
-        <td>
-            <a href="feedback-and-reviews">Feedback & Reviews</a>
-        </td>
-    </tr>
-</table>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/sidePanel.css" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+    <script src="../controller/js/dashboardScript.js"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+</head>
+
+<body>
+    <div class="sidebar">
+        <!-- fahim: admin er left navigation bar -->
+        <div class="option1"><button class="mainButton"> Employee
+            </button></div>
+        <div class="options">
+            <div class="option4"><a href="profile-update.php"><button> Profile Update</button></a> </div>
+            <div class="option2"><a href="salary-sheet.php"><button> Salary Sheet</button></a></div>
+            <div class="option3"><a href="rating-system.php"><button> Rating System</button></a> </div>
+            <div class="option4"><a href="order-information.php"><button> Manage Order Information</button></a></div>
+            <div class="option3"><a href="delivery-status-updates.php"><button>Delivery Status Updates</button></a>
+            </div>
+            <div class="option3"><a href="print-report.php"><button>Print Report</button></a> </div>
+            <div class="option3"><a href="feedback-and-review.php"><button>Feedback & Review</button></a> </div>
+        </div>
+    </div>
+    <!-- <select name="options" onchange="location = this.value"> -->
+    </div>
+</body>
+
+</html>
