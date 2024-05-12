@@ -16,13 +16,13 @@
 </head>
 
 <body>
-     fahim: back button  -->
+
     <?php require_once ('navbar.php') ?>
 
     <div class="container">
 
-         fahim: cart table  -->
-         ratul: cart fetch kor  -->
+
+
         <h1 align="center">Cart</h1> <br>
          msg -->
         <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
@@ -37,7 +37,7 @@
                     Author Name: <?= $book['author'] ?><br>
                     <img src="<?= $book['imgdir'] ?>" alt="x"><br>
                     Taka: <?= $book['price'] ?><br><br>
-                     ratul: remove koris cart erte  -->
+
                     <div class="removeFromCart">
 
                         <a

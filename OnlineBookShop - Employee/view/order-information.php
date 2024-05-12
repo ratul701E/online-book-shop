@@ -23,7 +23,7 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-     fahim: order details table -->
+
     <div class="container">
         <h1 align="center">Order Information</h1>
         <table class="order-details-table" id="order-details-table">

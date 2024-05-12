@@ -18,7 +18,7 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-     fahim: profile table -->
+
     <div class="container">
         <h1 align="center">Profile</h1>
         <table class="profile-table" id="profile-table">

@@ -21,8 +21,8 @@
     <?php require_once('navbar.php') ?>
     <h1 align="center">Manage Address Book</h1>
     <div class="container">
-         fahim: manage address book table -->
-         ratul: password verify koira address update kor -->
+
+
         <form action="../controller/manage-address-book-controller.php" method="post"
             onsubmit="return validateManageAddressBookForm()">
             <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
@@ -33,7 +33,7 @@
                         <textarea name="address" cols="30" rows="10"><?= $user['address'] ?></textarea><br><br>
                         Account Password <br>
                         <input type="password" name="password"><br><br>
-                         fahim: save changes button -->
+
                         <button class="save-changes-button" id="save-changes-button">Save Changes</button>
                     </td>
                 </tr>

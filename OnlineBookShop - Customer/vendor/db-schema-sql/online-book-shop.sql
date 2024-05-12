@@ -170,7 +170,7 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `role`, `status`, `full_name`, `nid`, `address`, `mobile_number`) VALUES
-(1, 'ratulratul', 'ratul@gmail.com', 'ratulratul', 'Customer', 'Active', 'Ratul', '987654321', 'khilgaadskffon, bangladesh', '12354698741');
+
 
 -- --------------------------------------------------------
 

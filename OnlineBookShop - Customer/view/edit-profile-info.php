@@ -38,7 +38,7 @@
                         <input type="text" name="username" value="<?= $user['username'] ?>"><br><br>
                         NID <br>
                         <input type="text" name="nid" value="<?= $user['nid'] ?>"><br><br>
-                         fahim: save changes button -->
+
                         <button class="save-changes-button" id="save-changes-button">Save Changes</button>
                     </td>
                 </tr>

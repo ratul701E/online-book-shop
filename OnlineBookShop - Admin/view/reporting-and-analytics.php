@@ -26,7 +26,7 @@
     <?php require_once('side-panel.php') ?>
 
     ul: fetch kor -->
-     fahim: reporting and analytics table -->
+
     <div class="container">
         <h1 align="center">Report and Analytics</h1>
         <table class="reporting-and-analytics-table" id="reporting-and-analytics-table">
@@ -42,7 +42,7 @@
                 </td>
             </tr>
         </table>
-         ratul: fetch kor -->
+
         reporting and analytics table -->
         <table class="order-info-table" id="order-info-table">
             <tr>

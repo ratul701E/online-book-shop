@@ -19,8 +19,8 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-     fahim: customer table -->
-     ratul: fetch kor -->
+
+
     <div class="container">
         <table class="customers-table" id="customers-table">
             <tr>

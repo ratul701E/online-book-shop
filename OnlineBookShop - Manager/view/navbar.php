@@ -22,12 +22,12 @@
                             <span class="material-symbols-outlined">
                                 search
                             </span>
-                             ratul: search -->
+
                         </div>
                     </td>
                     <td>
                         <div class="logo">
-                             fahim: logo -->
+
                             <img src="../vendor/logo.png" alt="" height="50px" width="100px">
                         </div>
                     </td>

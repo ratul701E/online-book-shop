@@ -18,8 +18,8 @@ session_start();
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-     fahim: add user table -->
-     ratul: ein dia employee ar manager 2 account etonulte parbi -->
+
+
     <div class="container">
         <h1 align="center">Add User</h1>
         <form action="../controller/add-user-controller.php" method="post" onsubmit="return validateAddUserForm()">
@@ -43,7 +43,7 @@ session_start();
                         Role<br>
                         <input type="radio" name="role" id="role" value="Employee"> Employee
                         <input type="radio" name="role" id="role" value="Manager"> Manager
-                         fahim: Create User button -->
+
                         <button type="submmit">Create User</button>
                     </td>
                 </tr>

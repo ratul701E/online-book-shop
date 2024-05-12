@@ -24,10 +24,10 @@
     <div class="container">
 
         <h1>Employees</h1>
-         ratul: fetch kor -->
+
         <a href="create-new-employee.php">New</a>
-         fahim: employees table -->
-         ratul: fetch kor -->
+
+
         <table class="employees-table" id="employees-table">
             <tr>
                 <th> ID </th>

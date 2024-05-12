@@ -47,7 +47,7 @@
                             <input type="text" name="password"><br><br>
                             NID <br>
                             <input type="text" name="nid"><br><br>
-                             fahim: add employee button -->
+
                             <button type="submit">Confirm</button>
                         </td>
                     </tr>
@@ -55,7 +55,7 @@
             </form>
         </div>
         <div class="dashboardTable">
-             fahim: employee table -->
+
             <table class="employee-table" id="employee-table">
                 <tr>
                     <td colspan="6">
@@ -76,13 +76,13 @@
                     <td> <?= $user['full_name'] ?> </td>
                     <td> <?= $user['status'] ?> </td>
                     <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">View
-                             fahim: view korar icon -->
+
                         </a> </td>
                     <td> <a href="edit-profile-info.php?user_id=<?= $user['user_id'] ?>">Edit
-                             fahim: edit korar icon -->
+
                         </a> </td>
                     <td> <a href="../controller/delete-user-controller.php?user_id=<?= $user['user_id'] ?>">Delete
-                             fahim: delete korar icon -->
+
                         </a> </td>
                 </tr>
                 <?php

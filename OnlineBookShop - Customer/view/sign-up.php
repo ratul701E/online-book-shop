@@ -19,7 +19,7 @@
     <div>
         back button -->
 
-         fahim: registration form -->
+
         <form action="../controller/sign-up-controller.php" method="post" onsubmit="return validateSignUpForm()">
             <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
             <table class="registration-table" id="registration-table">

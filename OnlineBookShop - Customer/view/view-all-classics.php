@@ -24,7 +24,7 @@ $classics = get_all_books();
     <?php require_once ('navbar.php') ?>
 
     <div class="container">
-         ratul: fetch kor back to back  -->
+
         <table class="classics-table" id="classics-table">
             <tr>
                 <td>

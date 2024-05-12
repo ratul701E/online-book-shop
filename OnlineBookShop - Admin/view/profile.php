@@ -21,7 +21,7 @@
     <?php require_once('side-panel.php') ?>
 
 
-     fahim: profile table -->
+
     ul: info fetch kor -->
     <div class="container">
         <h1 align="center">Profile</h1>
