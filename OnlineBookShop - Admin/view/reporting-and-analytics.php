@@ -25,13 +25,6 @@
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
 
-<<<<<<< HEAD
-    <!-- ratul: fetch kor -->
-    <!-- fahim: reporting and analytics table -->
-=======
-    ul: fetch kor -->
-     fahim: reporting and analytics table -->
->>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <h1 align="center">Report and Analytics</h1>
         <table class="reporting-and-analytics-table" id="reporting-and-analytics-table">
@@ -47,13 +40,7 @@
                 </td>
             </tr>
         </table>
-<<<<<<< HEAD
-        <!-- ratul: fetch kor -->
-        <!-- fahim: reporting and analytics table -->
-=======
-         ratul: fetch kor -->
-        reporting and analytics table -->
->>>>>>> parent of 07e05e9 (updated)
+       
         <table class="order-info-table" id="order-info-table">
             <tr>
                 <td colspan="5">

@@ -59,31 +59,14 @@
                 <p>Total Earning: <?= $total_money['completed_money'] ?> TK.</p>
                 <p>Pending: TK. <?= $total_money['pending_money'] ?></p>
                 <p>Overdue: TK. 1000</p>
-<<<<<<< HEAD
-                <!-- ratul: hardcoded -->
                 <p>Essentials: TK. 1000</p>
-                <!-- ratul: hardcoded -->
             </div>
             <div class="cards">
-                <!-- ratul: fetch kor -->
-=======
-                 ratul: hardcoded -->
-                <p>Essentials: TK. 1000</p>
-                 ratul: hardcoded -->
-            </div>
-            <div class="cards">
-                 ratul: fetch kor -->
->>>>>>> parent of 07e05e9 (updated)
                 <p>Total Orders: <?= $orders_count['total_count'] ?></p>
                 <p>Orders Pending:
                     <?= $orders_count['pending_count'] ?></p>
                 <p>Completed Orders: <?= $orders_count['completed_count'] ?></p>
                 <p>Cancelled Orders: <?= $orders_count['cancelled_count'] ?></p>
-<<<<<<< HEAD
-                <!-- ratul: fetch kor -->
-=======
-                 ratul: fetch kor -->
->>>>>>> parent of 07e05e9 (updated)
             </div>
         </div>
     </div>

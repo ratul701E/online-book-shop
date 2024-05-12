@@ -22,11 +22,6 @@
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
 
-<<<<<<< HEAD
-    <!-- fahim: edit profile table -->
-=======
-     fahim: edit profile table -->
->>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <form action="../controller/edit-profile-info-controller.php" method="post"
             onsubmit="return validateEditProfileForm()">
@@ -46,11 +41,6 @@
                         <input type="text" name="username" value="<?= $user['username'] ?>"><br><br>
                         NID <br>
                         <input type="text" name="nid" value="<?= $user['nid'] ?>"><br><br>
-<<<<<<< HEAD
-                        <!-- fahim: save changes button -->
-=======
-                         fahim: save changes button -->
->>>>>>> parent of 07e05e9 (updated)
                         <button class="save-changes-button" id="save-changes-button">Save Changes</button>
                     </td>
                 </tr>

@@ -19,13 +19,6 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-<<<<<<< HEAD
-    <!-- fahim: customer table -->
-    <!-- ratul: fetch kor -->
-=======
-     fahim: customer table -->
-     ratul: fetch kor -->
->>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <table class="customers-table" id="customers-table">
             <tr>
