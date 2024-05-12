@@ -25,7 +25,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $nid = $_POST["nid"];
 
     update_user($user['user_id'], $username, $email, $user['password'], $user['role'], 'Active', $full_name, $nid, $user['address'], $mobile_number);
-
+    $user = get_user_by_username($username);
+    $_SESSION['user'] = $user;
     header("Location: ../view/edit-profile-info.php?user_id=".$user['user_id']."&status=7");
     exit();
 }
