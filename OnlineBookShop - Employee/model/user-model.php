@@ -1,6 +1,5 @@
 <?php
 require_once 'db.php';
-require_once('user-attendance-model.php');
 function check_user_existence($username, $password) {
     $conn = conn();
     $query = "SELECT * FROM users WHERE username = '$username'";
@@ -20,7 +19,6 @@ function create_user($username, $email, $password, $role, $status, $full_name, $
     $query = "INSERT INTO users (username, email, password, role, status, full_name, nid, address, mobile_number) 
               VALUES ('$username', '$email', '$password', '$role', '$status', '$full_name', '$nid', '$address', '$mobile_number')";
     
-    add_user_attendance($username);
     mysqli_query($conn, $query);
     mysqli_close($conn);
 }
