@@ -1,7 +1,12 @@
 <?php
 require_once '../model/user-model.php';
+require_once 'status-message.php';
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["username"]) || empty($_POST["password"])) {
+        header("Location: ../view/sign-in.php?status=2"); // Fields cannot be empty
+        exit();
+    }
     
     $username = $_POST["username"];
     $password = $_POST["password"];
@@ -30,7 +35,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         }
         else if($user['role'] == "Manager") {
-            header("Location: ../view/home.php");
+            header("Location: ../view/manager-home.php");
             exit();
         }
         else {
