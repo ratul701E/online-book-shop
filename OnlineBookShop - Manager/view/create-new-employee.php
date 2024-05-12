@@ -21,7 +21,7 @@ require '../controller/status-message.php'
 
     <div class="container">
         <h1 align="center">Create New Employee</h1>
-        <form action="../controller/create-new-employee.php" method="post"
+        <form action="../controller/create-new-employee-controller.php" method="post"
             onsubmit="return validateCreateNewEmployeeForm()">
             <table class="create-new-employee-table" id="create-new-employee-table">
                 <tr>

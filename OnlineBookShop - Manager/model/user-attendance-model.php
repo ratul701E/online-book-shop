@@ -2,8 +2,9 @@
 
 require_once('db.php'); 
 
-function add_user_attendance($user_id, $attendance = 0) {
+function add_user_attendance($username, $attendance = 0) {
     $conn = conn();
+    $user_id = get_user_by_username($username)['user_id'];
     $query = "INSERT INTO user_attendance (user_id, attendance) VALUES ($user_id, $attendance)";
     mysqli_query($conn, $query);
     mysqli_close($conn);
@@ -30,10 +31,7 @@ function update_user_attendance($user_id, $new_attendance) {
 }
 
 function increase_attendance($user_id) {
-    $conn = conn();
-    $user_id = mysqli_real_escape_string($conn, $user_id); // Sanitize user ID input
-    
-    // Increment the attendance by 1
+    $conn = conn();    
     $query = "UPDATE user_attendance SET attendance = attendance + 1 WHERE user_id = $user_id";
     mysqli_query($conn, $query);
     mysqli_close($conn);

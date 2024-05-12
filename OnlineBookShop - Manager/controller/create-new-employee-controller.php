@@ -1,14 +1,8 @@
 <?php
-session_start();
-
-require_once '../model/user-model.php';
-require_once 'status-message.php';
+require_once ('../model/user-model.php');
+require_once ('../model/user-attendance-model.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    if (empty($_POST["full_name"]) || empty($_POST["email"]) || empty($_POST["mobile_number"]) || empty($_POST["Address"]) || empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["nid"])) {
-        header("Location: ../view/create-new-employee.php?status=2"); 
-        exit();
-    }
 
     $full_name = $_POST["full_name"];
     $email = $_POST["email"];
@@ -18,5 +12,19 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $password = $_POST["password"];
     $nid = $_POST["nid"];
 
-} 
+    if(empty($full_name) || empty($email) || empty($mobile_number) || empty($address) || empty($username) || empty($password) || empty($nid)) {
+        header('location: ../view/create-new-employee.php?status=2'); 
+        exit();
+    }
+
+    $role = "Employee";
+
+    create_user($username, $email, $password, $role, 'Active', $full_name, $nid, $address, $mobile_number);
+    add_user_attendance($username);
+
+    header('location: ../view/create-new-employee.php');
+    exit();
+} else {
+    header('location: ../view/create-new-employee.php');
+}
 ?>
