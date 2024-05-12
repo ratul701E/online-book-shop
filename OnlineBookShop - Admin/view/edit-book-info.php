@@ -13,6 +13,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Book Info</title>
     <link rel="stylesheet" href="css/addBookAndUserStyles.css">
+    <script src="../controller/js/script.js"></script>
 
 </head>
 
@@ -22,7 +23,7 @@
     <!-- fahim: add book table -->
     <div class="container">
         <h1 align="center">Edit Book</h1>
-        <form action="../controller/update-book-controller.php" method="post">
+        <form action="../controller/update-book-controller.php" method="post" onsubmit="return validateEditBookForm()">
             <input type="hidden" name="book_id" value="<?=$book['book_id']?>">
             <table class="edit-book-info-table" id="edit-book-info-table">
                 <tr>

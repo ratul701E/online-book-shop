@@ -11,6 +11,8 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New User</title>
     <link rel="stylesheet" href="css/addBookAndUserStyles.css">
+    <script src="../controller/js/script.js"></script>
+
 </head>
 
 <body>
@@ -20,7 +22,7 @@ session_start();
     <!-- ratul: ein dia employee ar manager 2 account etonulte parbi -->
     <div class="container">
         <h1 align="center">Add User</h1>
-        <form action="../controller/add-user-controller.php" method="post">
+        <form action="../controller/add-user-controller.php" method="post" onsubmit="return validateAddUserForm()">
             <table class="create-user-table" id="create-user-table">
                 <tr>
                     <td>

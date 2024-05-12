@@ -31,7 +31,7 @@
                     <p><strong>FullName: </strong> <?= $user['full_name'] ?></p>
                     <p><strong>Email: </strong> <?= $user['email'] ?></p>
                     <p><strong>Mobile Number: </strong><?= $user['mobile_number'] ?></p>
-                    <p><strong>Address: </strong> <?= $user['address'] ?></p>
+                    <!-- <p><strong>Address: </strong> <?= $user['address'] ?></p> -->
                     <p><strong>Username: </strong> <?= $user['username'] ?></p>
                     <p><strong>NID: </strong> <?= $user['nid'] ?></p>
                 </td>

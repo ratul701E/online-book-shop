@@ -32,10 +32,10 @@
                 </td>
             </tr>
             <tr>
-                <td> Book ID </td>
-                <td> Book Title </td>
-                <td> Stock </td>
-                <td colspan="3"> Action </td>
+                <th> Book ID </th>
+                <th> Book Title </th>
+                <th> Stock </th>
+                <th colspan="3"> Action </th>
             </tr>
             <?php
                 foreach($books as $book) {

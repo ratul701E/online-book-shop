@@ -12,60 +12,68 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Reporting and Analytics</title>
+    <link rel="stylesheet" href="css/bookDetailsStyles.css">
+
 </head>
+
 <body>
-<?php require_once('navbar.php') ?>
-<?php require_once('side-panel.php') ?>
+    <?php require_once('navbar.php') ?>
+    <?php require_once('side-panel.php') ?>
 
     <!-- ratul: fetch kor -->
     <!-- fahim: reporting and analytics table -->
-    <table class="reporting-and-analytics-table" id="reporting-and-analytics-table">
-        <tr>
-            <td>
-                Number of Books Available: <?=$counts['total_books'] ?>
-                Number of Books in Stock: <?=$counts['total_stock'] ?>
-                Number of Books Sold: <?=$counts['total_sold'] ?>
-                Total Revenue: <?=$total_money['completed_money']?>
-                Number of Customers: <?=$users['total_customers'] ?>
-                Number of Employees: <?=$users['total_employees'] ?>
-                Number of Managers: <?=$users['total_managers'] ?>
-            </td>
-        </tr>
-    </table>
-    <!-- ratul: fetch kor -->
-    <!-- fahim: reporting and analytics table -->
-    <table class="order-info-table" id="order-info-table">
-        <tr>
-            <td colspan="5">
-                Order Info
-            </td>
-        </tr>
-        <tr>
-            <td> Order ID </td>
-            <td> Status </td>
-            <td> Date </td>
-            <td> Total </td>
-            <td> Action </td>
-        </tr>
-        <?php
+    <div class="container">
+        <h1 align="center">Report and Analytics</h1>
+        <table class="reporting-and-analytics-table" id="reporting-and-analytics-table">
+            <tr>
+                <td>
+                    <p><strong>Number of Books Available: </strong><?=$counts['total_books'] ?></p>
+                    <p><strong>Number of Books In Stocks: </strong> <?=$counts['total_stock'] ?></p>
+                    <p><strong>Number of Books Sold: </strong> <?=$counts['total_sold'] ?></p>
+                    <p><strong>Total Revenue: </strong> <?=$total_money['completed_money']?></p>
+                    <p><strong>Number of Customers: </strong> <?=$users['total_customers'] ?></p>
+                    <p><strong>Number of Employees: </strong> <?=$users['total_employees'] ?></p>
+                    <p><strong>Number of Managers: </strong> <?=$users['total_managers'] ?></p>
+                </td>
+            </tr>
+        </table>
+        <!-- ratul: fetch kor -->
+        <!-- fahim: reporting and analytics table -->
+        <table class="order-info-table" id="order-info-table">
+            <tr>
+                <td colspan="5">
+                    Order Info
+                </td>
+            </tr>
+            <tr>
+                <th> Order ID </th>
+                <th> Status </th>
+                <th> Date </th>
+                <th> Total </th>
+                <th> Action </th>
+            </tr>
+            <?php
             foreach($all_orders as $order){
                 ?>
-                    <tr>
-                        <td> <?= $order['order_id'] ?> </td>
-                        <td> <?= $order['status'] ?> </td>
-                        <td> <?= $order['order_date'] ?> </td>
-                        <td> <?= $order['total_price'] ?> </td>
-                        <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
-                    </tr>
-                <?php
+            <tr>
+                <td> <?= $order['order_id'] ?> </td>
+                <td> <?= $order['status'] ?> </td>
+                <td> <?= $order['order_date'] ?> </td>
+                <td> <?= $order['total_price'] ?> </td>
+                <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
+            </tr>
+            <?php
             }
         ?>
-    </table>
+        </table>
 
-<?php require_once('footer.php') ?>
+    </div>
+    <?php require_once('footer.php') ?>
 </body>
+
 </html>

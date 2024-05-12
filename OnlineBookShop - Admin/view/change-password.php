@@ -11,6 +11,7 @@ require '../controller/status-message.php'
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Change Password</title>
     <link rel="stylesheet" href="css/addBookAndUserStyles.css">
+    <script src="../controller/js/script.js"></script>
 </head>
 
 <body>
@@ -22,7 +23,8 @@ require '../controller/status-message.php'
     <!-- message -->
     <div class="container">
         <h1 align="center">Change Password</h1>
-        <form action="../controller/change-password-controller.php" method="post">
+        <form action="../controller/change-password-controller.php" method="post"
+            onsubmit="return validateChangePasswordForm()">
             <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
             <table class="change-password-table" id="change-password-table">
                 <tr>

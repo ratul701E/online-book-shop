@@ -14,6 +14,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Edit Profile Info</title>
     <link rel="stylesheet" href="css/addBookAndUserStyles.css">
+    <script src="../controller/js/script.js"></script>
+
 </head>
 
 <body>
@@ -23,7 +25,8 @@
     <!-- fahim: edit profile table -->
     <div class="container">
         <h1 align="center">Edit Profile</h1>
-        <form action="../controller/edit-profile-info-controller.php" method="post">
+        <form action="../controller/edit-profile-info-controller.php" method="post"
+            onsubmit="return validateEditProfileForm()">
             <br><?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
             <input type="hidden" name="user_id" value="<?= $user['user_id'] ?>">
             <table class="edit-profile-table" id="edit-profile-table">

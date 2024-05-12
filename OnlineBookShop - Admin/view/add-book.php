@@ -11,6 +11,7 @@ session_start();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Add Book</title>
     <link rel="stylesheet" href="css/addBookAndUserStyles.css">
+    <script src="../controller/js/script.js"></script>
 </head>
 
 <body>
@@ -19,7 +20,7 @@ session_start();
     <!-- fahim: add book table -->
     <div class="container">
         <h1 align="center">Add Book</h1>
-        <form action="../controller/add-book-controller.php" method="post">
+        <form action="../controller/add-book-controller.php" method="post" onsubmit="return validateAddBookForm()">
             <table class="add-book-table" id="add-book-table">
                 <tr>
                     <td>
