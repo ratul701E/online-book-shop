@@ -12,4 +12,7 @@
     <tr>
         <td><a href="books.php">Books</a></td>
     </tr>
+    <tr>
+        <td><a href="logout.php">Logout</a></td>
+    </tr>
 </table>

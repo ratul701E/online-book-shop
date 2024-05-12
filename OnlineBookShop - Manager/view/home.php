@@ -6,6 +6,28 @@
     <title>Home</title>
 </head>
 <body>
-    
+<?php require_once('navbar.php') ?>
+<?php require_once('right-panel.php') ?>
+
+<!-- ratul: ajker tarikh fetch kor eine (jigaisna ken) -->
+5 May, 2024
+
+<a href="edit-information.php">Edit Information</a>
+<a href="change-password.php">Change Password</a>
+
+<table class="manager-home-table" id="manager-home-table">
+    <tr>
+        <td>
+            Manager Home 
+
+            Fullname: <?= $user['full_name'] ?>
+            Email: <?= $user['email'] ?>
+            Mobile Number: <?= $user['mobile_number'] ?>
+            Address: <?= $user['address'] ?>
+            Username: <?= $user['username'] ?>
+            NID: <?= $user['nid'] ?>
+        </td>
+    </tr>
+</table>
 </body>
 </html>
