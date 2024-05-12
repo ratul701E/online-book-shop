@@ -1,16 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create New Employee</title>
 </head>
+
 <body>
-<?php require_once('navbar.php') ?>
-<?php require_once('right-panel.php') ?>
-<!-- fahim: create new employee table -->
-<!-- ratul: ein dia employee account e khulte parbi -->
-<form action="" method="post">
+    <?php require_once('navbar.php') ?>
+    <?php require_once('right-panel.php') ?>
+    <!-- fahim: create new employee table -->
+    <!-- ratul: ein dia employee account e khulte parbi -->
+    <form action="" method="post">
         <table class="create-new-employee-table" id="create-new-employee-table">
             <tr>
                 <td>
@@ -35,4 +37,5 @@
         </table>
     </form>
 </body>
+
 </html>
