@@ -43,7 +43,7 @@
                 <td> <?= $user['user_id'] ?> </td>
                 <td> <?= $user['full_name'] ?> </td>
                 <td> <?= get_user_attendance($user['user_id']) * 500 ?> </td>
-                <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">
+                <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">view</a>
                         <!-- fahim: view korar icon -->
                     </a> </td>
             </tr>

@@ -73,7 +73,7 @@ function get_book_counts() {
     $total_stock = $in_stock_row['total_stock'];
 
     $query_sold = "SELECT SUM(od.quantity) AS total_sold
-                   FROM order_details od
+                   FROM orders od
                    JOIN books b ON od.book_id = b.book_id";
     $result_sold = mysqli_query($conn, $query_sold);
     $sold_row = mysqli_fetch_assoc($result_sold);

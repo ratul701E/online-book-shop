@@ -62,8 +62,8 @@ function get_order_counts() {
 function get_total_money_by_status() {
     $conn = conn();
     $query = "SELECT 
-                SUM(CASE WHEN status = 'Pending' THEN total_amount ELSE 0 END) AS pending_money,
-                SUM(CASE WHEN status = 'Completed' THEN total_amount ELSE 0 END) AS completed_money
+                SUM(CASE WHEN status = 'Pending' THEN total_price ELSE 0 END) AS pending_money,
+                SUM(CASE WHEN status = 'Completed' THEN total_price ELSE 0 END) AS completed_money
               FROM orders";
     $result = mysqli_query($conn, $query);
     $total_money = mysqli_fetch_assoc($result);

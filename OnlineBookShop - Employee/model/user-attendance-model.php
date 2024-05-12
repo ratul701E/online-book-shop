@@ -1,9 +1,11 @@
 <?php
 
 require_once('db.php'); 
+require_once('user-model.php');
 
-function add_user_attendance($user_id, $attendance = 0) {
+function add_user_attendance($username, $attendance = 0) {
     $conn = conn();
+    $user_id = get_user_by_username($username)['user_id'];
     $query = "INSERT INTO user_attendance (user_id, attendance) VALUES ($user_id, $attendance)";
     mysqli_query($conn, $query);
     mysqli_close($conn);
