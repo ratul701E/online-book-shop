@@ -31,7 +31,7 @@
                     <p><strong>Username</strong> <?= $user_details['username'] ?></p>
                     <p><strong>Order ID:</strong> <?= $order['order_id'] ?></p>
                     <p><strong>Order Date:</strong> <?= $order['order_date'] ?></p>
-                    <p><strong>Total Amount:</strong> <?= $order['total_amount'] ?></p>
+                    <p><strong>Total Amount:</strong> <?= $order['total_price'] ?></p>
                     <p><strong>Order Status:</strong> <?= $order['status'] ?></p>
                 </td>
             </tr>

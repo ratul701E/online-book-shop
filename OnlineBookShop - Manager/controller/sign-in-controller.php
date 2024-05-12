@@ -30,7 +30,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             exit();
         }
         else if($user['role'] == "Manager") {
-            header("Location: ../view/manager-home.php");
+            header("Location: ../view/home.php");
             exit();
         }
         else {

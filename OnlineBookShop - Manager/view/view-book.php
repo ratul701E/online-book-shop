@@ -1,3 +1,10 @@
+<?php
+    require('../model/book-model.php');
+    session_start();
+    $book = get_book_by_id($_GET['book_id']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

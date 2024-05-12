@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    require('../model/user-model.php');
+    $user = get_user_by_id($_GET['user_id']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>

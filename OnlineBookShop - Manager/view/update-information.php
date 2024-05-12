@@ -1,3 +1,12 @@
+<?php
+    session_start();
+    require('../model/user-model.php');
+    require('../controller/status-message.php');
+    $user = get_user_by_id($_GET['user_id']);
+
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -7,7 +16,7 @@
 </head>
 <body>
 <?php require_once('navbar.php') ?>
-<?php require_once('side-panel.php') ?>
+<?php require_once('right-panel.php') ?>
 
     <!-- fahim: edit profile table -->
     <br><?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>

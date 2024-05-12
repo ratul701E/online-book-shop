@@ -1,3 +1,10 @@
+<?php
+    require('../model/book-model.php');
+    session_start();
+    $books = get_all_books();
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +35,9 @@
                             <td><?=$book['book_id']?></td>
                             <td><?=$book['title']?></td>
                             <td><?=$book['stock_quantity']?></td>
-                            <td><a href="view-book.php">View</a></td><!-- ratul: kaam kor -->
-                            <td><a href="edit-book.php">Edit</a></td>
-                            <td><a href="">Delete</a></td>
+                            <td><a href="view-book.php?book_id=<?=$book['book_id']?>">View</a></td>
+                            <td><a href="edit-book.php?book_id=<?=$book['book_id']?>">Edit</a></td>
+                            <td><a href="../controller/remove-book-controller.php?book_id=<?=$book['book_id']?>">Delete</a></td>
                         </tr>
                     <?php
                 }

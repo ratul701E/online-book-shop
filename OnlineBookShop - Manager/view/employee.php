@@ -1,3 +1,10 @@
+<?php
+    session_start();
+    require_once('../model/user-model.php');
+    $employees = get_users_by_role('Employee');
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -28,9 +35,9 @@
             <td> <?= $user['user_id'] ?> </td>
             <td> <?= $user['full_name'] ?> </td>
             <td> <?= $user['username'] ?> </td>
-            <td> <a href="view-details.php">View Details</a> </td> <!-- ratul: kaam kor -->
-            <td> <a href="update-information.php">Update Information</a> </td>
-            <td> <a href="">Delete Account</a></td>
+            <td> <a href="view-details.php?user_id=<?= $user['user_id'] ?>">View </a> </td>
+            <td> <a href="update-information.php?user_id=<?= $user['user_id'] ?>">Edit</a> </td>
+            <td> <a href="../controller/delete-user-controller.php?user_id=<?= $user['user_id'] ?>">Delete</a> </td>
         </tr>
         <?php
         }

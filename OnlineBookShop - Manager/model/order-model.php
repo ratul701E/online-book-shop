@@ -71,4 +71,11 @@ function get_total_money_by_status() {
     return $total_money;
 }
 
+function update_order_status($order_id, $new_status) {
+    $conn = conn();
+    $query = "UPDATE orders SET status = '$new_status' WHERE order_id = $order_id";
+    mysqli_query($conn, $query);
+    mysqli_close($conn);
+}
+
 ?>

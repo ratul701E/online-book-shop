@@ -1,3 +1,10 @@
+<?php
+    require('../model/book-model.php');
+    session_start();
+    $book = get_book_by_id($_GET['book_id']);
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +16,7 @@
 <?php require_once('navbar.php') ?>
 <?php require_once('right-panel.php') ?>
 <!-- fahim: edit book table -->
-    <form action="" method="post">
+    <form action="../controller/update-book-controller.php" method="post">
         <input type="hidden" name="book_id" value="<?=$book['book_id']?>">
         <table class="edit-book-table" id="edit-book-table">
             <tr>
@@ -25,11 +32,11 @@
                     Price <br>
                     <input type="text" name="price" value="<?=$book['price']?>"><br><br>
                     Description <br>
-                    <textarea type="text" name="description" > <?=$book['description']?> </textarea><br><br>
+                    <textarea type="text" name="description" ><?=$book['description']?></textarea><br><br>
                     Stock Quantity <br>
                     <input type="text" name="stock_quantity" value="<?=$book['stock_quantity']?>"><br><br>
                     <!-- fahim: add book button -->
-                    <button>Edit Book</button>
+                    <button type="submit">Edit Book</button>
                 </td>
             </tr>
         </table>
