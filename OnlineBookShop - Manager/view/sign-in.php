@@ -18,11 +18,11 @@
             <h1>Online Book Shop</h1>
         </div>
         <div class="container">
-            im: signup button -->
+            <!-- fahim: signup button -->
 
             <form action="../controller/sign-in-controller.php" method="post" onsubmit="return validateSignInForm()">
-                 fahim: login table -->
-                 message -->
+                <!-- fahim: login table -->
+                <!-- message -->
                 <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
                 <table class="sign-in-table" id="sign-in-table">
                     <tr>
@@ -31,7 +31,7 @@
                             <input type="text" name="username" placeholder=""><br><br>
                             Password <br>
                             <input type="text" name="password"><br><br>
-                             fahim: sign in button -->
+                            <!-- fahim: sign in button -->
                             <button class="sign-in-button" id="sign-in-button">Sign In</button>
                         </td>
                     </tr>

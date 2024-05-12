@@ -18,8 +18,8 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('right-panel.php') ?>
-     fahim: book table -->
-    ul: info fetch kor -->
+    <!-- fahim: book table -->
+    <!-- ratul: info fetch kor -->
 
     <div class="container">
         <h1 align="center">View Book</h1>

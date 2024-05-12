@@ -23,7 +23,7 @@
 
 <body>
     <div class="sidebar">
-         fahim: admin er left navigation bar -->
+        <!-- fahim: admin er left navigation bar -->
         <div class="option1"><button class="mainButton"> Employee
             </button></div>
         <div class="options">
@@ -37,7 +37,7 @@
             <div class="option3"><a href="feedback-and-review.php"><button>Feedback & Review</button></a> </div>
         </div>
     </div>
-     <select name="options" onchange="location = this.value"> -->
+    <!-- <select name="options" onchange="location = this.value"> -->
     </div>
 </body>
 

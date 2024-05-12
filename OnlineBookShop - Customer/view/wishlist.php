@@ -18,13 +18,13 @@
 </head>
 
 <body>
-    im: back button  -->
+    <!-- fahim: back button  -->
     <?php require_once ('navbar.php') ?>
     <h1 align="center">Wishlist</h1>
     <div class="container">
 
-         fahim: wishlist table  -->
-         ratul: wishlist fetch kor  -->
+        <!-- fahim: wishlist table  -->
+        <!-- ratul: wishlist fetch kor  -->
         <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
         <table class="wishlist-table" id="wishlist-table"s>
             <?php

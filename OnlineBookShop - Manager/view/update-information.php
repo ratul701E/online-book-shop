@@ -25,7 +25,7 @@
     <div class="container">
         <h1 align="center">Update Information</h1>
 
-        im: edit profile table -->
+        <!-- fahim: edit profile table -->
         <form action="../controller/edit-profile-info-controller.php" method="post"
             onsubmit="return validateEditProfileForm()">
             <br><?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
@@ -43,7 +43,7 @@
                         <input type="text" name="username" value="<?= $user['username'] ?>"><br><br>
                         NID <br>
                         <input type="text" name="nid" value="<?= $user['nid'] ?>"><br><br>
-                        im: update information button -->
+                        <!-- fahim: update information button -->
                         <button class="update-information-button" id="update-information-button">Update
                             Information</button>
                     </td>

@@ -10,13 +10,13 @@
 
 <body>
 
-    im: back button  -->
-     ratul: thik id dia back koris book page e  -->
+    <!-- fahim: back button  -->
+    <!-- ratul: thik id dia back koris book page e  -->
     <a href="book-page.php">Back</a>
     <?php require_once ('navbar.php') ?>
 
-     ratul: fetch kor back to back  -->
-     fahim: related products table  -->
+    <!-- ratul: fetch kor back to back  -->
+    <!-- fahim: related products table  -->
     <table class="related-products-table" id="related-products-table">
         <tr>
             <td>

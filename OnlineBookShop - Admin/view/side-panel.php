@@ -23,7 +23,7 @@
 
 <body>
     <div class="sidebar">
-         fahim: admin er left navigation bar -->
+        <!-- fahim: admin er left navigation bar -->
         <div class="option1"><button class="mainButton" onclick="toggleOptions()">
                 <span class="material-symbols-outlined">
                     shield_person
@@ -47,7 +47,7 @@
                         </span><br>Reporting and Analytics</button></a>
             </div>
         </div>
-         <select name="options" onchange="location = this.value"> -->
+        <!-- <select name="options" onchange="location = this.value"> -->
     </div>
 </body>
 

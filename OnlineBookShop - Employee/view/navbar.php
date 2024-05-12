@@ -17,7 +17,7 @@
                 <div class="navBarItems">
                     <td>
                         <div class="logo">
-                             fahim: logo -->
+                            <!-- fahim: logo -->
                             <a href="profile-update.php"><img src="../vendor/logo.png" alt="" height="50px"
                                     width="100px"></a>
                         </div>
@@ -28,14 +28,14 @@
                             <span class="material-symbols-outlined">
                                 search
                             </span>
-                             ratul: search -->
+                            <!-- ratul: search -->
                         </div>
                     </td>
 
                     <td>
                         <div class="others">
-                             fahim: oije navbar er oida bucchos e to naam mone nai -->
-                            information fetch kor logout redirect kor -->
+                            <!-- fahim: oije navbar er oida bucchos e to naam mone nai -->
+                            <!-- ratul: information fetch kor logout redirect kor -->
                             <select name="profile" onchange="location = this.value">
                                 <option disabled selected hidden><?=$_SESSION['user']['username'] ?></option>
                                 <option value="profile.php">Profile</option>

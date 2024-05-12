@@ -22,12 +22,12 @@
 </head>
 
 <body>
-     fahim: back button  -->
+    <!-- fahim: back button  -->
     <?php require_once ('navbar.php') ?>
     <h1 align="center">Checkout</h1>
-    kout table  -->
+    <!-- fahim: checkout table  -->
     <div class="container">
-        sage -->
+        <!-- message -->
         <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
 
         <table class="checkout-table" id="checkout-table">
@@ -38,7 +38,7 @@
                     E-mail: <?=$user['email']?> <br>
                     Address: <?=$user['address']?> <br><br>
                     Total: <?=$total_price?> <br><br>
-                     ratul: password thikmoto dile order confirm  -->
+                    <!-- ratul: password thikmoto dile order confirm  -->
                     <form action="../controller/checkout-controller.php" method="post">
                         Password <br>
                         <input type="text" name="password"><br><br>

@@ -19,12 +19,12 @@ $classics = get_all_books();
 
 <body>
 
-    im: back button  -->
+    <!-- fahim: back button  -->
     <a href="customer-home.php">Back</a>
     <?php require_once ('navbar.php') ?>
 
     <div class="container">
-         ratul: fetch kor back to back  -->
+        <!-- ratul: fetch kor back to back  -->
         <table class="classics-table" id="classics-table">
             <tr>
                 <td>

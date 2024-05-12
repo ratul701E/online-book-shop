@@ -17,7 +17,7 @@
                 <div class="navBarItems">
                     <td>
                         <div class="logo">
-                            im: logo -->
+                            <!-- fahim: logo -->
                             <img src="../vendor/logo.png" alt="" height="50px" width="100px">
                         </div>
                     </td>
@@ -27,7 +27,7 @@
                             <span class="material-symbols-outlined">
                                 search
                             </span>
-                             ratul: search -->
+                            <!-- ratul: search -->
                         </div>
                     </td>
 
@@ -37,8 +37,8 @@
                                     settings
                                 </span></a>
 
-                             fahim: oije navbar er oida bucchos e to naam mone nai -->
-                            ul: information fetch kor logout redirect kor -->
+                            <!-- fahim: oije navbar er oida bucchos e to naam mone nai -->
+                            <!-- ratul: information fetch kor logout redirect kor -->
                             <select name="profile" onchange="location = this.value">
                                 <option disabled selected hidden> <?=$_SESSION['user']['username'] ?></option>
                                 <option disabled> <?=$_SESSION['user']['full_name'] ?> </option>
