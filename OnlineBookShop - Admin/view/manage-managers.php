@@ -19,8 +19,13 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
+<<<<<<< HEAD
     <!-- fahim: manager table -->
     <!-- ratul: fetch kor -->
+=======
+     fahim: manager table -->
+     ratul: fetch kor -->
+>>>>>>> parent of 07e05e9 (updated)
     <div class="container">
 
         <table class="managers-table" id="managers-table">
@@ -30,7 +35,11 @@
                 </td>
                 <td></td>
                 <td>
+<<<<<<< HEAD
                     <!-- ratul: employee create kor notun -->
+=======
+                     ratul: employee create kor notun -->
+>>>>>>> parent of 07e05e9 (updated)
                     <a href="add-user.php">Add Manager</a>
                 </td>
             </tr>

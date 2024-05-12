@@ -24,7 +24,11 @@ $classics = get_all_books();
     <?php require_once ('navbar.php') ?>
 
     <div class="container">
+<<<<<<< HEAD
         <!-- ratul: fetch kor back to back  -->
+=======
+         ratul: fetch kor back to back  -->
+>>>>>>> parent of 07e05e9 (updated)
         <table class="classics-table" id="classics-table">
             <tr>
                 <td>

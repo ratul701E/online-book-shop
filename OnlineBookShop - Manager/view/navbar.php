@@ -22,12 +22,20 @@
                             <span class="material-symbols-outlined">
                                 search
                             </span>
+<<<<<<< HEAD
                             <!-- ratul: search -->
+=======
+                             ratul: search -->
+>>>>>>> parent of 07e05e9 (updated)
                         </div>
                     </td>
                     <td>
                         <div class="logo">
+<<<<<<< HEAD
                             <!-- fahim: logo -->
+=======
+                             fahim: logo -->
+>>>>>>> parent of 07e05e9 (updated)
                             <img src="../vendor/logo.png" alt="" height="50px" width="100px">
                         </div>
                     </td>

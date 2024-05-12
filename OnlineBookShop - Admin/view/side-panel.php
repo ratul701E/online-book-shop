@@ -23,7 +23,11 @@
 
 <body>
     <div class="sidebar">
+<<<<<<< HEAD
         <!-- fahim: admin er left navigation bar -->
+=======
+         fahim: admin er left navigation bar -->
+>>>>>>> parent of 07e05e9 (updated)
         <div class="option1"><button class="mainButton" onclick="toggleOptions()">
                 <span class="material-symbols-outlined">
                     shield_person

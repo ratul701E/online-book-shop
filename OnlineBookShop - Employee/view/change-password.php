@@ -18,9 +18,15 @@ require '../controller/status-message.php'
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
 
+<<<<<<< HEAD
     <!-- fahim: change password table -->
     <!-- ratul: password verify koira password update kor  => DONE -->
     <!-- message -->
+=======
+     fahim: change password table -->
+     ratul: password verify koira password update kor  => DONE -->
+     message -->
+>>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <h1 align="center">Change Password</h1>
         <form action="../controller/change-password-controller.php" method="post"

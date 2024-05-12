@@ -20,7 +20,11 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
+<<<<<<< HEAD
     <!-- fahim: add book table -->
+=======
+     fahim: add book table -->
+>>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <h1 align="center">Edit Book</h1>
         <form action="../controller/update-book-controller.php" method="post" onsubmit="return validateEditBookForm()">
@@ -42,7 +46,11 @@
                         <textarea type="text" name="description"> <?=$book['description']?> </textarea><br><br>
                         Stock Quantity <br>
                         <input type="text" name="stock_quantity" value="<?=$book['stock_quantity']?>"><br><br>
+<<<<<<< HEAD
                         <!-- fahim: add book button -->
+=======
+                         fahim: add book button -->
+>>>>>>> parent of 07e05e9 (updated)
                         <button>Save Changes</button>
                     </td>
                 </tr>

@@ -16,13 +16,22 @@
 </head>
 
 <body>
+<<<<<<< HEAD
     <!-- fahim: back button  -->
+=======
+     fahim: back button  -->
+>>>>>>> parent of 07e05e9 (updated)
     <?php require_once ('navbar.php') ?>
 
     <div class="container">
 
+<<<<<<< HEAD
         <!-- fahim: cart table  -->
         <!-- ratul: cart fetch kor  -->
+=======
+         fahim: cart table  -->
+         ratul: cart fetch kor  -->
+>>>>>>> parent of 07e05e9 (updated)
         <h1 align="center">Cart</h1> <br>
         <!-- msg -->
         <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
@@ -37,7 +46,11 @@
                     Author Name: <?= $book['author'] ?><br>
                     <img src="<?= $book['imgdir'] ?>" alt="x"><br>
                     Taka: <?= $book['price'] ?><br><br>
+<<<<<<< HEAD
                     <!-- ratul: remove koris cart erte  -->
+=======
+                     ratul: remove koris cart erte  -->
+>>>>>>> parent of 07e05e9 (updated)
                     <div class="removeFromCart">
 
                         <a

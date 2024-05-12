@@ -22,7 +22,11 @@
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
 
+<<<<<<< HEAD
     <!-- fahim: salary sheet table -->
+=======
+     fahim: salary sheet table -->
+>>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <table class="salary-sheet-table" id="salary-sheet-table">
             <tr>

@@ -24,7 +24,11 @@ session_start();
 
 
     <div class="container">
+<<<<<<< HEAD
         <!-- fahim: sobi laga  -->
+=======
+         fahim: sobi laga  -->
+>>>>>>> parent of 07e05e9 (updated)
         <a href="edit-profile-info.php?user_id=<?=$_SESSION['user']['user_id']?>"><span
                 class="material-symbols-outlined">
                 edit

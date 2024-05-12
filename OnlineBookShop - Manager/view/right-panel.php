@@ -20,7 +20,11 @@
 
 <body>
     <div class="sidebar">
+<<<<<<< HEAD
         <!-- fahim: admin er left navigation bar -->
+=======
+         fahim: admin er left navigation bar -->
+>>>>>>> parent of 07e05e9 (updated)
         <div class="options">
             <div class="option4"><a href="manager-home.php"><button><span class="material-symbols-outlined">
                             home

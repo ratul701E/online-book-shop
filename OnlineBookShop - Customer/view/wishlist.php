@@ -23,8 +23,13 @@
     <h1 align="center">Wishlist</h1>
     <div class="container">
 
+<<<<<<< HEAD
         <!-- fahim: wishlist table  -->
         <!-- ratul: wishlist fetch kor  -->
+=======
+         fahim: wishlist table  -->
+         ratul: wishlist fetch kor  -->
+>>>>>>> parent of 07e05e9 (updated)
         <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
         <table class="wishlist-table" id="wishlist-table"s>
             <?php

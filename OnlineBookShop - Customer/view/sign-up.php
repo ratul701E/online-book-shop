@@ -17,9 +17,15 @@
         <h1>Online Book Shop</h1>
     </div>
     <div>
+<<<<<<< HEAD
         <!-- fahim: back button -->
 
         <!-- fahim: registration form -->
+=======
+        back button -->
+
+         fahim: registration form -->
+>>>>>>> parent of 07e05e9 (updated)
         <form action="../controller/sign-up-controller.php" method="post" onsubmit="return validateSignUpForm()">
             <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
             <table class="registration-table" id="registration-table">

@@ -27,7 +27,11 @@
                             <span class="material-symbols-outlined">
                                 search
                             </span>
+<<<<<<< HEAD
                             <!-- ratul: search -->
+=======
+                             ratul: search -->
+>>>>>>> parent of 07e05e9 (updated)
                         </div>
                     </td>
 
@@ -37,8 +41,13 @@
                                     settings
                                 </span></a>
 
+<<<<<<< HEAD
                             <!-- fahim: oije navbar er oida bucchos e to naam mone nai -->
                             <!-- ratul: information fetch kor logout redirect kor -->
+=======
+                             fahim: oije navbar er oida bucchos e to naam mone nai -->
+                            ul: information fetch kor logout redirect kor -->
+>>>>>>> parent of 07e05e9 (updated)
                             <select name="profile" onchange="location = this.value">
                                 <option disabled selected hidden> <?=$_SESSION['user']['username'] ?></option>
                                 <option disabled> <?=$_SESSION['user']['full_name'] ?> </option>

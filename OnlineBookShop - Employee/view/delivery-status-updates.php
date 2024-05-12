@@ -20,8 +20,13 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
+<<<<<<< HEAD
     <!-- ratul: fetch kor -->
     <!-- fahim: reporting and analytics table -->
+=======
+     ratul: fetch kor -->
+     fahim: reporting and analytics table -->
+>>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <table class="order-info-table" id="order-info-table">
             <tr>

@@ -21,8 +21,13 @@
     <?php require_once('side-panel.php') ?>
 
 
+<<<<<<< HEAD
     <!-- fahim: profile table -->
     <!-- ratul: info fetch kor -->
+=======
+     fahim: profile table -->
+    ul: info fetch kor -->
+>>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <h1 align="center">Profile</h1>
         <table class="profile-table" id="profile-table">

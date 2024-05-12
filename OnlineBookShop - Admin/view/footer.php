@@ -16,7 +16,11 @@
         <table class=" footer" id="footer">
             <tr>
                 <td>
+<<<<<<< HEAD
                     <!-- fahim: logo -->
+=======
+                     fahim: logo -->
+>>>>>>> parent of 07e05e9 (updated)
                     <img src="../vendor/logo.png" alt="" height="75px" width="150px">
                 </td>
             </tr>

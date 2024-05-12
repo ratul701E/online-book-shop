@@ -17,7 +17,11 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
+<<<<<<< HEAD
     <!-- fahim: rating table table -->
+=======
+     fahim: rating table table -->
+>>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <table class="customer-ratings-table" id="customer-ratings-table">
             <tr>

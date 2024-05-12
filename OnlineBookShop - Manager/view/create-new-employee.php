@@ -16,8 +16,13 @@ require '../controller/status-message.php'
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('right-panel.php') ?>
+<<<<<<< HEAD
     <!-- fahim: create new employee table -->
     <!-- ratul: ein dia employee account e khulte parbi -->
+=======
+     fahim: create new employee table -->
+     ratul: ein dia employee account e khulte parbi -->
+>>>>>>> parent of 07e05e9 (updated)
 
     <div class="container">
         <h1 align="center">Create New Employee</h1>
@@ -40,7 +45,11 @@ require '../controller/status-message.php'
                         <input type="text" name="password"><br><br>
                         NID <br>
                         <input type="text" name="nid"><br><br>
+<<<<<<< HEAD
                         <!-- fahim: Create Employee button -->
+=======
+                         fahim: Create Employee button -->
+>>>>>>> parent of 07e05e9 (updated)
                         <button type="submit">Create Employee</button>
                     </td>
                 </tr>

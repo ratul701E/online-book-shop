@@ -18,8 +18,13 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
+<<<<<<< HEAD
     <!-- fahim: inventory table -->
     <!-- ratul: fetch kor -->
+=======
+     fahim: inventory table -->
+     ratul: fetch kor -->
+>>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <table class="inventory-table" id="inventory-table">
             <tr>
@@ -27,7 +32,11 @@
                     <h1>Inventory Details</h1>
                 </td>
                 <td>
+<<<<<<< HEAD
                     <!-- ratul: employee create kor notun -->
+=======
+                     ratul: employee create kor notun -->
+>>>>>>> parent of 07e05e9 (updated)
                     <a href="add-book.php">Add Book</a>
                 </td>
             </tr>

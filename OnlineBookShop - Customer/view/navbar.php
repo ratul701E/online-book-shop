@@ -22,7 +22,11 @@
 
 <body>
     <nav>
+<<<<<<< HEAD
         <!-- fahim: navbar -->
+=======
+         fahim: navbar -->
+>>>>>>> parent of 07e05e9 (updated)
         <table class="navbar" id="navbar">
             <tr>
                 <td></td>
@@ -41,7 +45,11 @@
                 <div class="navBarItems">
                     <td>
                         <div class="logo">
+<<<<<<< HEAD
                             <!-- fahim: logo -->
+=======
+                             fahim: logo -->
+>>>>>>> parent of 07e05e9 (updated)
                             <a href="customer-home.php"><img src="../vendor/logo.png" alt="" height="100px"
                                     width="200px"></a>
                         </div>
