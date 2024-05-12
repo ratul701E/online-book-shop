@@ -35,7 +35,7 @@
         <table>
             <tr>
                 <td>
-                   <img src="<?= $book['imgdir'] ?>" alt="as">
+                <img src="../vendor/<?= $book['imgdir'] ?>" alt="x"><br>
                     <img src="../vendor//book1.jpg" alt="as">
                 </td>
                 <td>
