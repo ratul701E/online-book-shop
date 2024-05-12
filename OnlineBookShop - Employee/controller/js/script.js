@@ -13,22 +13,6 @@ function validateEditProfileForm() {
 }
 
 
-function validateEditBookForm() {
-    var title = document.getElementsByName("title")[0].value;
-    var author = document.getElementsByName("author")[0].value;
-    var genre = document.getElementsByName("genre")[0].value;
-    var isbn = document.getElementsByName("isbn")[0].value;
-    var price = document.getElementsByName("price")[0].value;
-    var description = document.getElementsByName("description")[0].value;
-    var stockQuantity = document.getElementsByName("stock_quantity")[0].value;
-
-    if (title.trim() === '' || author.trim() === '' || genre.trim() === '' || isbn.trim() === '' || price.trim() === '' || description.trim() === '' || stockQuantity.trim() === '') {
-        alert("Fields cannot be empty");
-        return false;
-    }
-    return true;
-}
-
 
 function validateChangePasswordForm() {
     var oldPassword = document.getElementsByName("password")[0].value;
@@ -48,9 +32,7 @@ function validateChangePasswordForm() {
     return true;
 }
 
-
-
-function validateAddUserForm() {
+function validateProfileUpdateForm() {
     var fullName = document.getElementsByName("full_name")[0].value;
     var email = document.getElementsByName("email")[0].value;
     var mobileNumber = document.getElementsByName("mobile_number")[0].value;
@@ -58,37 +40,11 @@ function validateAddUserForm() {
     var username = document.getElementsByName("username")[0].value;
     var password = document.getElementsByName("password")[0].value;
     var nid = document.getElementsByName("nid")[0].value;
-    var roleEmployee = document.getElementById("role_employee").checked;
-    var roleManager = document.getElementById("role_manager").checked;
 
     if (fullName.trim() === '' || email.trim() === '' || mobileNumber.trim() === '' || address.trim() === '' || username.trim() === '' || password.trim() === '' || nid.trim() === '') {
         alert("Fields cannot be empty");
         return false;
     }
 
-    if (!roleEmployee && !roleManager) {
-        alert("Please select a role (Employee/Manager)");
-        return false;
-    }
-
     return true;
 }
-
-
-function validateAddBookForm() {
-    var title = document.getElementsByName("title")[0].value;
-    var author = document.getElementsByName("author")[0].value;
-    var genre = document.getElementsByName("genre")[0].value;
-    var isbn = document.getElementsByName("isbn")[0].value;
-    var price = document.getElementsByName("price")[0].value;
-    var description = document.getElementsByName("description")[0].value;
-    var stockQuantity = document.getElementsByName("stock_quantity")[0].value;
-
-    if (title.trim() === '' || author.trim() === '' || genre.trim() === '' || isbn.trim() === '' || price.trim() === '' || description.trim() === '' || stockQuantity.trim() === '') {
-        alert("Fields cannot be empty");
-        return false;
-    }
-
-    return true;
-}
-

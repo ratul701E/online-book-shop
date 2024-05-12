@@ -12,6 +12,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Profile Update</title>
+    <link rel="stylesheet" href="dashboardStyles.css">
+    <script src="../controller/js/script.js"></script>
 </head>
 
 <body>
@@ -19,11 +21,12 @@
     <?php require_once('side-panel.php') ?>
     <!-- fahim: add employee table -->
     <div class="container">
-        <form action="../controller/add-user-controller.php" method="post">
+        <form action="../controller/add-user-controller.php" method="post"
+            onsubmit="return validateProfileUpdateForm()">
             <table class="add-employee-table" id="add-employee-table">
                 <tr>
                     <td>
-                        Add Employee
+                        <h1 align="center">Add Employee</h1>
                     </td>
                 </tr>
                 <tr>
@@ -43,7 +46,7 @@
                         NID <br>
                         <input type="text" name="nid"><br><br>
                         <!-- fahim: add employee button -->
-                        <button type="submmit">Confirm</button>
+                        <button type="submit">Confirm</button>
                     </td>
                 </tr>
             </table>
@@ -52,14 +55,14 @@
         <table class="employee-table" id="employee-table">
             <tr>
                 <td colspan="6">
-                    Profile Update
+                    <h1 align="center">Profile Update</h1>
                 </td>
             </tr>
             <tr>
-                <td> ID </td>
-                <td> Employees Name </td>
-                <td> Status </td>
-                <td colspan="3"> Action </td>
+                <th> ID </th>
+                <th> Employees Name </th>
+                <th> Status </th>
+                <th colspan="3"> Action </th>
             </tr>
             <?php
             foreach($employees as $user) {

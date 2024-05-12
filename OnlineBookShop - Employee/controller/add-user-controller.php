@@ -2,6 +2,11 @@
 require_once ('../model/user-model.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if(empty($full_name) || empty($email) || empty($mobile_number) || empty($address) || empty($username) || empty($password) || empty($nid)) {
+        header('location: ../view/profile-update.php?status=2'); 
+        exit();
+    }
     $full_name = $_POST["full_name"];
     $email = $_POST["email"];
     $mobile_number = $_POST["mobile_number"];
