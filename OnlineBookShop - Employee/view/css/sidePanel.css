@@ -39,9 +39,13 @@ select:focus {
 .mainButton {
   width: 100%;
   color: white;
-  font-size: x-large;
+  font-size: xx-large;
   background-color: transparent;
-  border-radius: 10px;
+  border: none;
+}
+
+.mainButton:hover {
+  color: white;
 }
 
 button {

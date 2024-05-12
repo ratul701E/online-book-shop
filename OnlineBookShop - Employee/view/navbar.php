@@ -18,7 +18,8 @@
                     <td>
                         <div class="logo">
                             <!-- fahim: logo -->
-                            <img src="../vendor/logo.png" alt="" height="50px" width="100px">
+                            <a href="profile-update.php"><img src="../vendor/logo.png" alt="" height="50px"
+                                    width="100px"></a>
                         </div>
                     </td>
                     <td>
