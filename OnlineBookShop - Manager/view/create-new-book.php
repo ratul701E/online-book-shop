@@ -16,7 +16,6 @@ require '../controller/status-message.php'
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('right-panel.php') ?>
-    <!-- fahim: create book table -->
     <div class="container">
         <h1 align="center">Create New Book</h1>
         <form action="../controller/create-new-book-controller.php" method="post"
@@ -38,7 +37,6 @@ require '../controller/status-message.php'
                         <textarea type="text" name="description"> </textarea><br><br>
                         Stock Quantity <br>
                         <input type="text" name="stock_quantity"><br><br>
-                        <!-- fahim: add book button -->
                         <button>Create Book</button>
                     </td>
                 </tr>

@@ -18,13 +18,10 @@
     <?php require_once('navbar.php') ?>
     <div class="rightPanel"><?php require_once('right-panel.php') ?></div>
     <div class="container">
-        <!-- fahim: chhobi ajaira balsal dia bhorayla -->
-        <!-- ratul: ajker tarikh fetch kor eine (jigaisna ken) -->
         <h1 align="center">Welcome <?= $user['full_name'] ?></h1>
         <div class="others">
-            <?=date('j F, Y', strtotime('2024-05-05'))?>
+            <?= date('j F, Y')?>
             <a href="edit-information.php"><button>Edit Information</button></a>
-            <!-- fahim: ei 2 da right corner e rakh profile er -->
             <a href="change-password.php"><button>Change Password</button></a>
         </div>
         <br>

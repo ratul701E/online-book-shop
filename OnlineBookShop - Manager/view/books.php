@@ -20,12 +20,8 @@
     <?php require_once('right-panel.php') ?>
     <div class="container">
 
-        <!-- fahim: shundor format kor -->
         <h1>Books</h1>
-        <!-- ratul: fetch kor -->
         <a href="create-new-book.php">New</a>
-        <!-- fahim: book table -->
-        <!-- ratul: fetch kor -->
         <table class="book-table" id="book-table">
             <tr>
                 <th> Book ID </th>
