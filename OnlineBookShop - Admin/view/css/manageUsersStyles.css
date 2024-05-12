@@ -5,6 +5,7 @@ body {
 }
 
 .container {
+  height: 150px;
   max-width: 500px;
   position: relative;
   left: 550px;
@@ -17,7 +18,8 @@ body {
 
 .employees-table,
 .customers-table,
-.managers-table {
+.managers-table,
+.inventory-table {
   width: 100%;
   border-collapse: collapse;
 }
@@ -27,14 +29,17 @@ body {
 .employees-table th,
 .employees-table td,
 .customers-table th,
-.customers-table td {
+.customers-table td,
+.inventory-table th,
+.inventory-table td {
   padding: 8px;
   text-align: center;
 }
 
 .managers-table th,
 .employees-table th,
-.customers-table th {
+.customers-table th,
+.inventory-table th {
   background-color: #f2f2f2;
   text-align: left;
 }

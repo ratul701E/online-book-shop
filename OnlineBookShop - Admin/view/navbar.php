@@ -44,7 +44,7 @@
                                 <option disabled> <?=$_SESSION['user']['full_name'] ?> </option>
                                 <option disabled> Admin </option>
                                 <option value="profile.php">Profile Settings</option>
-                                <option value="">Log Out</option>
+                                <option value="../controller/logout.php">Log Out</option>
                             </select>
                         </div>
                     </td>
