@@ -24,3 +24,25 @@
 .book-details p {
   margin-bottom: 5px;
 }
+a {
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #20123e;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  color: white;
+  transition: all 0.5s ease;
+  width: 100%;
+}
+
+button:hover {
+  background-color: whitesmoke;
+  color: #20123e;
+  border: 1px solid #20123e;
+}

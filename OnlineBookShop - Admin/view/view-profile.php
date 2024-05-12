@@ -13,6 +13,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>View Profile</title>
+    <link rel="stylesheet" href="css/bookDetailsStyles.css">
+
+
 </head>
 
 <body>
@@ -21,15 +24,16 @@
     <!-- fahim: profile table -->
     <!-- ratul: info fetch kor, ei file e admin nijer info dekhte parbo + manage erte view click korleo einei anbi -->
     <div class="container">
+        <h1 align="center">View Profile</h1>
         <table class="profile-table" id="profile-table">
             <tr>
                 <td>
-                    Fullname: <?= $user['full_name'] ?>
-                    Email: <?= $user['email'] ?>
-                    Mobile Number: <?= $user['mobile_number'] ?>
-                    Address: <?= $user['address'] ?>
-                    Username: <?= $user['username'] ?>
-                    NID: <?= $user['nid'] ?>
+                    <p><strong>FullName: </strong> <?= $user['full_name'] ?></p>
+                    <p><strong>Email: </strong> <?= $user['email'] ?></p>
+                    <p><strong>Mobile Number: </strong><?= $user['mobile_number'] ?></p>
+                    <p><strong>Address: </strong> <?= $user['address'] ?></p>
+                    <p><strong>Username: </strong> <?= $user['username'] ?></p>
+                    <p><strong>NID: </strong> <?= $user['nid'] ?></p>
                 </td>
             </tr>
         </table>

@@ -41,8 +41,9 @@
                     <td> <?= $order['order_id'] ?> </td>
                     <td> <?= $order['status'] ?> </td>
                     <td> <?= $order['order_date'] ?> </td>
-                    <td> <?= $order['total_price'] ?> </td>
-                    <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
+                    <td> <?= $order['total_amount'] ?> </td>
+                    <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>"><button>View
+                                Details</button></a> </td>
                 </tr>
                 <?php
             }
