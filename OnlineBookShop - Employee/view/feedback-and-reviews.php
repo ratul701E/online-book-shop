@@ -17,7 +17,7 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-
+     fahim: rating table table -->
     <div class="container">
         <table class="customer-ratings-table" id="customer-ratings-table">
             <tr>

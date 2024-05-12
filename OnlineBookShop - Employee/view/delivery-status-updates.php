@@ -20,8 +20,8 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-
-
+     ratul: fetch kor -->
+     fahim: reporting and analytics table -->
     <div class="container">
         <table class="order-info-table" id="order-info-table">
             <tr>

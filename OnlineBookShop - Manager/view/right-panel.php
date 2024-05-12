@@ -20,7 +20,7 @@
 
 <body>
     <div class="sidebar">
-
+         fahim: admin er left navigation bar -->
         <div class="options">
             <div class="option4"><a href="manager-home.php"><button><span class="material-symbols-outlined">
                             home

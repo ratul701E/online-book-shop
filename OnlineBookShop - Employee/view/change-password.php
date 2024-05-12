@@ -18,8 +18,8 @@ require '../controller/status-message.php'
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
 
-
-
+     fahim: change password table -->
+     ratul: password verify koira password update kor  => DONE -->
      message -->
     <div class="container">
         <h1 align="center">Change Password</h1>

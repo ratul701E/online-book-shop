@@ -19,8 +19,8 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-
-
+     fahim: manager table -->
+     ratul: fetch kor -->
     <div class="container">
         <table class="employees-table" id="employees-table">
             <tr>
@@ -28,7 +28,7 @@
                     <h1>Employee Details</h1>
                 </td>
                 <td>
-
+                     ratul: employee create kor notun -->
                     <a href="add-user.php">Add Employee</a>
                 </td>
             </tr>

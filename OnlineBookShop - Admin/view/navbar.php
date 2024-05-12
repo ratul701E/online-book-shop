@@ -27,7 +27,7 @@
                             <span class="material-symbols-outlined">
                                 search
                             </span>
-
+                             ratul: search -->
                         </div>
                     </td>
 
@@ -37,7 +37,7 @@
                                     settings
                                 </span></a>
 
-
+                             fahim: oije navbar er oida bucchos e to naam mone nai -->
                             ul: information fetch kor logout redirect kor -->
                             <select name="profile" onchange="location = this.value">
                                 <option disabled selected hidden> <?=$_SESSION['user']['username'] ?></option>

@@ -54,7 +54,7 @@ if (isset($_POST['print_pdf'])) {
 
     <div class="container">
         <h1 align="center">Print Report</h1>
-
+         Fahim sundor kor -->
         <div>
             <p><strong>Number of Books Available:</strong> <?= $counts['total_books'] ?></p>
             <p><strong>Number of Books in Stock:</strong> <?= $counts['total_stock'] ?></p>

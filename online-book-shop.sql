@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2024 at 11:06 PM
+-- Generation Time: May 12, 2024 at 09:19 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -44,11 +44,10 @@ CREATE TABLE `books` (
 --
 
 INSERT INTO `books` (`book_id`, `title`, `author`, `genre`, `isbn`, `price`, `description`, `stock_quantity`, `imgdir`) VALUES
-(1, 'The Great Gatsby', 'F. Scott Fitzgerald', 'Classic', '978-0-7432-7356-5', 152.99, '11111          ', 50, ''),
-(2, 'To Kill a Mockingbird', 'Harper Lee', 'Classic', '978-0-06-112008-4', 101.99, 'The novel is renowned for its warmth and humor, despite dealing with serious issues such as racial inequality and rape.', 40, 'img/to_kill_a_mockingbird.jpg'),
-(4, 'Pride and Prejudice', 'Jane Austen', 'Romance', '978-0-14-139140-3', 111.99, 'The story follows the main character Elizabeth Bennet as she deals with issues of manners, upbringing, morality, education, and marriage in the society of the landed gentry of the British Regency.', 55, 'img/pride_and_prejudice.jpg'),
-(5, 'The Catcher in the Rye', 'J.D. Salinger', 'Coming-of-age', '978-0-316-76948-4', 28.99, 'The novel details two days in the life of 16-year-old Holden Caulfield after he has been expelled from prep school.', 45, 'img/catcher_in_the_rye.jpg'),
-(8, 'Aafasdfl;ksadj', 'Aafasdfl;ksadj', 'Aafasdfl;ksadj', 'Aafasdfl;ksadj', 1111.00, ' Aafasdfl;ksadj', 1, '');
+(1, 'The Great Gatsby', 'F. Scott Fitzgerald', 'Classic', '978-0-7432-7356-5', 12.99, '11111          ', 50, ''),
+(2, 'To Kill a Mockingbird', 'Harper Lee', 'Classic', '978-0-06-112008-4', 10.99, 'The novel is renowned for its warmth and humor, despite dealing with serious issues such as racial inequality and rape.', 40, 'img/to_kill_a_mockingbird.jpg'),
+(4, 'Pride and Prejudice', 'Jane Austen', 'Romance', '978-0-14-139140-3', 11.99, 'The story follows the main character Elizabeth Bennet as she deals with issues of manners, upbringing, morality, education, and marriage in the society of the landed gentry of the British Regency.', 55, 'img/pride_and_prejudice.jpg'),
+(5, 'The Catcher in the Rye', 'J.D. Salinger', 'Coming-of-age', '978-0-316-76948-4', 8.99, 'The novel details two days in the life of 16-year-old Holden Caulfield after he has been expelled from prep school.', 45, 'img/catcher_in_the_rye.jpg');
 
 -- --------------------------------------------------------
 
@@ -143,6 +142,7 @@ CREATE TABLE `review` (
 
 INSERT INTO `review` (`review_id`, `user_id`, `book_id`, `review_text`, `review_date`) VALUES
 (1, 1, 1, 'Are osthir book', '2024-05-10 15:46:08'),
+(2, 1, 1, 'sex', '2024-05-10 15:54:05'),
 (3, 1, 1, 'osthir', '2024-05-10 15:54:40'),
 (4, 1, 1, '0000000', '2024-05-10 15:55:19');
 
@@ -172,7 +172,9 @@ CREATE TABLE `users` (
 INSERT INTO `users` (`user_id`, `username`, `email`, `password`, `role`, `status`, `full_name`, `nid`, `address`, `mobile_number`) VALUES
 (1, 'ratulratul', 'ratul@gmail.com', 'ratulratul', 'Customer', 'Active', 'Ratul ', '987654321', 'khilgaadskffon, bangladesh', '12354698741'),
 (2, 'admin', 'admin@gmail.com', 'admin', 'Admin', 'Active', 'ADMINADMIN', '123-654-789', 'Bagichar bagane', '1230215698'),
+(3, 'Samia', 'samia@gmail.com', 'samia', 'Manager', 'Inactive', 'SAMIA LIZA UMME', '555-666-777', 'onek kase', '01236547897'),
 (5, 'aaaaa', 'aaaaaaaaaa', 'aaaaa', 'Manager', 'Active', 'aaaaaa', '136455', ' ytytuiygug', '01236547897'),
+(6, 'bbbbb', 'bbbbbbbbbb', 'bbbbb', 'Employee', 'Active', 'xxxxxxxxxx', 'bbbbbbbbbbbb', ' ', '01236547897'),
 (9, 'Shafwan', 'Shafwan', 'Shafwan', 'Employee', 'Active', 'Shafwan', 'Shafwan', ' Shafwan', '01236547897'),
 (10, 'Shafwan', 'Shafwan', 'Shafwan', 'Employee', 'Pending', 'Shafwan', 'Shafwan', ' Shafwan', '01236547897');
 
@@ -194,10 +196,7 @@ CREATE TABLE `user_attendance` (
 INSERT INTO `user_attendance` (`user_id`, `attendance`) VALUES
 (5, 16),
 (6, 2),
-(9, 2),
-(11, 0),
-(13, 0),
-(16, 0);
+(9, 2);
 
 -- --------------------------------------------------------
 
@@ -281,7 +280,7 @@ ALTER TABLE `wishlist`
 -- AUTO_INCREMENT for table `books`
 --
 ALTER TABLE `books`
-  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `book_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
 
 --
 -- AUTO_INCREMENT for table `orders`
@@ -311,7 +310,7 @@ ALTER TABLE `review`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=11;
 
 --
 -- AUTO_INCREMENT for table `wishlist`

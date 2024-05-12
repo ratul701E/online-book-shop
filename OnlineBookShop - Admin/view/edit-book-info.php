@@ -20,7 +20,7 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-
+     fahim: add book table -->
     <div class="container">
         <h1 align="center">Edit Book</h1>
         <form action="../controller/update-book-controller.php" method="post" onsubmit="return validateEditBookForm()">
@@ -42,7 +42,7 @@
                         <textarea type="text" name="description"> <?=$book['description']?> </textarea><br><br>
                         Stock Quantity <br>
                         <input type="text" name="stock_quantity" value="<?=$book['stock_quantity']?>"><br><br>
-
+                         fahim: add book button -->
                         <button>Save Changes</button>
                     </td>
                 </tr>
