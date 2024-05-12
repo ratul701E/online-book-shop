@@ -22,8 +22,8 @@ Candidates
             01402246680
             EX: 10 Years
             Applied: 12 May, 2024
-            <button><a href="">View</a></button>
-            <button><a href="">Submit</a></button>
+            <button><a href="view-details.php">View</a></button>
+            <button><a href="">Submit</a></button> <!-- ratul: eine approve korbi pending erte -->
         </td>
     </tr>
 </table>

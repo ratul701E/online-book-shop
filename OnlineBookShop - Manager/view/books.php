@@ -28,9 +28,9 @@
                             <td><?=$book['book_id']?></td>
                             <td><?=$book['title']?></td>
                             <td><?=$book['stock_quantity']?></td>
-                            <td><a href="">View</a></td>
-                            <td><a href="">Edit</a></td>
-                            <td><a href="">Remove</a></td>
+                            <td><a href="view-book.php">View</a></td><!-- ratul: kaam kor -->
+                            <td><a href="edit-book.php">Edit</a></td>
+                            <td><a href="">Delete</a></td>
                         </tr>
                     <?php
                 }
