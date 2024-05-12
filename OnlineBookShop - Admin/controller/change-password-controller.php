@@ -1,11 +1,19 @@
 <?php
 session_start();
 
-$user_id = $_SESSION['user']['user_id'];
 
 require_once '../model/user-model.php';
+require_once 'status-message.php';
+
+$user_id = $_SESSION['user']['user_id'];
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+
+    if (empty($_POST["password"]) || empty($_POST["npassword"]) || empty($_POST["cnpassword"])) {
+        header("Location: ../view/change-password.php?status=2"); 
+        exit();
+    }
+
     $old_password = $_POST["password"];
     $new_password = $_POST["npassword"];
     $confirm_new_password = $_POST["cnpassword"];

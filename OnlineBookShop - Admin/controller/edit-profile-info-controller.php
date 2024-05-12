@@ -1,5 +1,7 @@
 <?php
 require_once '../model/user-model.php';
+require_once 'status-message.php';
+
 session_start();
 
 if (!isset($_SESSION['user'])) {
@@ -10,6 +12,11 @@ if (!isset($_SESSION['user'])) {
 //validation
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (empty($_POST["full_name"]) || empty($_POST["email"]) || empty($_POST["mobile_number"]) || empty($_POST["username"]) || empty($_POST["nid"])) {
+        header("Location: ../view/edit-profile-info.php?user_id=".$_POST['user_id']."&status=2"); 
+        exit();
+    }
+    
     $user = get_user_by_id($_POST['user_id']);
     $full_name = $_POST["full_name"];
     $email = $_POST["email"];

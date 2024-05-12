@@ -1,22 +1,33 @@
 <?php
 require_once ('../model/user-model.php');
+require_once ('status-message.php');
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $full_name = $_POST["full_name"];
-    $email = $_POST["email"];
-    $mobile_number = $_POST["mobile_number"];
-    $address = $_POST["Address"];
-    $username = $_POST["username"];
-    $password = $_POST["password"];
-    $nid = $_POST["nid"];
+    if (empty($_POST["full_name"]) || empty($_POST["email"]) || empty($_POST["mobile_number"]) || empty($_POST["Address"]) || empty($_POST["username"]) || empty($_POST["password"]) || empty($_POST["nid"]) || empty($_POST["role"])) {
+        $status_message = get_status_message(2); 
+        header("Location: ../view/add-user.php?status=$status_message");
+        exit();
+    } elseif (strlen($_POST["password"]) < 8) {
+        $status_message = get_status_message(19); 
+        header("Location: ../view/add-user.php?status=$status_message");
+        exit();
+    } else {
+        $full_name = $_POST["full_name"];
+        $email = $_POST["email"];
+        $mobile_number = $_POST["mobile_number"];
+        $Address = $_POST["Address"];
+        $username = $_POST["username"];
+        $password = $_POST["password"];
+        $nid = $_POST["nid"];
+        $role = $_POST["role"];
 
-    $role = $_POST['role'];
-
-    create_user($username, $email, $password, $role, 'Active', $full_name, $nid, $address, $mobile_number);
-
-    header('location: ../view/manage-'.strtolower($role).'s.php');
-    exit();
+        create_user($username, $email, $password, $role, 'Active', $full_name, $nid, $address, $mobile_number);
+        $status_message = get_status_message(20); 
+        header("Location: ../view/manage-users.php?status=$status_message");
+        exit();
+    }
 } else {
-    echo "Method not allowed.";
+    header("Location: ../view/add-user.php");
+    exit();
 }
 ?>
