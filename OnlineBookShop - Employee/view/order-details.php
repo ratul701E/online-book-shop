@@ -22,11 +22,6 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-<<<<<<< HEAD
-    <!-- fahim: order details table -->
-=======
-     fahim: order details table -->
->>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <h1 align="center">Order Details</h1>
         <table class="order-details-table" id="order-details-table">

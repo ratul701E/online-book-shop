@@ -19,7 +19,6 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-    <!-- fahim: add employee table -->
     <div class="container">
         <div class="dashboardForm">
 
@@ -47,11 +46,6 @@
                             <input type="text" name="password"><br><br>
                             NID <br>
                             <input type="text" name="nid"><br><br>
-<<<<<<< HEAD
-                            <!-- fahim: add employee button -->
-=======
-                             fahim: add employee button -->
->>>>>>> parent of 07e05e9 (updated)
                             <button type="submit">Confirm</button>
                         </td>
                     </tr>
@@ -59,11 +53,6 @@
             </form>
         </div>
         <div class="dashboardTable">
-<<<<<<< HEAD
-            <!-- fahim: employee table -->
-=======
-             fahim: employee table -->
->>>>>>> parent of 07e05e9 (updated)
             <table class="employee-table" id="employee-table">
                 <tr>
                     <td colspan="6">
@@ -84,23 +73,10 @@
                     <td> <?= $user['full_name'] ?> </td>
                     <td> <?= $user['status'] ?> </td>
                     <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">View
-<<<<<<< HEAD
-                            <!-- fahim: view korar icon -->
                         </a> </td>
                     <td> <a href="edit-profile-info.php?user_id=<?= $user['user_id'] ?>">Edit
-                            <!-- fahim: edit korar icon -->
                         </a> </td>
                     <td> <a href="../controller/delete-user-controller.php?user_id=<?= $user['user_id'] ?>">Delete
-                            <!-- fahim: delete korar icon -->
-=======
-                             fahim: view korar icon -->
-                        </a> </td>
-                    <td> <a href="edit-profile-info.php?user_id=<?= $user['user_id'] ?>">Edit
-                             fahim: edit korar icon -->
-                        </a> </td>
-                    <td> <a href="../controller/delete-user-controller.php?user_id=<?= $user['user_id'] ?>">Delete
-                             fahim: delete korar icon -->
->>>>>>> parent of 07e05e9 (updated)
                         </a> </td>
                 </tr>
                 <?php

@@ -18,13 +18,7 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('right-panel.php') ?>
-<<<<<<< HEAD
-    <!-- fahim: book table -->
-    <!-- ratul: info fetch kor -->
-=======
-     fahim: book table -->
-    ul: info fetch kor -->
->>>>>>> parent of 07e05e9 (updated)
+
 
     <div class="container">
         <h1 align="center">View Book</h1>

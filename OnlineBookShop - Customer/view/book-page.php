@@ -29,25 +29,13 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <!-- fahim: back button  -->
-=======
-     fahim: back button  -->
->>>>>>> parent of 07e05e9 (updated)
     <?php require_once ('navbar.php') ?>
-    <!-- msg -->
     <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?> <br>
     <div class="container">
         <table>
             <tr>
                 <td>
-<<<<<<< HEAD
-                    <!-- fahim: boi er sobi -->
-                    <!-- <img src="<?= $book['imgdir'] ?>" alt="as"> -->
-=======
-                     fahim: boi er sobi -->
-                     <img src="<?= $book['imgdir'] ?>" alt="as"> -->
->>>>>>> parent of 07e05e9 (updated)
+                   <img src="<?= $book['imgdir'] ?>" alt="as">
                     <img src="../vendor//book1.jpg" alt="as">
                 </td>
                 <td>
@@ -83,11 +71,6 @@
 
             </tr>
         </table>
-<<<<<<< HEAD
-        <!-- fahim: related products -->
-=======
-         fahim: related products -->
->>>>>>> parent of 07e05e9 (updated)
         <table class="related-products-table" id="related-products-table">
             <tr>
                 <td>
@@ -110,11 +93,6 @@
             ?>
             </tr>
         </table>
-<<<<<<< HEAD
-        <!-- fahim: bame rating daane review -->
-=======
-         fahim: bame rating daane review -->
->>>>>>> parent of 07e05e9 (updated)
         <table class="reviews-and-ratings-table" id="reviews-and-ratings-table">
             <tr>
                 <td>
@@ -127,8 +105,7 @@
                         <input type="hidden" name="return_url" value="book-page.php?book_id=<?=$book['book_id'] ?>">
 
                         <input type="radio" name="rating" value="1"> *
-                        <!-- fahim: eine star er icon bohais -->
-                        <input type="radio" name="rating" value="2"> **
+\                        <input type="radio" name="rating" value="2"> **
                         <input type="radio" name="rating" value="3"> ***
                         <input type="radio" name="rating" value="4"> ****
                         <input type="radio" name="rating" value="5"> ***** <br><br>

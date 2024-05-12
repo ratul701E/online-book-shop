@@ -23,11 +23,6 @@
 
 <body>
     <div class="sidebar">
-<<<<<<< HEAD
-        <!-- fahim: admin er left navigation bar -->
-=======
-         fahim: admin er left navigation bar -->
->>>>>>> parent of 07e05e9 (updated)
         <div class="option1"><button class="mainButton"> Employee
             </button></div>
         <div class="options">
@@ -41,7 +36,6 @@
             <div class="option3"><a href="feedback-and-review.php"><button>Feedback & Review</button></a> </div>
         </div>
     </div>
-    <!-- <select name="options" onchange="location = this.value"> -->
     </div>
 </body>
 

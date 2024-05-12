@@ -19,16 +19,10 @@ $classics = get_all_books();
 
 <body>
 
-    <!-- fahim: back button  -->
     <a href="customer-home.php">Back</a>
     <?php require_once ('navbar.php') ?>
 
     <div class="container">
-<<<<<<< HEAD
-        <!-- ratul: fetch kor back to back  -->
-=======
-         ratul: fetch kor back to back  -->
->>>>>>> parent of 07e05e9 (updated)
         <table class="classics-table" id="classics-table">
             <tr>
                 <td>

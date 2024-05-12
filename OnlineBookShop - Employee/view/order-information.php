@@ -23,11 +23,6 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-<<<<<<< HEAD
-    <!-- fahim: order details table -->
-=======
-     fahim: order details table -->
->>>>>>> parent of 07e05e9 (updated)
     <div class="container">
         <h1 align="center">Order Information</h1>
         <table class="order-details-table" id="order-details-table">
@@ -40,7 +35,6 @@
                 </td>
             </tr>
         </table>
-        <!-- fahim: reporting and analytics table -->
         <table class="order-info-table" id="order-info-table">
             <tr>
                 <th> Order ID </th>

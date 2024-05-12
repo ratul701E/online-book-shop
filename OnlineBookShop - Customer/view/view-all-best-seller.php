@@ -19,11 +19,6 @@ $best_sellers = get_all_books();
 
 <body>
 
-<<<<<<< HEAD
-    <!-- fahim: back button  -->
-=======
-     fahim: back button  -->
->>>>>>> parent of 07e05e9 (updated)
     <?php require_once ('navbar.php') ?>
     <table class="best-seller-table" id="best-seller-table">
         <tr>

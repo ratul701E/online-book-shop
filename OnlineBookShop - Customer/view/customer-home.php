@@ -19,25 +19,14 @@ $all_books = array_slice(get_all_books(), 0, 5);
 <body>
     <div class="container">
         <?php require_once ('navbar.php') ?>
-        <!-- fahim: banner -->
         <table class="banner" id="banner">
             <tr>
                 <td>
-<<<<<<< HEAD
-                    <!-- fahim: banner lagais ekta -->
-=======
-                     fahim: banner lagais ekta -->
->>>>>>> parent of 07e05e9 (updated)
                     <img src="../vendor/banner.png" alt="">
                 </td>
             </tr>
         </table>
 
-<<<<<<< HEAD
-        <!-- fahim: best seller -->
-=======
-         fahim: best seller -->
->>>>>>> parent of 07e05e9 (updated)
         <table class="best-seller-table" id="best-seller-table">
             <tr>
                 <td>
@@ -46,11 +35,6 @@ $all_books = array_slice(get_all_books(), 0, 5);
                 </td>
             </tr>
             <tr>
-<<<<<<< HEAD
-                <!-- ratul: daan dik borabor fetch koris td te 5 ta -->
-=======
-                 ratul: daan dik borabor fetch koris td te 5 ta -->
->>>>>>> parent of 07e05e9 (updated)
                 <?php
                 foreach($all_books as $book) {
                     ?>
@@ -66,7 +50,6 @@ $all_books = array_slice(get_all_books(), 0, 5);
             </tr>
         </table>
 
-        <!-- fahim: classics -->
         <table class="classics-table" id="classics-table">
             <tr>
                 <td>
@@ -75,7 +58,6 @@ $all_books = array_slice(get_all_books(), 0, 5);
                 </td>
             </tr>
             <tr>
-                <!-- ratul: daan dik borabor fetch koris td te 5 ta -->
                 <?php
                 foreach($all_books as $book) {
                     ?>

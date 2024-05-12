@@ -22,16 +22,9 @@
 </head>
 
 <body>
-<<<<<<< HEAD
-    <!-- fahim: back button  -->
-=======
-     fahim: back button  -->
->>>>>>> parent of 07e05e9 (updated)
     <?php require_once ('navbar.php') ?>
     <h1 align="center">Checkout</h1>
-    <!-- fahim: checkout table  -->
     <div class="container">
-        <!-- message -->
         <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
 
         <table class="checkout-table" id="checkout-table">
@@ -42,11 +35,6 @@
                     E-mail: <?=$user['email']?> <br>
                     Address: <?=$user['address']?> <br><br>
                     Total: <?=$total_price?> <br><br>
-<<<<<<< HEAD
-                    <!-- ratul: password thikmoto dile order confirm  -->
-=======
-                     ratul: password thikmoto dile order confirm  -->
->>>>>>> parent of 07e05e9 (updated)
                     <form action="../controller/checkout-controller.php" method="post">
                         Password <br>
                         <input type="text" name="password"><br><br>

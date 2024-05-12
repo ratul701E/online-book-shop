@@ -21,7 +21,6 @@
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
     <div class="container">
-        <!-- fahim: rating system table -->
         <table class="rating-system-table" id="rating-system-table">
             <tr>
                 <td colspan="4">
