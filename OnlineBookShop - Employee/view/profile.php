@@ -1,7 +1,7 @@
 <?php
     session_start();
     require_once('../model/user-model.php');
-    
+    $user = $_SESSION['user'];
 
 ?>
 <!DOCTYPE html>
@@ -24,10 +24,10 @@
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
     <div class="container">
-        <a href="view-profile.php"> <span class="material-symbols-outlined">
+        <a href="view-profile.php?user_id=<?=$user['user_id']?>"> <span class="material-symbols-outlined">
                 pageview
             </span><br>View Profile</a>
-        <a href="edit-profile-info.php"><span class="material-symbols-outlined">
+        <a href="edit-profile-info.php?user_id=<?=$user['user_id']?>"><span class="material-symbols-outlined">
                 edit
             </span><br>Edit Profile Information</a>
         <a href="change-password.php"><span class="material-symbols-outlined">
