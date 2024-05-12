@@ -44,6 +44,7 @@ if (isset($_POST['print_pdf'])) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Print Report</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -51,28 +52,32 @@ if (isset($_POST['print_pdf'])) {
     <?php require_once ('navbar.php') ?>
     <?php require_once ('side-panel.php') ?>
 
-    <!-- Fahim sundor kor -->
-    <div>
-        Number of Books Available: <?= $counts['total_books'] ?> <br>
-        Number of Books in Stock: <?= $counts['total_stock'] ?> <br>
-        Number of Books Sold: <?= $counts['total_sold'] ?> <br>
-        Number of Customers: <?= $users['total_customers'] ?> <br>
-        Number of Employees: <?= $users['total_employees'] ?> <br>
-        Number of Managers: <?= $users['total_managers'] ?> <br>
-        Total Orders: <?= $orders_count['total_count'] ?> <br>
-        Orders Pending: <?= $orders_count['pending_count'] ?> <br>
-        Completed Orders: <?= $orders_count['completed_count'] ?> <br>
-        Cancelled Orders: <?= $orders_count['cancelled_count'] ?> <br>
-        Total Revenue: TK. <?= $total_money['completed_money'] ?> <br>
-        Pending: TK. <?= $total_money['pending_money'] ?> <br>
-        Employee Salary: TK. <?= $total_money['completed_money'] ?> <br>
-        Profit: TK. <?= $total_money['pending_money'] ?> <br>
+    <div class="container">
+        <h1 align="center">Print Report</h1>
+        <!-- Fahim sundor kor -->
+        <div>
+            <p><strong>Number of Books Available:</strong> <?= $counts['total_books'] ?></p>
+            <p><strong>Number of Books in Stock:</strong> <?= $counts['total_stock'] ?></p>
+            <p><strong>Number of Books Sold:</strong> <?= $counts['total_sold'] ?></p>
+            <p><strong>Number of Customers:</strong> <?= $users['total_customers'] ?></p>
+            <p><strong>Number of Employees:</strong> <?= $users['total_employees'] ?></p>
+            <p><strong>Number of Managers:</strong> <?= $users['total_managers'] ?></p>
+            <p><strong>Total Orders:</strong> <?= $orders_count['total_count'] ?></p>
+            <p><strong>Orders Pending:</strong> <?= $orders_count['pending_count'] ?></p>
+            <p><strong>Completed Orders:</strong> <?= $orders_count['completed_count'] ?></p>
+            <p><strong>Cancelled Orders:</strong> <?= $orders_count['cancelled_count'] ?></p>
+            <p><strong>Total Revenue:</strong> TK. <?= $total_money['completed_money'] ?></p>
+            <p><strong>Pending:</strong> TK. <?= $total_money['pending_money'] ?></p>
+            <p><strong>Employee Salary:</strong> TK. <?= $total_money['completed_money'] ?></p>
+            <p><strong>Profit:</strong> TK. <?= $total_money['pending_money'] ?></p>
+
+        </div>
+
+        <form method="post">
+            <button type="submit" name="print_pdf">Print Report</button>
+        </form>
+
     </div>
-
-    <form method="post">
-        <button type="submit" name="print_pdf">Print Report</button>
-    </form>
-
     <?php require_once ('footer.php') ?>
 </body>
 

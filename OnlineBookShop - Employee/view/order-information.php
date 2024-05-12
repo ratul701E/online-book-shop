@@ -11,53 +11,57 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Information</title>
+    <link rel="stylesheet" href="css/allTableStyles.css">
+
 </head>
+
 <body>
-<?php require_once('navbar.php') ?>
-<?php require_once('side-panel.php') ?>
+    <?php require_once('navbar.php') ?>
+    <?php require_once('side-panel.php') ?>
     <!-- fahim: order details table -->
-    <table class="order-details-table" id="order-details-table">
-        <tr>
-            <td>
-                Number of Books Available: <?=$counts['total_books'] ?>
-                Number of Books in Stock: <?=$counts['total_stock'] ?>
-                Number of Books Sold: <?=$counts['total_sold'] ?>
-                Total Revenue: <?=$total_money['completed_money']?>
-            </td>
-        </tr>
-    </table>
-    <!-- fahim: reporting and analytics table -->
-    <table class="order-info-table" id="order-info-table">
-        <tr>
-            <td colspan="5">
-                Order Information
-            </td>
-        </tr>
-        <tr>
-            <td> Order ID </td>
-            <td> Status </td>
-            <td> Date </td>
-            <td> Total </td>
-            <td> Action </td>
-        </tr>
-        <?php
+    <div class="container">
+        <h1 align="center">Order Information</h1>
+        <table class="order-details-table" id="order-details-table">
+            <tr>
+                <td>
+                    <p><strong>Number of books available: </strong> <?=$counts['total_books'] ?></p>
+                    <p><strong>Number of books in stock: </strong> <?=$counts['total_stock'] ?></p>
+                    <p><strong>Number of books sold: </strong> <?=$counts['total_sold'] ?></p>
+                    <p><strong>Total revenue: </strong> <?=$total_money['completed_money']?></p>
+                </td>
+            </tr>
+        </table>
+        <!-- fahim: reporting and analytics table -->
+        <table class="order-info-table" id="order-info-table">
+            <tr>
+                <th> Order ID </th>
+                <th> Status </th>
+                <th> Date </th>
+                <th> Total </th>
+                <th colspan="3"> Action </th>
+            </tr>
+            <?php
             foreach($all_orders as $order){
                 ?>
-                    <tr>
-                        <td> <?= $order['order_id'] ?> </td>
-                        <td> <?= $order['status'] ?> </td>
-                        <td> <?= $order['order_date'] ?> </td>
-                        <td> <?= $order['total_price'] ?> </td>
-                        <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a> </td>
-                    </tr>
-                <?php
+            <tr>
+                <td> <?= $order['order_id'] ?> </td>
+                <td> <?= $order['status'] ?> </td>
+                <td> <?= $order['order_date'] ?> </td>
+                <td> <?= $order['total_amount'] ?> </td>
+                <td> <a href="order-details.php?order_id=<?= $order['order_id'] ?>">View Details</a>
+                </td>
+            </tr>
+            <?php
             }
-        ?>
-    </table>
-<?php require_once('footer.php') ?>
+            ?>
+        </table>
+    </div>
+    <?php require_once('footer.php') ?>
 </body>
+
 </html>

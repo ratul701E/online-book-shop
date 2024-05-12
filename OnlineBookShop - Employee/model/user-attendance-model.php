@@ -11,7 +11,6 @@ function add_user_attendance($user_id, $attendance = 0) {
 
 function get_user_attendance($user_id) {
     $conn = conn();
-    
     $query = "SELECT attendance FROM user_attendance WHERE user_id = $user_id";
     $result = mysqli_query($conn, $query);
     $attendance_row = mysqli_fetch_assoc($result);
@@ -40,4 +39,3 @@ function increase_attendance($user_id) {
 }
 
 ?>
-

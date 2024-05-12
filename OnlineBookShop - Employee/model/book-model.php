@@ -72,7 +72,9 @@ function get_book_counts() {
     $in_stock_row = mysqli_fetch_assoc($result_in_stock);
     $total_stock = $in_stock_row['total_stock'];
 
-    $query_sold = "SELECT SUM(quantity) AS total_sold FROM orders";
+    $query_sold = "SELECT SUM(od.quantity) AS total_sold
+                   FROM order_details od
+                   JOIN books b ON od.book_id = b.book_id";
     $result_sold = mysqli_query($conn, $query_sold);
     $sold_row = mysqli_fetch_assoc($result_sold);
     $total_sold = $sold_row['total_sold'];
@@ -85,6 +87,4 @@ function get_book_counts() {
         'total_sold' => $total_sold
     ];
 }
-
 ?>
-

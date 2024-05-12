@@ -11,26 +11,33 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Order Details</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
+
 <body>
-<?php require_once('navbar.php') ?>
-<?php require_once('side-panel.php') ?>
+    <?php require_once('navbar.php') ?>
+    <?php require_once('side-panel.php') ?>
     <!-- fahim: order details table -->
-    <table class="order-details-table" id="order-details-table">
-        <tr>
-            <td>
-                Username: <?= $user_details['username'] ?>
-                Order ID: <?= $order['order_id'] ?>
-                Order Date: <?= $order['order_date'] ?>
-                Total Amount: <?= $order['total_price'] ?>
-                Order Status: <?= $order['status'] ?>
-            </td>
-        </tr>
-    </table>
-<?php require_once('footer.php') ?>
+    <div class="container">
+        <h1 align="center">Order Details</h1>
+        <table class="order-details-table" id="order-details-table">
+            <tr>
+                <td>
+                    <p><strong>Username: </strong> <?= $user_details['username'] ?></p>
+                    <p><strong>Order ID:</strong> <?= $order['order_id'] ?></p>
+                    <p><strong>Order Date:</strong> <?= $order['order_date'] ?></p>
+                    <p><strong>Total Amount:</strong> <?= $order['total_amount'] ?></p>
+                    <p><strong>Order Status:</strong> <?= $order['status'] ?></p>
+                </td>
+            </tr>
+        </table>
+    </div>
+    <?php require_once('footer.php') ?>
 </body>
+
 </html>
