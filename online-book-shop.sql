@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 12, 2024 at 07:11 PM
+-- Generation Time: May 12, 2024 at 09:19 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -194,7 +194,9 @@ CREATE TABLE `user_attendance` (
 --
 
 INSERT INTO `user_attendance` (`user_id`, `attendance`) VALUES
-(5, 16);
+(5, 16),
+(6, 2),
+(9, 2);
 
 -- --------------------------------------------------------
 
