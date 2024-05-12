@@ -10,7 +10,7 @@
 <?php require_once('right-panel.php') ?>
 <!-- fahim: shundor format kor -->
 Candidates
-100 Total Person
+100 Total Person <!-- ratul: fetch kor -->
 <a href="create-new-employee.php">New</a>
 <!-- ratul: candidate bana, ora user but ogor account status pending, submit korle approved hoia jaibo -->
 <table class="candidate-table" id="candidate-table">
