@@ -9,41 +9,50 @@
 
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Salary Sheet</title>
+    <link rel="stylesheet" href="css/allTableStyles.css">
+
 </head>
+
 <body>
-<?php require_once('navbar.php') ?>
-<?php require_once('side-panel.php') ?>
+    <?php require_once('navbar.php') ?>
+    <?php require_once('side-panel.php') ?>
 
     <!-- fahim: salary sheet table -->
-    <table class="salary-sheet-table" id="salary-sheet-table">
-        <tr>
-            <td colspan="4">
-                Salary Sheet
-            </td>
-        </tr>
-        <tr>
-            <td> ID </td>
-            <td> Employees Name </td>
-            <td> Salary </td>
-            <td> Action </td>
-        </tr>
-        <?php
+    <div class="container">
+        <table class="salary-sheet-table" id="salary-sheet-table">
+            <tr>
+                <td colspan="4">
+                    <h1 align="center">Salary Sheet</h1>
+                </td>
+            </tr>
+            <tr>
+                <th> ID </th>
+                <th> Employees Name </th>
+                <th> Salary </th>
+                <th> Action </th>
+            </tr>
+            <?php
             foreach($employees as $user) {
                 ?>
-                    <tr>
-                        <td> <?= $user['user_id'] ?> </td>
-                        <td> <?= $user['full_name'] ?> </td>
-                        <td> <?= get_user_attendance($user['user_id']) * 500 ?> </td>
-                        <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>"> <!-- fahim: view korar icon --></a> </td>
-                    </tr>
-                <?php
+            <tr>
+                <td> <?= $user['user_id'] ?> </td>
+                <td> <?= $user['full_name'] ?> </td>
+                <td> <?= get_user_attendance($user['user_id']) * 500 ?> </td>
+                <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">
+                        <!-- fahim: view korar icon -->
+                    </a> </td>
+            </tr>
+            <?php
             }
         ?>
-    </table>
-<?php require_once('footer.php') ?>
+        </table>
+    </div>
+    <?php require_once('footer.php') ?>
 </body>
+
 </html>
