@@ -23,7 +23,7 @@ session_start();
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
 
-    <!-- fahim: sobi laga  -->
+    im: sobi laga  -->
     <div class="container">
         <a href="manage-managers.php"><span class="material-symbols-outlined">
                 person

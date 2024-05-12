@@ -20,7 +20,7 @@
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
 
-    <!-- fahim: edit profile table -->
+    im: edit profile table -->
     <div class="container">
         <form action="../controller/edit-profile-info-controller.php" method="post"
             onsubmit="return validateEditProfileForm()">
@@ -40,7 +40,7 @@
                         <input type="text" name="username" value="<?= $user['username'] ?>"><br><br>
                         NID <br>
                         <input type="text" name="nid" value="<?= $user['nid'] ?>"><br><br>
-                        <!-- fahim: save changes button -->
+                        im: save changes button -->
                         <button class="save-changes-button" id="save-changes-button">Save Changes</button>
                     </td>
                 </tr>

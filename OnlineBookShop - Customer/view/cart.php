@@ -16,15 +16,15 @@
 </head>
 
 <body>
-    <!-- fahim: back button  -->
+     fahim: back button  -->
     <?php require_once ('navbar.php') ?>
 
     <div class="container">
 
-        <!-- fahim: cart table  -->
-        <!-- ratul: cart fetch kor  -->
+         fahim: cart table  -->
+         ratul: cart fetch kor  -->
         <h1 align="center">Cart</h1> <br>
-        <!-- msg -->
+         msg -->
         <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
         <table class="cart-table" id="cart-table">
             <tr>
@@ -37,7 +37,7 @@
                     Author Name: <?= $book['author'] ?><br>
                     <img src="<?= $book['imgdir'] ?>" alt="x"><br>
                     Taka: <?= $book['price'] ?><br><br>
-                    <!-- ratul: remove koris cart erte  -->
+                     ratul: remove koris cart erte  -->
                     <div class="removeFromCart">
 
                         <a
@@ -51,7 +51,7 @@
             ?>
             </tr>
         </table>
-        <!-- ratul: total price fetch koris  -->
+        ul: total price fetch koris  -->
         <br>
         <div class="totalPrice">
             <a href="checkout.php"><button>Checkout [<?=$total_price?>]</button></a>

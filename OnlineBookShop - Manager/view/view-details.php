@@ -18,8 +18,8 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('right-panel.php') ?>
-    <!-- fahim: profile table -->
-    <!-- ratul: info fetch kor, ei file e admin nijer info dekhte parbo + manage erte view click korleo einei anbi -->
+     fahim: profile table -->
+     ratul: info fetch kor, ei file e admin nijer info dekhte parbo + manage erte view click korleo einei anbi -->
     <div class="container">
         <h1 align="center">View Details</h1>
         <table class="profile-table" id="profile-table">

@@ -22,7 +22,7 @@
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
 
-    <!-- fahim: salary sheet table -->
+     fahim: salary sheet table -->
     <div class="container">
         <table class="salary-sheet-table" id="salary-sheet-table">
             <tr>
@@ -44,7 +44,7 @@
                 <td> <?= $user['full_name'] ?> </td>
                 <td> <?= get_user_attendance($user['user_id']) * 500 ?> </td>
                 <td> <a href="view-profile.php?user_id=<?= $user['user_id'] ?>">view</a>
-                        <!-- fahim: view korar icon -->
+                         korar icon -->
                     </a> </td>
             </tr>
             <?php

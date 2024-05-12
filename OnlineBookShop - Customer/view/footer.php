@@ -16,7 +16,7 @@
         <table class=" footer" id="footer">
             <tr>
                 <td>
-                    <!-- fahim: logo -->
+                    logo -->
                     <a href="customer-home.php"><img src="../vendor/logo.png" alt="" height="75px" width="150px"></a>
                 </td>
             </tr>

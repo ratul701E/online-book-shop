@@ -17,7 +17,7 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('side-panel.php') ?>
-    <!-- fahim: rating table table -->
+     fahim: rating table table -->
     <div class="container">
         <table class="customer-ratings-table" id="customer-ratings-table">
             <tr>
@@ -48,7 +48,7 @@
             }
         ?>
         </table>
-        <!-- fahim: review table -->
+        ew table -->
         <table class="customer-reviews-table" id="customer-reviews-table">
             <tr>
                 <td colspan="7">

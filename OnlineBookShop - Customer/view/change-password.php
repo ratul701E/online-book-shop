@@ -15,13 +15,13 @@ require '../controller/status-message.php'
 
 <body>
     <?php require_once('navbar.php') ?>
-    <!-- fahim: back button -->
+     fahim: back button -->
     <h1 align="center">Change Password</h1>
     <div class="container">
 
-        <!-- fahim: change password table -->
-        <!-- ratul: password verify koira password update kor  => DONE -->
-        <!-- message -->
+         fahim: change password table -->
+         ratul: password verify koira password update kor  => DONE -->
+         message -->
         <form action="../controller/change-password-controller.php" method="post"
             onsubmit="return validateChangePasswordForm()">
             <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?>
@@ -34,7 +34,7 @@ require '../controller/status-message.php'
                         <input type="password" name="npassword"><br><br>
                         Confirm New Password <br>
                         <input type="password" name="cnpassword"><br><br>
-                        <!-- fahim: save changes button -->
+                         changes button -->
                         <button class="save-changes-button" id="save-changes-button">Save Changes</button>
                     </td>
                 </tr>

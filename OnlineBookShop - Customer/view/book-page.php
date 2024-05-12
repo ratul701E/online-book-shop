@@ -29,16 +29,16 @@
 </head>
 
 <body>
-    <!-- fahim: back button  -->
+     fahim: back button  -->
     <?php require_once ('navbar.php') ?>
-    <!-- msg -->
+     msg -->
     <?php if(isset($_GET['status']))  echo get_status_message($_GET['status']) ?> <br>
     <div class="container">
         <table>
             <tr>
                 <td>
-                    <!-- fahim: boi er sobi -->
-                    <!-- <img src="<?= $book['imgdir'] ?>" alt="as"> -->
+                     fahim: boi er sobi -->
+                     <img src="<?= $book['imgdir'] ?>" alt="as"> -->
                     <img src="../vendor//book1.jpg" alt="as">
                 </td>
                 <td>
@@ -74,7 +74,7 @@
 
             </tr>
         </table>
-        <!-- fahim: related products -->
+         fahim: related products -->
         <table class="related-products-table" id="related-products-table">
             <tr>
                 <td>
@@ -97,7 +97,7 @@
             ?>
             </tr>
         </table>
-        <!-- fahim: bame rating daane review -->
+         fahim: bame rating daane review -->
         <table class="reviews-and-ratings-table" id="reviews-and-ratings-table">
             <tr>
                 <td>
@@ -110,7 +110,7 @@
                         <input type="hidden" name="return_url" value="book-page.php?book_id=<?=$book['book_id'] ?>">
 
                         <input type="radio" name="rating" value="1"> *
-                        <!-- fahim: eine star er icon bohais -->
+                        eine star er icon bohais -->
                         <input type="radio" name="rating" value="2"> **
                         <input type="radio" name="rating" value="3"> ***
                         <input type="radio" name="rating" value="4"> ****

@@ -19,7 +19,7 @@
 <body>
     <?php require_once('navbar.php') ?>
     <?php require_once('right-panel.php') ?>
-    <!-- fahim: edit book table -->
+    im: edit book table -->
     <div class="container">
         <h1 align="center">Edit Book</h1>
 
@@ -42,7 +42,7 @@
                         <textarea type="text" name="description"><?=$book['description']?></textarea><br><br>
                         Stock Quantity <br>
                         <input type="text" name="stock_quantity" value="<?=$book['stock_quantity']?>"><br><br>
-                        <!-- fahim: add book button -->
+                        add book button -->
                         <button type="submit">Edit Book</button>
                     </td>
                 </tr>
